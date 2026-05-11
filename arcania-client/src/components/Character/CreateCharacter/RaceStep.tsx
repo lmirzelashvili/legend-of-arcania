@@ -82,7 +82,7 @@ const RaceStep: React.FC<StepProps> = ({ state, onUpdateState, sounds }) => {
                     <EquipmentPreview
                       race={race}
                       characterClass={RACE_CLASS_COMPATIBILITY[race][0]}
-                      gender={selectedGender}
+                      gender={race === Race.LILIN ? 'female' : selectedGender}
                       scale={2}
                       showControls={false}
                       autoPlay={true}
