@@ -28,6 +28,7 @@ import pvpRoutes from './routes/pvp.routes.js';
 import internalRoutes from './routes/internal.routes.js';
 import sseRoutes from './routes/sse.routes.js';
 import walletLinkRoutes from './routes/wallet.link.routes.js';
+import arcRoutes from './routes/arc.routes.js';
 import { connectEventBus, disconnectEventBus } from './services/event-bus.service.js';
 import { initSSESubscriptions } from './services/sse.service.js';
 import { initEventHandlers } from './services/event-handlers.service.js';
@@ -92,6 +93,7 @@ app.use('/api/pvp', pvpRoutes);
 app.use('/api/internal', internalRoutes);
 app.use('/api/sse', sseRoutes);
 app.use('/api/wallet-link', walletLinkRoutes);
+app.use('/api/arc', arcRoutes);
 
 // Error handler
 app.use(errorHandler);

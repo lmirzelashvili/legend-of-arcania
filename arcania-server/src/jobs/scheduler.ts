@@ -7,6 +7,7 @@ import { checkPremiumExpiry } from './premium-expiry.js';
 import { expireStaleTradesJob } from './trade-expiry.js';
 import { checkSeasonRotation } from './season-rotation.js';
 import { expireOldListings } from './listing-expiry.js';
+import { sweepAllActive } from '../services/arc/deposit.service.js';
 
 export function startScheduler(): void {
   logger.info('Starting background job scheduler');
@@ -31,6 +32,9 @@ export function startScheduler(): void {
 
   // Marketplace listing expiry — every hour
   cron.schedule('0 * * * *', () => runJob('listing-expiry', expireOldListings));
+
+  // ARC deposit sweep — every minute (safety net; primary path is user-triggered /api/arc/deposits/check)
+  cron.schedule('*/1 * * * *', () => runJob('arc-deposit-sweep', sweepAllActive));
 }
 
 async function runJob(name: string, fn: () => Promise<void>): Promise<void> {

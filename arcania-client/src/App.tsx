@@ -18,6 +18,7 @@ const Races = React.lazy(() => import('./pages/Races'));
 const Classes = React.lazy(() => import('./pages/Classes'));
 const Token = React.lazy(() => import('./pages/Token'));
 const Whitepaper = React.lazy(() => import('./pages/Whitepaper'));
+const ArcWallet = React.lazy(() => import('./pages/ArcWallet'));
 
 const LoginScreen = React.lazy(() =>
   import('./components/Auth/LoginScreen').then(m => ({ default: m.LoginScreen }))
@@ -116,6 +117,15 @@ function App() {
             element={
               <ProtectedRoute>
                 <CharacterManagementWrapper />
+              </ProtectedRoute>
+            }
+          />
+
+          <Route
+            path="/arc"
+            element={
+              <ProtectedRoute>
+                <ArcWallet />
               </ProtectedRoute>
             }
           />

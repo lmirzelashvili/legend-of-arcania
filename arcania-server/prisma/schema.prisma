@@ -36,10 +36,13 @@ model User {
   createdAt        DateTime  @default(now())
   solanaPublicKey  String?   @unique
   solanaLinkedAt   DateTime?
+  arcDepositAddress String?  @unique
 
   characters          Character[]
   vault               Vault?
   wallet              AccountWallet?
+  arcWallet           ArcWallet?
+  arcTransactions     ArcTransaction[]
   loginStreak         LoginStreak?
   referral            Referral?
   referralUses        ReferralUse[]
@@ -530,4 +533,47 @@ model PremiumSubscription {
   user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
+}
+
+// ──────────────────────────────────────────────────────────────────────────────
+// ARC token (custodial deposit/withdraw)
+// ──────────────────────────────────────────────────────────────────────────────
+
+model ArcWallet {
+  id        String   @id @default(uuid())
+  userId    String   @unique
+  balance   BigInt   @default(0)
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+enum ArcTransactionType {
+  DEPOSIT
+  WITHDRAW
+}
+
+enum ArcTransactionStatus {
+  PENDING
+  CONFIRMED
+  FAILED
+}
+
+model ArcTransaction {
+  id           String                @id @default(uuid())
+  userId       String
+  type         ArcTransactionType
+  status       ArcTransactionStatus  @default(PENDING)
+  amount       BigInt
+  txSignature  String?               @unique
+  destination  String?
+  source       String?
+  error        String?
+  createdAt    DateTime              @default(now())
+  updatedAt    DateTime              @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@index([status])
 }

@@ -42,3 +42,10 @@ export { boosterAPI } from './booster.api';
 export type { ActiveBooster, BoosterBonuses } from './booster.api';
 export { pvpAPI } from './pvp.api';
 export type { PvPStatsData, PvPSeason } from './pvp.api';
+export { arcApi } from './arc.api';
+export type {
+  ArcWalletInfo,
+  ArcTransactionRow,
+  SweepCheckResult,
+  WithdrawResult,
+} from './arc.api';
