@@ -1,4 +1,5 @@
 # Backlog: arcania-client
+- [ ] Fix: RaceStep Lilin tile preview fails to load when selectedGender=male
 - [ ] Frontend: Whitepaper page for Colosseum judges
 
 - [ ] Frontend: Polish Home + About for hackathon judges
