@@ -1,0 +1,117 @@
+---
+title: Inventory System
+description: Dual inventory system with secure Vault storage and risk-based character Bags.
+---
+
+Arcania uses a **dual inventory system**: a safe account-wide **Vault** and a character **Bag** that can drop items on death.
+
+---
+
+## The Dual Inventory Concept
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                         ACCOUNT LEVEL                                │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                      │
+│   ┌─────────────────────────────────────────────────────────────┐   │
+│   │                     VAULT (Account Bound)                    │   │
+│   │   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   │   │
+│   │   • Shared across ALL characters                             │   │
+│   │   • 100% SAFE - items cannot be lost                         │   │
+│   │   • Accessible from Nexus only                                │   │
+│   │   • Transfer items TO character Bag before entering zones    │   │
+│   └─────────────────────────────────────────────────────────────┘   │
+│                                    │                                 │
+│              ┌─────────────────────┼─────────────────────┐          │
+│              ▼                     ▼                     ▼          │
+│   ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐  │
+│   │   Character A    │  │   Character B    │  │   Character C    │  │
+│   │   ┌──────────┐   │  │   ┌──────────┐   │  │   ┌──────────┐   │  │
+│   │   │   BAG    │   │  │   │   BAG    │   │  │   │   BAG    │   │  │
+│   │   │ ⚠️ RISK  │   │  │   │ ⚠️ RISK  │   │  │   │ ⚠️ RISK  │   │  │
+│   │   └──────────┘   │  │   └──────────┘   │  │   └──────────┘   │  │
+│   └──────────────────┘  └──────────────────┘  └──────────────────┘  │
+│                                                                      │
+│                         Max 5 Characters                             │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Item Safety Hierarchy
+
+Items have different levels of protection depending on where they're stored:
+
+| Location | Safety | Description |
+|----------|--------|-------------|
+| **Vault** | 100% Safe | Never lost under any circumstances |
+| **Equipped** | Safe on Death | Worn items stay with you even when killed |
+| **Bag** | At Risk | Can be lost when dying in PvP zones |
+| **Ground** | Lootable | Dropped items can be picked up by anyone |
+
+<Callout type="info">
+**Key Insight:** Store valuable items you're not using in the Vault. Only carry what you're willing to risk in your Bag when venturing into dangerous zones.
+</Callout>
+
+---
+
+## Transferring Items
+
+Items can be moved between Vault and Bag from the Nexus:
+
+### Vault → Bag (Before adventuring)
+1. Open Inventory Management in Nexus
+2. Select items from Vault
+3. Choose destination character
+4. Confirm transfer
+5. Items appear in character's Bag
+
+### Bag → Vault (After adventuring)
+1. Return to a Safe Zone
+2. Exit to Nexus
+3. Open Inventory Management
+4. Select items from Bag
+5. Transfer to Vault for safekeeping
+
+<Callout type="warning">
+**Cannot transfer while in Danger Zones!** You must reach a Safe Zone before accessing the Vault or transferring items.
+</Callout>
+
+---
+
+## Storage Capacity
+
+### Vault Capacity
+| Tier | Slots | How to Unlock |
+|------|-------|---------------|
+| Base | 100 | Default |
+| Expanded | 150 | <img src="/game-icons/gold.png" alt="Gold" className="inline w-4 h-4 align-middle" /> 50,000 Gold |
+| Premium (Battle Pass) | 200 | Premium Subscription |
+
+### Bag Capacity
+| Tier | Slots | How to Unlock |
+|------|-------|---------------|
+| Base | 40 | Default |
+| Expanded | 60 | Level 30 |
+| Maximum | 80 | Level 60 |
+| Premium (Battle Pass) | 100 | Premium Subscription |
+
+<Callout type="tip">
+**Pro Tip:** Keep your Bag organized. When you die in PvP zones, random items drop - better to lose consumables than your +15 weapon!
+</Callout>
+
+---
+
+## Explore Inventory
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+  <a href="/docs/platform/inventory/vault" className="block p-4 border rounded-lg hover:border-primary transition-colors">
+    <h3 className="font-semibold mb-1">Vault</h3>
+    <p className="text-sm text-muted-foreground">Account-wide safe storage</p>
+  </a>
+  <a href="/docs/platform/inventory/bag" className="block p-4 border rounded-lg hover:border-primary transition-colors">
+    <h3 className="font-semibold mb-1">Bag</h3>
+    <p className="text-sm text-muted-foreground">Character inventory and risk mechanics</p>
+  </a>
+</div>

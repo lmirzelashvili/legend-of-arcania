@@ -1,0 +1,245 @@
+---
+title: Bag
+description: Character-specific inventory with risk-based mechanics in dangerous zones.
+---
+
+The **Bag** is your character's inventory. Items here can drop on death in PvP zones.
+
+---
+
+## Core Features
+
+### Character-Specific
+
+Each character has their own Bag with independent contents:
+
+```
+┌────────────────────┐  ┌────────────────────┐  ┌────────────────────┐
+│   CHARACTER A      │  │   CHARACTER B      │  │   CHARACTER C      │
+│   ┌────────────┐   │  │   ┌────────────┐   │  │   ┌────────────┐   │
+│   │    BAG     │   │  │   │    BAG     │   │  │   │    BAG     │   │
+│   │  40 slots  │   │  │   │  60 slots  │   │  │   │  80 slots  │   │
+│   │            │   │  │   │            │   │  │   │            │   │
+│   │  ⚔️🛡️🧪🧪   │   │  │   │  🏹💎📜🔮   │   │  │   │  🪄💍🧪💰   │   │
+│   │  💰💎📜     │   │  │   │  💰🧪🧪     │   │  │   │  🔮📜💎     │   │
+│   └────────────┘   │  │   └────────────┘   │  │   └────────────┘   │
+│   Level 25         │  │   Level 45         │  │   Level 70         │
+└────────────────────┘  └────────────────────┘  └────────────────────┘
+```
+
+### Dual Access
+
+The Bag can be accessed from both the Nexus and In-Game:
+
+| Access Point | Features |
+|--------------|----------|
+| **Nexus** | Full management, sorting, filtering, Vault transfers |
+| **In-Game** | Quick access, drag-to-equip, mid-combat swaps |
+
+<Callout type="info">
+Opening your Bag in-game does **not** pause the game. Be careful opening inventory in combat - you're still vulnerable!
+</Callout>
+
+---
+
+## Risk Mechanics
+
+### Items at Risk
+
+Items in your Bag are **at risk** when you die in **PvP zones**:
+
+| Zone Type | Death Penalty |
+|-----------|---------------|
+| 🟢 Safe Zone | No death possible |
+| 🟡 PvE Zone | 10% durability loss (no item drops) |
+| 🟠 Hard PvE Zone | 10% durability loss (no item drops) |
+| 🔴 PvP Zone | **Random items drop from Bag** |
+
+### How Item Drops Work
+
+When you die in a PvP zone:
+
+1. **Equipped items are SAFE** - they stay with you
+2. **Random Bag items drop** - selection is random
+3. **Drop quantity** - typically 3-5 items depending on Bag contents
+4. **Dropped items are lootable** - the player who killed you (or anyone nearby) can pick them up
+
+```
+BEFORE DEATH                    AFTER DEATH
+┌────────────────┐              ┌────────────────┐
+│ EQUIPPED (SAFE)│              │ EQUIPPED (SAFE)│
+│ ⚔️ Weapon      │              │ ⚔️ Weapon      │
+│ 🛡️ Armor       │              │ 🛡️ Armor       │
+├────────────────┤              ├────────────────┤
+│ BAG (AT RISK)  │              │ BAG (REDUCED)  │
+│ 💎💎💎         │  ──DEATH──►  │ 💎💎           │ 💎 dropped
+│ 🧪🧪🧪🧪       │              │ 🧪🧪🧪         │ 🧪 dropped
+│ 📜📜           │              │ 📜             │ 📜 dropped
+│ 💰💰💰         │              │ 💰💰           │ 💰 dropped
+└────────────────┘              └────────────────┘
+```
+
+<Callout type="warning">
+**The risk is real.** High-value items in your Bag can be lost to other players. Only carry what you're willing to lose when entering PvP zones.
+</Callout>
+
+---
+
+## Item Safety Rules
+
+### Always Safe (Never Drops)
+
+| Item Type | Why Safe |
+|-----------|----------|
+| **Equipped gear** | Worn items protected |
+| **Quest items** | Cannot be traded or dropped |
+| **Bound items** | Soul-bound items protected |
+
+### At Risk in PvP Zones
+
+| Item Type | Risk Level |
+|-----------|------------|
+| **Unequipped gear** | Can drop |
+| **Materials** | Can drop |
+| **Gold** | Portion can drop |
+| **Consumables** | Can drop |
+| **Trade goods** | Can drop |
+
+<Callout type="tip">
+**Risk Management:** Before entering PvP zones, equip your best gear (safe), store valuables in Vault, and only carry consumables you're willing to lose.
+</Callout>
+
+---
+
+## Bag Capacity
+
+### Capacity Tiers
+
+Bag capacity increases as you level:
+
+| Level | Capacity | Unlock |
+|-------|----------|--------|
+| 1 | 40 slots | Default |
+| 30 | 60 slots | Automatic |
+| 60 | 80 slots | Automatic |
+| Premium (Battle Pass) | 100 slots | Premium Subscription |
+
+---
+
+## In-Game Bag Interface
+
+When you open your Bag in-game, you see a compact quick-access view:
+
+```
+┌─────────────────────────────────┐
+│ ┌───┬───┬───┬───┬───┬───┬───┐  │
+│ │ ⚔️│ 🛡️│ 🧪│ 🧪│ 📜│ 💎│ 💰│  │
+│ ├───┼───┼───┼───┼───┼───┼───┤  │
+│ │ 🔮│ 💍│ 🪄│   │   │   │   │  │
+│ └───┴───┴───┴───┴───┴───┴───┘  │
+│         [Close]                 │
+└─────────────────────────────────┘
+```
+
+### Quick Actions
+
+| Action | How |
+|--------|-----|
+| **Equip item** | Drag to character or double-click |
+| **Use consumable** | Right-click or drag to hotbar |
+| **Drop item** | Drag outside window (with confirmation) |
+| **Inspect** | Hover for tooltip |
+
+<Callout type="info">
+The in-game Bag has limited sorting compared to the Nexus. For full inventory management, return to a Safe Zone and use the Nexus interface.
+</Callout>
+
+---
+
+## Transfer to/from Vault
+
+### Depositing to Vault (Bag → Vault)
+
+1. Return to a **Safe Zone**
+2. Exit to **Nexus**
+3. Open **Inventory Management**
+4. Select items from **Bag** tab
+5. Click **Transfer to Vault**
+6. Items are now safe
+
+### Withdrawing from Vault (Vault → Bag)
+
+1. Be in the **Nexus** (not in a zone)
+2. Open **Inventory Management**
+3. Select items from **Vault** tab
+4. Choose character to receive
+5. Click **Transfer to Bag**
+6. Items are now at risk when entering zones
+
+<Callout type="warning">
+**Cannot transfer in Danger Zones!** If you're deep in a Dominion territory with valuable loot, you must survive the journey back to a Safe Zone before you can deposit to Vault.
+</Callout>
+
+---
+
+## Strategic Considerations
+
+### Before Entering PvP Zones
+
+**Recommended Bag Contents:**
+- Equipped best gear (safe)
+- Health potions (replaceable)
+- Mana potions (replaceable)
+- Buff scrolls (worth the risk)
+- Minimal gold (can drop)
+
+**Leave in Vault:**
+- Backup equipment
+- Rare materials
+- Large gold reserves
+- Items for other characters
+
+### The Loot Decision
+
+When you find valuable loot in a dangerous zone, you face a choice:
+
+```
+Found rare drop! Options:
+│
+├── Continue deeper (more rewards, more risk)
+│   └── Risk: Might die and lose the item
+│
+├── Return to Safe Zone now (secure the loot)
+│   └── Safe: Deposit to Vault, but trip ends
+│
+└── Strategic hybrid
+    └── Clear path to exit, THEN push deeper
+```
+
+<Callout type="tip">
+**Pro Strategy:** When you find something valuable, consider making a "loot run" back to safety. The extra trip is worth securing rare items.
+</Callout>
+
+---
+
+## Death Recovery
+
+### PvE Death (Durability Loss)
+
+In PvE zones, death only costs durability:
+- 10% durability loss on all equipped items
+- No items drop from Bag
+- Respawn at nearest Safe Zone
+
+### PvP Death (Item Drop)
+
+In PvP zones, death is more punishing:
+- Random items drop from Bag (3-5 items typically)
+- Dropped items appear on ground
+- **Killer can loot your drops** (and anyone else nearby)
+- Respawn at nearest Safe Zone
+- Equipped items are safe
+
+<Callout type="info">
+**Corpse Run:** You can attempt to return to where you died to recover dropped items - but they may already be taken by your killer or other players.
+</Callout>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Armored boot - left -->
+  <path
+    d="M8 8 L18 8 L18 28 L20 32 L20 38 L22 40 L22 44 L4 44 L4 40 L6 36 L6 28 Z"
+    fill="#c8b89a" fill-opacity="0.15"
+    stroke="#c8b89a" stroke-width="2"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+  <!-- Armored boot - right -->
+  <path
+    d="M30 8 L40 8 L42 28 L42 36 L44 40 L44 44 L26 44 L26 40 L28 32 L30 28 Z"
+    fill="#c8b89a" fill-opacity="0.15"
+    stroke="#c8b89a" stroke-width="2"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+  <!-- Left boot cuff -->
+  <path
+    d="M7 12 L19 12"
+    fill="none"
+    stroke="#c8b89a" stroke-width="1.5"
+    stroke-linecap="round"
+    opacity="0.6"
+  />
+  <!-- Right boot cuff -->
+  <path
+    d="M29 12 L41 12"
+    fill="none"
+    stroke="#c8b89a" stroke-width="1.5"
+    stroke-linecap="round"
+    opacity="0.6"
+  />
+  <!-- Left sole line -->
+  <path
+    d="M4 40 L22 40"
+    fill="none"
+    stroke="#c8b89a" stroke-width="1.5"
+    stroke-linecap="round"
+    opacity="0.5"
+  />
+  <!-- Right sole line -->
+  <path
+    d="M26 40 L44 40"
+    fill="none"
+    stroke="#c8b89a" stroke-width="1.5"
+    stroke-linecap="round"
+    opacity="0.5"
+  />
+</svg>

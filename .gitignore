@@ -1,0 +1,132 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build
+dist/
+build/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Database
+*.db
+*.sqlite
+prisma/migrations/*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+.cache/
+temp/
+
+# Backups / database dumps
+backups/
+*.dump
+
+# Temp/Generated folders (DO NOT COMMIT)
+lpc-generator-temp/
+lpc-updates-temp/
+
+# Downloaded assets (can be re-downloaded)
+downloads/
+
+# Zip files
+*.zip
+*.tar.gz
+
+# Large temporary images
+image copy.png
+
+# Windows artifacts
+nul
+
+# Claude
+.claude/
+
+# ============================================================
+# UNUSED LPC SPRITE DIRECTORIES
+# ~64K files / ~75MB excluded. Remove lines to re-include.
+# ============================================================
+
+# body/ unused variants
+arcania-client/public/assets/sprites/lpc/body/prosthesis/
+arcania-client/public/assets/sprites/lpc/body/tail/
+arcania-client/public/assets/sprites/lpc/body/wheelchair/
+arcania-client/public/assets/sprites/lpc/body/wings/
+arcania-client/public/assets/sprites/lpc/body/wound/
+
+# head/heads/ unused races (only human + orc are used)
+arcania-client/public/assets/sprites/lpc/head/heads/alien/
+arcania-client/public/assets/sprites/lpc/head/heads/boarman/
+arcania-client/public/assets/sprites/lpc/head/heads/frankenstein/
+arcania-client/public/assets/sprites/lpc/head/heads/goblin/
+arcania-client/public/assets/sprites/lpc/head/heads/jack/
+arcania-client/public/assets/sprites/lpc/head/heads/lizard/
+arcania-client/public/assets/sprites/lpc/head/heads/minotaur/
+arcania-client/public/assets/sprites/lpc/head/heads/mouse/
+arcania-client/public/assets/sprites/lpc/head/heads/pig/
+arcania-client/public/assets/sprites/lpc/head/heads/rabbit/
+arcania-client/public/assets/sprites/lpc/head/heads/rat/
+arcania-client/public/assets/sprites/lpc/head/heads/sheep/
+arcania-client/public/assets/sprites/lpc/head/heads/skeleton/
+arcania-client/public/assets/sprites/lpc/head/heads/troll/
+arcania-client/public/assets/sprites/lpc/head/heads/vampire/
+arcania-client/public/assets/sprites/lpc/head/heads/wartotaur/
+arcania-client/public/assets/sprites/lpc/head/heads/wolf/
+arcania-client/public/assets/sprites/lpc/head/heads/zombie/
+
+# eyes/ unused
+arcania-client/public/assets/sprites/lpc/eyes/cyclops/
+
+# beards/ unused
+arcania-client/public/assets/sprites/lpc/beards/mustache/
+
+# cape/ unused variants (only solid + solid_behind are used)
+arcania-client/public/assets/sprites/lpc/cape/tattered/
+arcania-client/public/assets/sprites/lpc/cape/tattered_behind/
+arcania-client/public/assets/sprites/lpc/cape/trim/
+
+# shield/ unused variants
+arcania-client/public/assets/sprites/lpc/shield/female/
+arcania-client/public/assets/sprites/lpc/shield/male/
+arcania-client/public/assets/sprites/lpc/shield/two_engrailed/
+arcania-client/public/assets/sprites/lpc/shield/two_engrailed_trim/
+arcania-client/public/assets/sprites/lpc/shield/scutum_trim/
+arcania-client/public/assets/sprites/lpc/shield/heater/revised/
+arcania-client/public/assets/sprites/lpc/shield/heater/pattern/
+arcania-client/public/assets/sprites/lpc/shield/heater/original/pattern/
+arcania-client/public/assets/sprites/lpc/shield/heater/original/wood/
+
+# hat/ unused variant
+arcania-client/public/assets/sprites/lpc/hat/pirate/bicorne/athwart/
+
+# Legacy duplicate weapon sprites (replaced by /weapons/)
+arcania-client/public/assets/sprites/lpc/weapon/
+
+# Unused files
+arcania-client/testsprites.png
+arcania-client/scripts/
+
+# Unused background image (not referenced by code)
+arcania-client/public/nexusbg.jpg

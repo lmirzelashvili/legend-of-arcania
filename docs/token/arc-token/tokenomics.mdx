@@ -1,0 +1,207 @@
+---
+title: Tokenomics
+description: ARC Token supply, distribution, vesting schedules, and launch parameters.
+---
+
+ARC Token features a **fixed maximum supply of 100 million tokens** with a fair launch distribution that prioritizes player rewards. No team or marketing allocation - the team profits from game success, not token dumps.
+
+---
+
+## Supply Overview
+
+| Metric | Value |
+|--------|-------|
+| **Token Name** | ARC Token |
+| **Token Symbol** | ARC |
+| **Max Supply** | 100,000,000 |
+| **Initial Circulating** | 5-10M (5-10%) |
+
+<Callout type="info">
+The maximum supply is permanently fixed at 100 million tokens. No additional tokens can ever be minted, ensuring scarcity.
+</Callout>
+
+---
+
+## Token Distribution
+
+| Allocation | Percentage | Tokens | Purpose |
+|------------|------------|--------|---------|
+| **Play-to-Earn** | 75% | 75,000,000 | Player rewards, released based on growth |
+| **Treasury** | 10% | 10,000,000 | Ecosystem development, DAO-governed |
+| **Private Sale** | 5% | 5,000,000 | Early investor allocation |
+| **Public Sale** | 5% | 5,000,000 | Community launch allocation |
+| **Liquidity Pool** | 5% | 5,000,000 | DEX liquidity, permanently locked |
+
+<TokenDistributionChart />
+
+### Why No Team/Marketing/Advisor Allocation?
+
+| Traditional Model | Arcania Model |
+|-------------------|---------------|
+| Team gets tokens, dumps after vesting | Team profits from game revenue (aligned forever) |
+| Marketing tokens given to partners who dump | Marketing paid from revenue (no sell pressure) |
+| Short vesting = predictable dump events | No insider tokens = no insider dumps |
+
+The team is compensated through:
+- **Marketplace fees** (5% of all trades)
+- **Account creation fees** ($0.99 per account)
+- **Arcanite purchases** (premium currency sales)
+- **Future cosmetic sales**
+
+This creates permanent alignment - the team only profits when the game succeeds.
+
+---
+
+## Vesting Schedules
+
+All non-player allocations follow strict vesting designed to **never collide with halving events**:
+
+| Allocation | Cliff | Vesting | Fully Unlocked |
+|------------|-------|---------|----------------|
+| **Public Sale (5%)** | None | 9-month linear | Month 9 |
+| **Private Sale (5%)** | 3 months | 18-month linear | Month 21 |
+| **Treasury (10%)** | 18-month lock | DAO-governed | Month 18 |
+| **Liquidity Pool (5%)** | Permanent lock | LP tokens burned | Never |
+
+### Halving-Aligned Design
+
+Vesting unlocks are intentionally staggered between halving events to prevent sell pressure spikes:
+
+| Month | Emission Event | Vesting Event |
+|-------|----------------|---------------|
+| 6 | **Halving #1** (2.5M → 1.25M) | — |
+| 9 | — | Public Sale fully vested |
+| 12 | **Halving #2** (1.25M → 625k) | — |
+| 18 | — | Treasury unlocks (DAO-controlled) |
+| 19 | **Tail begins** (500k/mo) | — |
+| 21 | — | Private Sale fully vested |
+
+<Callout type="info">
+Liquidity Pool tokens are **permanently locked** at launch — LP tokens are burned, meaning liquidity can never be removed. This is a permanent commitment to tradability.
+</Callout>
+
+---
+
+## Play-to-Earn Emissions
+
+The 75% P2E allocation (75M tokens) releases with a **6-month halving cycle** aligned with the game's seasonal structure:
+
+### Halving Schedule
+
+#### Halving Phase (Months 1-18)
+
+| Period | Seasons | Monthly Emission | Total Released | Cumulative |
+|--------|---------|------------------|----------------|------------|
+| **Months 1-6** | S1-S2 | 2,500,000 | 15,000,000 | 15M (20%) |
+| **Months 7-12** | S3-S4 | 1,250,000 | 7,500,000 | 22.5M (30%) |
+| **Months 13-18** | S5-S6 | 625,000 | 3,750,000 | 26.25M (35%) |
+
+#### Tail Phase (Month 19+)
+
+| Period | Monthly Emission | Annual | Remaining to Emit | Cumulative |
+|--------|------------------|--------|--------------------|------------|
+| **Month 19+** | 500,000 | 6,000,000 | 48,750,000 | 75M (100%) |
+
+The tail phase begins at Month 19, when the next halving rate (312,500/mo) would drop below the tail floor of 500,000/mo. The tail emits the remaining 48.75M tokens over ~97.5 months (~8.1 years).
+
+**Total P2E timeline: ~9.6 years**
+
+### Why 6-Month Halving?
+
+- **Aligned with 3-month seasons** — halving occurs every 2 seasons
+- **Creates urgency** — "Play before the next halving!"
+- **Browser game pace** — faster than Bitcoin's 4-year or traditional 2-year cycles
+- **Sustainable** — P2E pool lasts ~10 years with tail emissions
+
+<Callout type="warning">
+P2E emissions follow a fixed 6-month halving schedule for 18 months, then transition to a 500k/month tail emission until all 75M tokens are distributed (~9.6 years total). Combined with burn mechanics, this ensures long-term scarcity.
+</Callout>
+
+---
+
+## Arcanite Emission Peg
+
+Arcanite earned through gameplay is **directly pegged** to ARC Token emissions. This single rule ties both currencies together:
+
+<FormulaBlock title="The Rule">
+Monthly Arcanite Earn Cap = Monthly ARC Emission × 100
+</FormulaBlock>
+
+Since the base conversion rate is 100 Arcanite = 1 ARC, earned Arcanite never exceeds what ARC can back. When ARC halves, Arcanite halves with it.
+
+### Linked Halving Schedule
+
+| Period | ARC Emission/mo | Arcanite Earn Cap/mo |
+|--------|----------------|---------------------|
+| **Months 1-6** | 2,500,000 | 250,000,000 |
+| **Months 7-12** | 1,250,000 | 125,000,000 |
+| **Months 13-18** | 625,000 | 62,500,000 |
+| **Month 19+** | 500,000 | 50,000,000 |
+
+### Earned vs Purchased
+
+| Source | Capped? | Rationale |
+|--------|---------|-----------|
+| **Earned** (drops, events, BP, achievements) | Yes — within monthly cap | Prevents inflation, pegged to ARC |
+| **Purchased** (real money packs) | No | Player exchanged real money — not inflationary |
+
+### Why This Matters
+
+- **One halving controls both currencies** — no separate Arcanite inflation schedule needed
+- **Perfect backing** — every earned Arcanite has ARC behind it
+- **No SLP problem** — earned supply can never outpace conversion capacity
+- **Sinks add deflation** — marketplace fees, cosmetics, and conversions remove Arcanite on top of the cap
+
+<Callout type="info">
+The Arcanite earn cap is distributed across all earn sources (monster drops, events, Battle Pass, achievements). When the monthly cap is reached, drop rates adjust dynamically for the remainder of the period.
+</Callout>
+
+---
+
+## Launch Parameters
+
+| Parameter | Target |
+|-----------|--------|
+| **Initial Market Cap** | $25k - $100k |
+| **Token Launch Price** | $0.005 - $0.01 |
+| **Initial DEX Liquidity** | $50k - $100k |
+| **Initial Circulating Supply** | 5-10% (5-10M tokens) |
+
+---
+
+## Deflationary Mechanisms
+
+ARC Token is designed to be **deflationary after Year 2**, with target annual deflation of 3-5%:
+
+| Mechanism | Burn Rate | Annual Impact |
+|-----------|-----------|---------------|
+| **Withdrawal Fees** | 2-3% of all conversions (burned) | Variable |
+| **Marketplace Fees** | 2-3% of ARC trades | ~1-2% of supply |
+| **Crafting Burns** | Variable per action | ~0.5-1% of supply |
+| **Premium Features** | Partial burns | ~0.5% of supply |
+
+---
+
+## Dynamic Rate Oracle
+
+The exchange system uses a **Dynamic Rate Oracle** to maintain economic health. Some parameters are fixed forever (base rate, account formula, 2-week lock at 100%, fees at 3%/2%), while others adjust within published hard limits: instant rate (30-60%), 1-week rate (60-80%), and weekly caps (5k-15k basic / 10k-25k KYC).
+
+The 2-week lock rate is **never touched** — patient players always receive 100% of their account rate regardless of Oracle state.
+
+<Callout type="info">
+For full Oracle documentation including trigger conditions and adjustment rules, see the **[Economic Design](/docs/token/economics#dynamic-rate-oracle)** page.
+</Callout>
+
+---
+
+## Comparison to Other Games
+
+| Game | Max Supply | P2E Allocation | Launch Year |
+|------|-----------|----------------|-------------|
+| **ARC Token** | 100M | 75% | 2026 |
+| Big Time | 5B | 60% | 2023 |
+| Gods Unchained | 500M | 34% | 2019 |
+| Illuvium | 10M | 30% | 2022 |
+| Axie (AXS) | 270M | 29% | 2020 |
+
+ARC Token leads the industry with 75% P2E allocation - a true fair launch model where players, not insiders, receive the majority of tokens.

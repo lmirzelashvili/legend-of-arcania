@@ -1,0 +1,417 @@
+---
+title: Character System
+description: Complete guide to races, classes, stats, and character progression.
+---
+
+> "Numbers tell the story of your strength, but they do not define your spirit. A warrior with half the stats of another may still triumph-if their will is greater."
+> - <img src="/game-icons/avatars/divine_family/erion_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> Erion, Last of the Gods
+
+Players create a unique character by selecting a race and class, then develop their character through stat allocation and equipment choices.
+
+---
+
+## Races
+
+Arcania features four playable races, each with unique lore, visual identity, and starting stat bonuses.
+
+| Race | Primary Bonuses |
+|------|-----------------|
+| <RaceMention race="human">Human</RaceMention> | All Stats +1, +5% XP |
+| <RaceMention race="luminar">Luminar</RaceMention> | INT +3, SPR +3 |
+| <RaceMention race="lilin">Lilin</RaceMention> | AGI +4, SPR +2 |
+| <RaceMention race="darkan">Darkan</RaceMention> | STR +4, VIT +4 |
+
+<Callout type="tip">
+New players should consider Human for versatility, or choose based on their preferred class. See the class pages for race recommendations.
+</Callout>
+
+---
+
+## Classes
+
+Each class has a distinct playstyle, unique abilities, and preferred stat distributions.
+
+| Class | Role | Difficulty | Primary Stats |
+|-------|------|------------|---------------|
+| <ClassMention class="paladin">[Paladin](/docs/gameplay/classes/paladin)</ClassMention> | Tank/Support | Medium | STR, VIT, SPR |
+| <ClassMention class="cleric">[Cleric](/docs/gameplay/classes/cleric)</ClassMention> | Healer/Support | Medium | SPR, INT, VIT |
+| <ClassMention class="mage">[Mage](/docs/gameplay/classes/mage)</ClassMention> | Ranged DPS/CC | Hard | INT, SPR, AGI |
+| <ClassMention class="warrior">[Warrior](/docs/gameplay/classes/warrior)</ClassMention> | Melee DPS/Off-Tank | Easy | STR, AGI, VIT |
+| <ClassMention class="ranger">[Ranger](/docs/gameplay/classes/ranger)</ClassMention> | Ranged DPS/Utility | Medium | AGI, STR, INT |
+
+---
+
+## Primary Stats (5)
+
+Primary stats are the five core attributes you directly allocate points to. Each affects multiple derived stats.
+
+<Callout type="info">
+Primary stats come **only** from level-up point allocation and racial bonuses. Equipment provides derived stats (like <DerivedStatMention stat="attack_speed" link={false}>Attack Speed</DerivedStatMention> or <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention>) but not primary stats like STR or VIT.
+</Callout>
+
+<StatTable
+  title="Primary Stat Overview"
+  data={[
+    { stat: "Strength (STR)", value: "Physical power", description: "Physical damage, armor penetration" },
+    { stat: "Intelligence (INT)", value: "Magical power", description: "Magic damage, mana pool, magic penetration" },
+    { stat: "Vitality (VIT)", value: "Health & toughness", description: "Max HP, physical defense, HP regen" },
+    { stat: "Agility (AGI)", value: "Speed & precision", description: "Crit chance, crit damage, attack speed, movement" },
+    { stat: "Spirit (SPR)", value: "Magic attunement", description: "Mana regen, magic resistance" },
+  ]}
+/>
+
+### Per-Point Scaling
+
+| Stat | Per Point Bonus |
+|------|-----------------|
+| **STR** | +2.0 <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention>, +0.05% <DerivedStatMention stat="armor_penetration" link={false}>Armor Penetration</DerivedStatMention> |
+| **INT** | +2.5 <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention>, +8 <DerivedStatMention stat="max_mana" link={false}>Max Mana</DerivedStatMention>, +0.05% <DerivedStatMention stat="magic_penetration" link={false}>Magic Penetration</DerivedStatMention> |
+| **VIT** | +12 <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention>, +2.0 <DerivedStatMention stat="physical_defense" link={false}>Physical Defense</DerivedStatMention>, +0.5 <DerivedStatMention stat="hp_regen" link={false}>HP Regen</DerivedStatMention> |
+| **AGI** | +0.12% <DerivedStatMention stat="critical_chance" link={false}>Crit Chance</DerivedStatMention>, +0.25% <DerivedStatMention stat="critical_damage" link={false}>Crit Damage</DerivedStatMention>, +0.5% <DerivedStatMention stat="attack_speed" link={false}>Attack Speed</DerivedStatMention>, +0.1% <DerivedStatMention stat="movement_speed" link={false}>Movement Speed</DerivedStatMention> |
+| **SPR** | +4 <DerivedStatMention stat="max_mana" link={false}>Max Mana</DerivedStatMention>, +2.0 <DerivedStatMention stat="magic_resistance" link={false}>Magic Resistance</DerivedStatMention>, +0.8 <DerivedStatMention stat="mana_regen" link={false}>Mana Regen</DerivedStatMention> |
+
+### Starting Stats by Class
+
+| Class | STR | INT | VIT | AGI | SPR | Total |
+|-------|-----|-----|-----|-----|-----|-------|
+| <ClassMention class="paladin" link={false}>Paladin</ClassMention> | 14 | 6 | 14 | 8 | 8 | 50 |
+| <ClassMention class="warrior" link={false}>Warrior</ClassMention> | 16 | 4 | 12 | 14 | 4 | 50 |
+| <ClassMention class="mage" link={false}>Mage</ClassMention> | 4 | 18 | 8 | 10 | 10 | 50 |
+| <ClassMention class="cleric" link={false}>Cleric</ClassMention> | 6 | 12 | 10 | 6 | 16 | 50 |
+| <ClassMention class="ranger" link={false}>Ranger</ClassMention> | 12 | 8 | 8 | 16 | 6 | 50 |
+
+### Stat Points Per Level
+
+| Level Range | Points/Level | Cumulative |
+|-------------|--------------|------------|
+| 1-50 | 5 | 250 |
+| 51-85 | 4 | 390 |
+
+---
+
+## Derived Stats (13)
+
+Derived stats are calculated from primary stats, equipment bonuses, buffs, and other sources. Equipment provides derived stats through slot identity bonuses and socketed gems.
+
+### Stat Categories
+
+```
+Primary Stats (5)
+    │
+    ├── Offensive (7)
+    │   ├── Physical Attack
+    │   ├── Magic Attack
+    │   ├── Critical Chance
+    │   ├── Critical Damage
+    │   ├── Attack Speed
+    │   ├── Armor Penetration
+    │   └── Magic Penetration
+    │
+    ├── Defensive (2)
+    │   ├── Physical Defense
+    │   └── Magic Resistance
+    │
+    ├── Resources (4)
+    │   ├── Max HP
+    │   ├── Max Mana
+    │   ├── HP Regeneration
+    │   └── Mana Regeneration
+    │
+    └── Utility (1)
+        └── Movement Speed
+```
+
+### How Stats Affect Abilities
+
+Abilities scale from **derived stats**, not primary stats directly:
+
+```
+Level Up → Allocate Primary Stats (STR, INT, etc.)
+    ↓
+Primary Stats convert to Derived Stats
+    ↓
+Equipment adds more Derived Stats
+    ↓
+Abilities scale from total Derived Stats
+```
+
+| Class | Abilities Scale From |
+|-------|---------------------|
+| <ClassMention class="warrior" link={false}>Warrior</ClassMention> | <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> |
+| <ClassMention class="paladin" link={false}>Paladin</ClassMention> | <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> (+ <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> for hybrid) |
+| <ClassMention class="ranger" link={false}>Ranger</ClassMention> | <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> |
+| <ClassMention class="mage" link={false}>Mage</ClassMention> | <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> |
+| <ClassMention class="cleric" link={false}>Cleric</ClassMention> | <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> |
+
+<Callout type="info">
+This means equipment directly affects ability damage. A sword with +50 <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> adds +50 damage (×skill multiplier) to Warrior abilities!
+</Callout>
+
+---
+
+## Offensive Stats
+
+### <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention>
+
+<FormulaBlock title="Physical Attack">
+Physical Attack = (STR × 2) + Weapon Damage + Equipment Stats
+</FormulaBlock>
+
+### <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention>
+
+<FormulaBlock title="Magic Attack">
+Magic Attack = (INT × 2.5) + Weapon Spell Power + Equipment Stats
+</FormulaBlock>
+
+### <DerivedStatMention stat="critical_chance" link={false}>Critical Chance</DerivedStatMention>
+
+<FormulaBlock title="Critical Chance">
+Critical Chance = 5% + (AGI × 0.12%) + Equipment Stats
+Cap: 50%
+</FormulaBlock>
+
+| AGI | Crit Chance |
+|-----|-------------|
+| 50 | 11% |
+| 100 | 17% |
+| 150 | 23% |
+| 200 | 29% |
+
+### <DerivedStatMention stat="critical_damage" link={false}>Critical Damage</DerivedStatMention>
+
+<FormulaBlock title="Critical Damage">
+Critical Damage = 125% + (AGI × 0.25%) + Equipment Stats
+Cap: 200%
+</FormulaBlock>
+
+| AGI | Crit Damage |
+|-----|-------------|
+| 50 | 137.5% |
+| 100 | 150% |
+| 150 | 162.5% |
+| 200 | 175% |
+
+### <DerivedStatMention stat="attack_speed" link={false}>Attack Speed</DerivedStatMention>
+
+<FormulaBlock title="Attack Speed">
+Attack Speed = Weapon Base × (1 + AGI × 0.005) × (1 + Equipment Stats)
+Soft Cap: 2.5 APS
+</FormulaBlock>
+
+| AGI | Speed Bonus | 1.0 Base → Actual |
+|-----|-------------|-------------------|
+| 50 | +25% | 1.25 APS |
+| 100 | +50% | 1.50 APS |
+| 150 | +75% | 1.75 APS |
+| 200 | +100% | 2.00 APS |
+
+### <DerivedStatMention stat="armor_penetration" link={false}>Armor Penetration</DerivedStatMention>
+
+<FormulaBlock title="Armor Penetration">
+Armor Penetration = (STR × 0.05%) + Equipment Stats
+Cap: 40%
+</FormulaBlock>
+
+Reduces enemy Physical Defense by the percentage before damage calculation.
+
+### <DerivedStatMention stat="magic_penetration" link={false}>Magic Penetration</DerivedStatMention>
+
+<FormulaBlock title="Magic Penetration">
+Magic Penetration = (INT × 0.05%) + Equipment Stats
+Cap: 40%
+</FormulaBlock>
+
+Reduces enemy Magic Resistance by the percentage before damage calculation.
+
+---
+
+## Defensive Stats
+
+### <DerivedStatMention stat="physical_defense" link={false}>Physical Defense</DerivedStatMention>
+
+<FormulaBlock title="Physical Defense">
+Physical Defense = (VIT × 2) + Armor Value + Equipment Stats
+Damage Reduction = Defense / (Defense + 100 + AttackerLevel × 5)
+</FormulaBlock>
+
+| Defense | vs Level 50 | Reduction |
+|---------|-------------|-----------|
+| 200 | 200 / 550 | 36% |
+| 400 | 400 / 750 | 53% |
+| 600 | 600 / 950 | 63% |
+| 800 | 800 / 1150 | 70% |
+
+### <DerivedStatMention stat="magic_resistance" link={false}>Magic Resistance</DerivedStatMention>
+
+<FormulaBlock title="Magic Resistance">
+Magic Resistance = (SPR × 2) + Magic Armor + Equipment Stats
+Magic Reduction = Resistance / (Resistance + 100 + AttackerLevel × 5)
+</FormulaBlock>
+
+---
+
+## Resource Stats
+
+### <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention>
+
+<FormulaBlock title="Max HP">
+Max HP = Class Base + (VIT × 12) + (Level × 15) + Equipment Stats
+</FormulaBlock>
+
+| Class | Base HP |
+|-------|---------|
+| <ClassMention class="paladin" link={false}>Paladin</ClassMention> | 200 |
+| <ClassMention class="warrior" link={false}>Warrior</ClassMention> | 150 |
+| <ClassMention class="cleric" link={false}>Cleric</ClassMention> | 120 |
+| <ClassMention class="ranger" link={false}>Ranger</ClassMention> | 120 |
+| <ClassMention class="mage" link={false}>Mage</ClassMention> | 100 |
+
+### <DerivedStatMention stat="max_mana" link={false}>Max Mana</DerivedStatMention>
+
+<FormulaBlock title="Max Mana">
+Max Mana = Class Base + (INT × 8) + (SPR × 4) + (Level × 8) + Equipment Stats
+</FormulaBlock>
+
+| Class | Base Mana |
+|-------|-----------|
+| <ClassMention class="mage" link={false}>Mage</ClassMention> | 200 |
+| <ClassMention class="cleric" link={false}>Cleric</ClassMention> | 180 |
+| <ClassMention class="ranger" link={false}>Ranger</ClassMention> | 120 |
+| <ClassMention class="paladin" link={false}>Paladin</ClassMention> | 100 |
+| <ClassMention class="warrior" link={false}>Warrior</ClassMention> | 80 |
+
+### <DerivedStatMention stat="hp_regen" link={false}>HP Regeneration</DerivedStatMention>
+
+<FormulaBlock title="HP Regeneration">
+HP Regen = (VIT × 0.5) + (SPR × 0.2) + Equipment Stats per tick (2 seconds)
+Out of Combat: ×3 multiplier
+In Combat: ×1 multiplier
+</FormulaBlock>
+
+### <DerivedStatMention stat="mana_regen" link={false}>Mana Regeneration</DerivedStatMention>
+
+<FormulaBlock title="Mana Regeneration">
+Mana Regen = (SPR × 0.8) per tick (2 seconds)
+Out of Combat: ×2 multiplier
+In Combat: ×1 multiplier
+</FormulaBlock>
+
+---
+
+## Utility Stats
+
+### <DerivedStatMention stat="movement_speed" link={false}>Movement Speed</DerivedStatMention>
+
+<FormulaBlock title="Movement Speed">
+Movement Speed = 100% + (AGI × 0.1%) + Equipment Stats
+</FormulaBlock>
+
+| AGI | Move Speed |
+|-----|------------|
+| 50 | 105% |
+| 100 | 110% |
+| 150 | 115% |
+| 200 | 120% |
+
+---
+
+## Stat Caps
+
+| Stat | Cap | Type |
+|------|-----|------|
+| <DerivedStatMention stat="critical_chance" link={false}>Critical Chance</DerivedStatMention> | 50% | Hard cap |
+| <DerivedStatMention stat="critical_damage" link={false}>Critical Damage</DerivedStatMention> | 200% | Hard cap |
+| <DerivedStatMention stat="attack_speed" link={false}>Attack Speed</DerivedStatMention> | 2.5 APS | Soft cap (50% efficiency beyond) |
+| <DerivedStatMention stat="armor_penetration" link={false}>Armor Penetration</DerivedStatMention> | 40% | Hard cap |
+| <DerivedStatMention stat="magic_penetration" link={false}>Magic Penetration</DerivedStatMention> | 40% | Hard cap |
+
+---
+
+## Class Stat Priorities
+
+| Class | Primary | Secondary | Tertiary |
+|-------|---------|-----------|----------|
+| <ClassMention class="paladin" link={false}>**Paladin (Tank)**</ClassMention> | VIT | STR | SPR |
+| <ClassMention class="paladin" link={false}>**Paladin (Support)**</ClassMention> | SPR | VIT | STR |
+| <ClassMention class="cleric" link={false}>**Cleric (Healer)**</ClassMention> | SPR | INT | VIT |
+| <ClassMention class="mage" link={false}>**Mage (DPS)**</ClassMention> | INT | AGI | SPR |
+| <ClassMention class="warrior" link={false}>**Warrior (DPS)**</ClassMention> | STR | AGI | VIT |
+| <ClassMention class="warrior" link={false}>**Warrior (Tank)**</ClassMention> | VIT | STR | AGI |
+| <ClassMention class="ranger" link={false}>**Ranger (DPS)**</ClassMention> | AGI | STR | INT |
+
+---
+
+## Example Calculations
+
+### Level 50 Warrior
+
+**Stats:** STR 150, INT 20, VIT 80, AGI 100, SPR 20
+
+<FormulaBlock title="Calculated Stats">
+Physical Attack = 150 × 2 = 300 (+ weapon)
+Physical Defense = 80 × 2 = 160 (+ armor)
+Max HP = 150 + (80 × 12) + (50 × 15) = 1,860
+Critical Chance = 5% + (100 × 0.12%) = 17%
+Critical Damage = 125% + (100 × 0.25%) = 150%
+Attack Speed = 1.0 × (1 + 100 × 0.005) = 1.5 APS
+Armor Penetration = 150 × 0.05% = 7.5%
+</FormulaBlock>
+
+### Level 50 Mage
+
+**Stats:** STR 20, INT 150, VIT 60, AGI 80, SPR 100
+
+<FormulaBlock title="Calculated Stats">
+Magic Attack = 150 × 2.5 = 375 (+ weapon)
+Magic Resistance = 100 × 2 = 200 (+ armor)
+Max HP = 100 + (60 × 12) + (50 × 15) = 1,570
+Max Mana = 200 + (150 × 8) + (100 × 4) + (50 × 8) = 2,200
+Critical Chance = 5% + (80 × 0.12%) = 14.6%
+Magic Penetration = 150 × 0.05% = 7.5%
+</FormulaBlock>
+
+---
+
+## Leveling System
+
+### Experience Curve
+
+<FormulaBlock title="XP Formula">
+XP Required = Level × 1000 × (1 + Level × 0.05)
+</FormulaBlock>
+
+| Level | XP Required | Cumulative |
+|-------|-------------|------------|
+| 1→2 | 1,050 | 1,050 |
+| 10→11 | 15,000 | 82,500 |
+| 25→26 | 56,250 | 656,250 |
+| 50→51 | 175,000 | 4,462,500 |
+| 84→85 | 436,800 | 12,150,000 |
+
+## Stat Respeccing
+
+| Respec Type | Cost | Cooldown |
+|-------------|------|----------|
+| Full Reset | 50,000 gold | 7 days |
+| Free Respec Token | Event reward | N/A |
+
+<Callout type="tip">
+Free respec tokens are given during major balance patches. Save your gold!
+</Callout>
+
+---
+
+## Character Deletion & Recovery
+
+<Callout type="warning">
+Characters above level 10 have a 7-day recovery period. Delete carefully!
+</Callout>
+
+### Deletion Rules
+- Characters below level 10: Immediate deletion
+- Characters level 10+: 7-day recovery period
+
+### Recovery
+- Deleted characters can be recovered within 7 days
+- All items and progress preserved
+- Gold has 10% tax on recovery

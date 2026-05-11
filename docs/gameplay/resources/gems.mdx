@@ -1,0 +1,220 @@
+---
+title: Gems
+description: Socket gems with random stat rolls for god roll hunting.
+---
+
+Gems are crystallized power sources that socket into equipment. Each gem randomly rolls ONE stat from its category, creating exciting double-RNG for god roll hunting.
+
+---
+
+## How Gems Work
+
+1. **Get a gem** (<GemMention gem="anguish" link={false}>Anguish</GemMention>, <GemMention gem="void" link={false}>Void</GemMention>, or <GemMention gem="light" link={false}>Light</GemMention>)
+2. **Stat rolls randomly** from that gem's pool
+3. **Value rolls** within ±20% range
+4. **Socket it** into any equipment with an empty socket
+
+<Callout type="info">
+Two layers of RNG: which stat you get AND how good that stat rolls.
+</Callout>
+
+---
+
+## Socket Distribution
+
+| Equipment Type | Tier 1 | Tier 2 | Tier 3 | Tier 4 | Tier 5 |
+|----------------|:------:|:------:|:------:|:------:|:------:|
+| Armor (per piece) | 1 | 2 | 3 | 4 | 5 |
+| Weapons | 1 | 1 | 2 | 2 | 3 |
+| Shields | 1 | 1 | 2 | 2 | 3 |
+| Accessories | - | - | - | - | - |
+
+---
+
+## Socketing Mechanics
+
+- **Socketing:** Insert gems into any empty socket
+- **Permanent:** Once socketed, gems cannot be removed normally
+- **Removal:** Only a <MaterialMention material="hand_of_blacksmith">Hand of Blacksmith</MaterialMention> can remove a socketed gem
+- **On Removal:** The gem is destroyed, but the item remains intact
+
+<Callout type="warning">
+Gems are permanent once socketed. Using a <MaterialMention material="hand_of_blacksmith" link={false}>**Hand of Blacksmith**</MaterialMention> removes the gem (destroying it) to free the socket for a new gem.
+</Callout>
+
+---
+
+## <GemMention gem="anguish" link={false}>Gem of Anguish</GemMention>
+
+*Crystallized rage of the Titans - raw destructive power.*
+
+**Randomly rolls ONE stat:**
+
+| Possible Stat | Value Range |
+|---------------|:-----------:|
+| <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> | +15-21 |
+| <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> | +18-27 |
+| <DerivedStatMention stat="critical_chance" link={false}>Crit Chance %</DerivedStatMention> | +1-1.5 |
+| <DerivedStatMention stat="critical_damage" link={false}>Crit Damage %</DerivedStatMention> | +2.5-4 |
+| <DerivedStatMention stat="attack_speed" link={false}>Attack Speed %</DerivedStatMention> | +1.4-2.1 |
+
+### God Roll Example
+```
+Gem of Anguish
+├── Stat: Crit Chance % (lucky roll!)
+└── Value: +1.5% (max!)
+```
+
+### Average Roll Example
+```
+Gem of Anguish
+├── Stat: Physical Attack
+└── Value: +18 (mid-range)
+```
+
+### Lore
+The Anguish was the chaotic energy unleashed when the Titans fell. Mages learned to stabilize fragments of this power into gems. Each one pulses with barely contained destruction - perfect for those who seek to unleash devastation upon their enemies.
+
+---
+
+## <GemMention gem="void" link={false}>Gem of Void</GemMention>
+
+*A shard of emptiness that absorbs harm - the Void Titan's gift.*
+
+**Randomly rolls ONE stat:**
+
+| Possible Stat | Value Range |
+|---------------|:-----------:|
+| <DerivedStatMention stat="physical_defense" link={false}>Physical Defense</DerivedStatMention> | +15-21 |
+| <DerivedStatMention stat="magic_resistance" link={false}>Magic Resistance</DerivedStatMention> | +15-21 |
+| <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention> | +75-105 |
+
+### God Roll Example
+```
+Gem of Void
+├── Stat: Max HP (great for any build!)
+└── Value: +105 (max!)
+```
+
+### Average Roll Example
+```
+Gem of Void
+├── Stat: Physical Defense
+└── Value: +18 (mid-range)
+```
+
+### Lore
+When the Void Titan was sealed, fragments of its essence scattered across Arcania. These gems contain pure emptiness - they absorb incoming harm into nothingness. Tanks and frontline fighters prize them for the protection they offer.
+
+---
+
+## <GemMention gem="light" link={false}>Gem of Light</GemMention>
+
+*A sliver of divine light - Anias's radiance sustains and empowers.*
+
+**Randomly rolls ONE stat:**
+
+| Possible Stat | Value Range |
+|---------------|:-----------:|
+| <DerivedStatMention stat="max_mana" link={false}>Max Mana</DerivedStatMention> | +60-84 |
+| <DerivedStatMention stat="hp_regen" link={false}>HP Regen</DerivedStatMention> | +2-3 |
+| <DerivedStatMention stat="mana_regen" link={false}>Mana Regen</DerivedStatMention> | +1.5-2.2 |
+| <DerivedStatMention stat="movement_speed" link={false}>Movement Speed %</DerivedStatMention> | +1.4-2.1 |
+
+### God Roll Example
+```
+Gem of Light
+├── Stat: Movement Speed % (mobility!)
+└── Value: +2.1% (max!)
+```
+
+### Average Roll Example
+```
+Gem of Light
+├── Stat: Max Mana
+└── Value: +72 (mid-range)
+```
+
+### Lore
+The Spark of Light is Anias's divine essence, distributed throughout the mortal realm. These gems capture slivers of that radiance - they sustain life, restore magical reserves, and quicken movement. Healers and support classes treasure them.
+
+---
+
+## Complete Stat Reference
+
+| Gem | Possible Stats | Min | Max |
+|-----|----------------|:---:|:---:|
+| <GemMention gem="anguish" link={false}>**Gem of Anguish**</GemMention> | <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> | +15 | +21 |
+| | <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> | +18 | +27 |
+| | <DerivedStatMention stat="critical_chance" link={false}>Crit Chance %</DerivedStatMention> | +1 | +1.5 |
+| | <DerivedStatMention stat="critical_damage" link={false}>Crit Damage %</DerivedStatMention> | +2.5 | +4 |
+| | <DerivedStatMention stat="attack_speed" link={false}>Attack Speed %</DerivedStatMention> | +1.4 | +2.1 |
+| <GemMention gem="void" link={false}>**Gem of Void**</GemMention> | <DerivedStatMention stat="physical_defense" link={false}>Physical Defense</DerivedStatMention> | +15 | +21 |
+| | <DerivedStatMention stat="magic_resistance" link={false}>Magic Resistance</DerivedStatMention> | +15 | +21 |
+| | <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention> | +75 | +105 |
+| <GemMention gem="light" link={false}>**Gem of Light**</GemMention> | <DerivedStatMention stat="max_mana" link={false}>Max Mana</DerivedStatMention> | +60 | +84 |
+| | <DerivedStatMention stat="hp_regen" link={false}>HP Regen</DerivedStatMention> | +2 | +3 |
+| | <DerivedStatMention stat="mana_regen" link={false}>Mana Regen</DerivedStatMention> | +1.5 | +2.2 |
+| | <DerivedStatMention stat="movement_speed" link={false}>Movement Speed %</DerivedStatMention> | +1.4 | +2.1 |
+
+---
+
+## Acquisition Sources
+
+| Source | Notes |
+|--------|-------|
+| World enemies | All 3 gem types drop |
+| Elite enemies | Higher drop chance |
+| Dominion bosses | Guaranteed drops |
+| Vendors | All 3 types for gold |
+
+<Callout type="tip">
+Farm Dominion bosses for guaranteed gem drops. You'll need many gems to hit god rolls.
+</Callout>
+
+---
+
+## Build Strategies
+
+### Physical DPS
+- Farm <GemMention gem="anguish" link={false}>**Gems of Anguish**</GemMention> hoping for <DerivedStatMention stat="critical_chance" link={false}>Crit Chance</DerivedStatMention>/<DerivedStatMention stat="critical_damage" link={false}>Crit Damage</DerivedStatMention>
+- <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> and <DerivedStatMention stat="attack_speed" link={false}>Attack Speed</DerivedStatMention> are good consolation rolls
+- <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> roll = bad luck, try again
+
+### Magic DPS
+- Farm <GemMention gem="anguish" link={false}>**Gems of Anguish**</GemMention> hoping for <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention>
+- <DerivedStatMention stat="attack_speed" link={false}>Attack Speed</DerivedStatMention> is universally good
+- <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> roll = bad luck for mages
+
+### Tank
+- Farm <GemMention gem="void" link={false}>**Gems of Void**</GemMention> - all 3 stats are useful
+- <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention> is universally good
+- Match defense type to content (Physical vs Magic)
+
+### Healer/Support
+- Mix of <GemMention gem="light" link={false}>**Gems of Light**</GemMention> for mana sustain
+- <GemMention gem="void" link={false}>**Gems of Void**</GemMention> for survivability
+- <DerivedStatMention stat="mana_regen" link={false}>Mana Regen</DerivedStatMention> and <DerivedStatMention stat="max_mana" link={false}>Max Mana</DerivedStatMention> are ideal rolls
+
+### Speed Build
+- Farm <GemMention gem="light" link={false}>**Gems of Light**</GemMention> hoping for <DerivedStatMention stat="movement_speed" link={false}>Movement Speed</DerivedStatMention>
+- <DerivedStatMention stat="attack_speed" link={false}>Attack Speed</DerivedStatMention> from <GemMention gem="anguish" link={false}>Gems of Anguish</GemMention> also helps
+- Great for farming and PvP mobility
+
+---
+
+## Removing Gems
+
+Once socketed, gems cannot be removed by normal means. The only way to free a socket is using a <MaterialMention material="hand_of_blacksmith" link={false}>**Hand of Blacksmith**</MaterialMention>.
+
+| Action | Result |
+|--------|--------|
+| Use <MaterialMention material="hand_of_blacksmith" link={false}>Hand of Blacksmith</MaterialMention> | Socket becomes empty |
+| Gem | **Destroyed** |
+| Equipment | Remains intact |
+
+This allows you to replace a bad gem roll with a better one. The <MaterialMention material="hand_of_blacksmith" link={false}>Hand of Blacksmith</MaterialMention> is consumed in the process.
+
+<Callout type="info">
+See [Materials](/docs/gameplay/resources/materials) for <MaterialMention material="hand_of_blacksmith" link={false}>Hand of Blacksmith</MaterialMention> acquisition sources.
+</Callout>

@@ -1,0 +1,131 @@
+---
+title: Shields
+description: Defensive equipment for Paladins with hybrid random stats.
+---
+
+Shields are defensive equipment used exclusively by <ClassMention class="paladin">Paladins</ClassMention>. Each shield uses the **hybrid random stat system** with base defense, identity stat, random bonus stats, and sockets for gems.
+
+---
+
+## Shield Stat Model
+
+Each shield provides:
+
+| Component | Description |
+|-----------|-------------|
+| **Defense** | Base defense value (scales by tier, ~±10% variance) |
+| **Identity Stat** | Physical Defense (guaranteed) |
+| **Prestige Stat** | Prestige Block % (only on Prestige quality drops) |
+| **Random Bonus Stats** | 1-3 stats from defensive pool |
+| **Sockets** | Empty slots for gems (1/1/2/2/3 by tier) |
+
+<Callout type="info">
+<ClassMention class="paladin" link={false}>**Paladin Only:**</ClassMention> Shields can only be equipped by Paladins, providing them with unique tanking capabilities.
+</Callout>
+
+---
+
+## Base Stats by Tier
+
+Base Defense has ~±10% variance:
+
+| Tier | Defense | Physical Defense (Identity) | Sockets |
+|------|---------|----------------------------|---------|
+| Tier 1 | 12-18 | 4-6 | 1 |
+| Tier 2 | 28-42 | 10-14 | 1 |
+| Tier 3 | 48-72 | 18-26 | 2 |
+| Tier 4 | 80-120 | 28-42 | 2 |
+| Tier 5 | 120-180 | 40-60 | 3 |
+
+---
+
+## Bonus Stats & Sockets by Tier
+
+| Tier | Bonus Stats | Sockets |
+|------|-------------|---------|
+| Tier 1 | 1 random | 1 |
+| Tier 2 | 1 random | 1 |
+| Tier 3 | 2 random | 2 |
+| Tier 4 | 2 random | 2 |
+| Tier 5 | 3 random | 3 |
+
+---
+
+## Prestige Shields
+
+Shields have a 10% chance to drop as **Prestige** quality, gaining bonus Block chance.
+
+| Tier | Prestige Block % |
+|------|------------------|
+| Tier 1 | +1% |
+| Tier 2 | +2% |
+| Tier 3 | +3% |
+| Tier 4 | +4% |
+| Tier 5 | +6% |
+
+<Callout type="info">
+Prestige Block % increases your chance to block incoming attacks, reducing damage taken. Essential for tank Paladins.
+</Callout>
+
+---
+
+## Shield Bonus Pool (Defensive)
+
+Shields draw bonus stats from a defensive pool:
+
+| Stat | T1 | T2 | T3 | T4 | T5 |
+|------|-------|-------|---------|---------|---------|
+| <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention> | 16-24 | 40-60 | 80-120 | 145-215 | 240-360 |
+| <DerivedStatMention stat="magic_resistance" link={false}>Magic Resistance</DerivedStatMention> | 2-4 | 5-9 | 10-16 | 17-27 | 28-42 |
+| <DerivedStatMention stat="hp_regen" link={false}>HP Regen</DerivedStatMention> | 0.2-0.3 | 0.4-0.6 | 0.7-1.1 | 1.0-1.6 | 1.6-2.4 |
+
+---
+
+## Example: Tier 5 Shield
+
+**Standard God Roll:**
+```
+Titan's Aegis (Tier 5 Shield)
+├── Defense: 180 (max)
+├── Identity: Physical Defense +60 (max)
+├── Bonus 1: Max HP +360 (max)
+├── Bonus 2: Magic Resistance +42 (max)
+├── Bonus 3: HP Regen +2.4 (max)
+└── Sockets: [ ] [ ] [ ]
+```
+
+**Prestige God Roll:**
+```
+★ Titan's Aegis (Tier 5 Shield) [PRESTIGE]
+├── Defense: 180 (max)
+├── Identity: Physical Defense +60 (max)
+├── Prestige: Prestige Block +6%
+├── Bonus 1: Max HP +360 (max)
+├── Bonus 2: Magic Resistance +42 (max)
+├── Bonus 3: HP Regen +2.4 (max)
+└── Sockets: [ ] [ ] [ ]
+```
+
+---
+
+## Paladin Shields
+
+| Tier | Shield | Req. Level |
+|------|--------|:----------:|
+| T1 | <ShieldMention shield="iron_shield" link={false}>Iron Shield</ShieldMention> | 1 |
+| T2 | <ShieldMention shield="bastion_shield" link={false}>Bastion Shield</ShieldMention> | 11 |
+| T3 | <ShieldMention shield="golden_bulwark" link={false}>Golden Bulwark</ShieldMention> | 26 |
+| T4 | <ShieldMention shield="glorious_shield" link={false}>Glorious Shield</ShieldMention> | 41 |
+| T5 | <ShieldMention shield="titans_aegis" link={false}>Titan's Aegis</ShieldMention> | 56 |
+
+---
+
+## Acquisition Sources
+
+| Tier | Primary Sources |
+|------|-----------------|
+| Tier 1 | Homeland vendors, starting quests |
+| Tier 2 | Regional quests, elite enemies |
+| Tier 3 | Dominion Zone 1-2 drops, boss rewards |
+| Tier 4 | Dominion Zone 3-4 drops, boss rewards |
+| Tier 5 | Legendary quests, final boss drops |

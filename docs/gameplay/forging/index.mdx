@@ -1,0 +1,189 @@
+---
+title: Forging
+description: Create Wings, Capes, and other equipment at the Forgemaster Anvil.
+---
+
+The **Forgemaster Anvil** is Arcania's central crafting station where players forge powerful equipment from gathered materials.
+
+---
+
+## Forgemaster Anvil
+
+The Forgemaster Anvil allows you to combine materials into equipment. Unlike drops, forged items let you work toward specific goals - but success is never guaranteed.
+
+### How Forging Works
+
+1. **Select a recipe** from the Anvil menu
+2. **Add required materials** (primary material + Crystal of Creation)
+3. **Optional:** Add Crystal of Spirit or Dominion to boost success rate
+4. **Attempt forging** - success creates the item, failure consumes materials
+
+<Callout type="warning">
+Forging is risky. Higher tier items have lower success rates. Add crystals to improve your odds.
+</Callout>
+
+<Callout type="info">
+**Prestige Quality:** All successfully forged items are always Prestige quality.
+</Callout>
+
+---
+
+## Forging Materials
+
+| Material | Purpose | Rarity |
+|----------|---------|--------|
+| <CrystalMention crystal="creation">**Crystal of Creation**</CrystalMention> | Required for all forging | Common |
+| <MaterialMention material="feather_of_roc" link={false}>**Feather of Roc**</MaterialMention> | Forge Wings | Uncommon |
+| <MaterialMention material="thread_of_silkworm" link={false}>**Thread of Silkworm**</MaterialMention> | Forge Capes | Uncommon |
+| <MaterialMention material="finger_of_titan" link={false}>**Finger of Titan**</MaterialMention> | Forge random T4-T5 armor piece | Uncommon |
+| <CrystalMention crystal="spirit">**Crystal of Spirit**</CrystalMention> | +2% success per crystal (max 5) | Common |
+| <CrystalMention crystal="dominion">**Crystal of Dominion**</CrystalMention> | +4% success per crystal (max 5) | Rare |
+
+---
+
+## Success Rates
+
+Base success rates vary by tier. Add crystals to improve your chances - **more crystals = higher bonus**:
+
+| Tier | Base Rate |
+|------|-----------|
+| T1 | 60% |
+| T2 | 40% |
+| T3 | 25% |
+| T4 | 12% |
+| T5 | 5% |
+
+### Crystal Bonuses (Stackable)
+
+| Crystal | Bonus Per Crystal | Max Quantity | Max Bonus |
+|---------|-------------------|--------------|-----------|
+| <CrystalMention crystal="spirit">**Crystal of Spirit**</CrystalMention> | +0.5% per crystal | 30 | +15% |
+| <CrystalMention crystal="dominion">**Crystal of Dominion**</CrystalMention> | +1% per crystal | 20 | +20% |
+
+**Combined Maximum:** +35% (30 Spirit + 20 Dominion)
+
+### Example: Tier 5 Forging
+
+| Crystals Used | Success Rate |
+|---------------|--------------|
+| None | 5% |
+| 10x Spirit | 10% |
+| 30x Spirit | 20% |
+| 20x Dominion | 25% |
+| 30x Spirit + 20x Dominion | 40% |
+
+<Callout type="tip">
+For Tier 5 forging, use maximum crystals (30 Spirit + 20 Dominion) to reach 40% success rate.
+</Callout>
+
+---
+
+## Failure Mechanics
+
+When forging fails, materials are handled differently:
+
+| Material | On Failure |
+|----------|------------|
+| <CrystalMention crystal="creation">**Crystal of Creation**</CrystalMention> | Always consumed |
+| <CrystalMention crystal="spirit">**Crystal of Spirit**</CrystalMention> | Always consumed |
+| <CrystalMention crystal="dominion">**Crystal of Dominion**</CrystalMention> | Always consumed |
+| <MaterialMention material="feather_of_roc" link={false}>**Feathers**</MaterialMention> / <MaterialMention material="thread_of_silkworm" link={false}>**Thread of Silkworm**</MaterialMention> | 20-70% returned (random) |
+
+<Callout type="info">
+Primary materials (Feathers, Thread of Silkworm) have a random chance to be returned on failure. You might recover most of them, or lose everything - it's random each attempt.
+</Callout>
+
+---
+
+## Available Recipes
+
+### Wings
+*For <ClassMention class="paladin" link={false}>Paladins</ClassMention> and <ClassMention class="warrior" link={false}>Warriors</ClassMention>*
+
+| Tier | Wings | Feathers | Crystal of Creation |
+|------|-------|----------|---------------------|
+| T1 | <AccessoryMention accessory="sentinel_wings" link={false}>Sentinel Wings</AccessoryMention> | 15 | 1 |
+| T2 | <AccessoryMention accessory="guardian_wings" link={false}>Guardian Wings</AccessoryMention> | 35 | 2 |
+| T3 | <AccessoryMention accessory="draconic_wings" link={false}>Draconic Wings</AccessoryMention> | 70 | 3 |
+| T4 | <AccessoryMention accessory="nightfall_wings" link={false}>Nightfall Wings</AccessoryMention> | 120 | 4 |
+| T5 | <AccessoryMention accessory="celestial_wings" link={false}>Celestial Wings</AccessoryMention> | 250 | 6 |
+
+### Capes
+*For <ClassMention class="cleric" link={false}>Clerics</ClassMention>, <ClassMention class="mage" link={false}>Mages</ClassMention>, and <ClassMention class="ranger" link={false}>Rangers</ClassMention>*
+
+| Tier | Cape | Thread of Silkworm | Crystal of Creation |
+|------|------|-------------|---------------------|
+| T1 | <AccessoryMention accessory="sentinel_cape" link={false}>Sentinel Cape</AccessoryMention> | 15 | 1 |
+| T2 | <AccessoryMention accessory="honor_cape" link={false}>Honor Cape</AccessoryMention> | 35 | 2 |
+| T3 | <AccessoryMention accessory="warlord_cape" link={false}>Warlord Cape</AccessoryMention> | 70 | 3 |
+| T4 | <AccessoryMention accessory="infernal_cape" link={false}>Infernal Cape</AccessoryMention> | 120 | 4 |
+| T5 | <AccessoryMention accessory="eternal_cape" link={false}>Eternal Cape</AccessoryMention> | 250 | 6 |
+
+---
+
+### <MaterialMention material="finger_of_titan" link={false}>Fingers of Titan</MaterialMention>
+*Forge random T4-T5 armor from existing sets*
+
+Combine <MaterialMention material="finger_of_titan" link={false}>Fingers of Titan</MaterialMention> to forge a random armor piece from the game's existing armor sets.
+
+| Material | Amount | Crystal of Creation |
+|----------|--------|---------------------|
+| <MaterialMention material="finger_of_titan" link={false}>Finger of Titan</MaterialMention> | 250 | 3 |
+
+**What's Random:**
+- **Tier:** T4 or T5 (50/50 chance)
+- **Slot:** Any armor slot (Head, Chest, Gloves, Legs, Boots)
+- **Set:** Any class armor set (Divine Bastion, Dark Berserker, Ancient Venom, Manticore Regalia, etc.)
+- **Stats:** Normal random stat rolls for that piece
+
+**Success Rate:** 40% base (use crystals to boost up to 70%)
+
+<Callout type="info">
+The forged armor follows the same stat and set bonus rules as dropped armor. You might get exactly what you need, or something to trade with other players.
+</Callout>
+
+---
+
+### <MaterialMention material="fang_of_griffin" link={false}>Griffin Fangs</MaterialMention>
+*Forge random T4-T5 weapon or shield from existing sets*
+
+Combine <MaterialMention material="fang_of_griffin" link={false}>Griffin Fangs</MaterialMention> to forge a random weapon or shield from the game's existing equipment sets.
+
+| Material | Amount | Crystal of Creation |
+|----------|--------|---------------------|
+| <MaterialMention material="fang_of_griffin" link={false}>Fang of Griffin</MaterialMention> | 250 | 3 |
+
+**What's Random:**
+- **Tier:** T4 or T5 (50/50 chance)
+- **Type:** Weapon or Shield (random)
+- **Weapon:** Any weapon type (Greatswords, Bows, Staves, Wands, etc.)
+- **Shield:** Any shield type
+- **Stats:** Normal random stat rolls for that piece
+
+**Success Rate:** 40% base (use crystals to boost)
+
+<Callout type="info">
+The forged weapon or shield follows the same stat rules as dropped equipment. You might get exactly what you need, or something to trade with other players.
+</Callout>
+
+---
+
+## Material Acquisition
+
+| Material | Sources |
+|----------|---------|
+| <CrystalMention crystal="creation">**Crystal of Creation**</CrystalMention> | Vendors, Dominion zones, world drops |
+| <MaterialMention material="feather_of_roc">**Feather of Roc**</MaterialMention> | Flying enemies, Dominion zones |
+| <MaterialMention material="thread_of_silkworm">**Thread of Silkworm**</MaterialMention> | Magical enemies, Dominion zones |
+| <MaterialMention material="finger_of_titan">**Finger of Titan**</MaterialMention> | Dominion Generals, Dominion bosses |
+| <MaterialMention material="fang_of_griffin">**Fang of Griffin**</MaterialMention> | Dominion Generals, Dominion bosses |
+| <CrystalMention crystal="spirit">**Crystal of Spirit**</CrystalMention> | See [Crystals](/docs/gameplay/resources/crystals) |
+| <CrystalMention crystal="dominion">**Crystal of Dominion**</CrystalMention> | See [Crystals](/docs/gameplay/resources/crystals) |
+
+---
+
+## Forging Tips
+
+- **Start low:** Practice on Tier 1-2 items to learn the system
+- **Stock materials:** Farm extra Feathers/Silk before attempting high tiers
+- **Always boost T5:** The 5% base rate is brutal - use both crystal types

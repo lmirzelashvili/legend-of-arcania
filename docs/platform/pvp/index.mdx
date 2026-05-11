@@ -1,0 +1,265 @@
+---
+title: PvP System
+description: The Outlaw system, PvP rules, and player-versus-player combat mechanics.
+---
+
+> "In the lawless lands, every shadow could be friend or foe. Trust is a luxury few can afford."
+> - <img src="/game-icons/avatars/divine_family/erion_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> Erion, Last of the Gods
+
+Arcania features an **Outlaw system** for PvP combat. In PvP-enabled zones, attacking other players is always possible - but it comes with consequences.
+
+---
+
+## The Outlaw System
+
+### Core Concept
+
+In PvP zones, any player can attack any other player. However, **initiating** an attack marks you as an **Outlaw**, bringing significant penalties.
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                       OUTLAW SYSTEM                                  │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                      │
+│   INNOCENT (White Name)                                              │
+│   • Default state                                                    │
+│   • Normal death penalty                                             │
+│   • Protected by guards in safe zones                                │
+│        │                                                             │
+│        │ Attack another innocent player                              │
+│        ▼                                                             │
+│   OUTLAW (Red Name)                                                  │
+│   • Marked for all to see                                            │
+│   • Increased death penalty                                          │
+│   • Guards attack on sight                                           │
+│   • Bounty placed on your head                                       │
+│        │                                                             │
+│        │ Time passes OR kill monsters                                │
+│        ▼                                                             │
+│   Back to INNOCENT                                                   │
+│                                                                      │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Player States
+
+### Innocent (White Name)
+
+Default state for all players.
+
+| Aspect | Status |
+|--------|--------|
+| **Name color** | White |
+| **Can attack** | Yes (becomes Outlaw) |
+| **Can be attacked** | By Outlaws freely, by Innocents (they become Outlaw) |
+| **Death penalty** | Normal (3-5 item drops) |
+| **Guard protection** | Protected in Safe Zones |
+| **Bounty** | None |
+
+### Outlaw (Red Name)
+
+Gained by attacking an Innocent player first.
+
+| Aspect | Status |
+|--------|--------|
+| **Name color** | Red |
+| **Can attack** | Yes (no additional penalty) |
+| **Can be attacked** | By anyone freely |
+| **Death penalty** | Increased (5-8 item drops) |
+| **Guard protection** | None - guards attack on sight |
+| **Bounty** | Yes - other players rewarded for killing you |
+
+<Callout type="warning">
+**Think Before You Strike:** Becoming an Outlaw has serious consequences. Guards will kill you in Safe Zones, and you drop more items on death.
+</Callout>
+
+---
+
+## Self-Defense Rules
+
+Defending yourself **does not** make you an Outlaw:
+
+| Scenario | Result |
+|----------|--------|
+| Outlaw attacks you first | You can fight back, stay Innocent |
+| Innocent attacks you first | You can fight back, they become Outlaw |
+| You attack an Outlaw | No penalty (killing Outlaws is encouraged) |
+| You attack an Innocent | You become Outlaw |
+
+<Callout type="info">
+**Bounty Hunting:** Killing Outlaws rewards you with bounty gold and does not give you Outlaw status. It's encouraged behavior!
+</Callout>
+
+---
+
+## Outlaw Consequences
+
+### Guards
+
+In Safe Zones, NPCs guards will:
+- **Detect** Outlaws immediately
+- **Attack** on sight
+- **Kill** quickly (guards are very powerful)
+- **Prevent** access to services
+
+```
+OUTLAW enters Safe Zone
+        │
+        ▼
+┌─────────────────────┐
+│ GUARDS AGGRO        │
+│ "Criminal spotted!" │
+│         │           │
+│         ▼           │
+│ GUARDS ATTACK       │
+│ (Very high damage)  │
+│         │           │
+│         ▼           │
+│ OUTLAW DIES         │
+│ (Full death penalty)│
+└─────────────────────┘
+```
+
+### Increased Drop Rate
+
+| Player State | Items Dropped on Death |
+|--------------|------------------------|
+| Innocent | 3-5 random bag items |
+| Outlaw | 5-8 random bag items |
+| Serial Outlaw | 6-10 random bag items |
+
+### Bounty System
+
+When you become an Outlaw:
+1. A **bounty** is placed on your head
+2. Bounty amount based on your crimes
+3. Anyone who kills you claims the bounty
+4. Bounty paid from system (not your gold)
+
+| Crime | Bounty Added |
+|-------|--------------|
+| First innocent killed | 1,000g base |
+| Each additional kill | +500g |
+| High-level victim | +200g per level difference |
+| Killing same player again | +1,000g (anti-grief) |
+
+---
+
+## Clearing Outlaw Status
+
+Outlaw status decays over time or through actions:
+
+### Time Decay
+
+| Outlaw Level | Time to Clear |
+|--------------|---------------|
+| Low (1-2 kills) | 15 minutes |
+| Medium (3-5 kills) | 30 minutes |
+| High (6-10 kills) | 1 hour |
+| Serial (11+ kills) | 2 hours |
+
+### Active Clearing
+
+| Method | Time Reduction |
+|--------|----------------|
+| Kill monsters | -1 minute per monster |
+| Kill elite monsters | -5 minutes per elite |
+| Complete quests | -10 minutes per quest |
+| Stay in PvE zones | Normal decay |
+| Stay logged out | 50% decay rate |
+
+<Callout type="tip">
+**Fast Clear:** If you accidentally became Outlaw, grinding monsters in PvE zones is the fastest way to clear your status.
+</Callout>
+
+---
+
+## PvP Zone Rules
+
+### Where PvP is Enabled
+
+| Zone Type | PvP Status |
+|-----------|------------|
+| 🟢 Safe Zones | Disabled |
+| 🟡 PvE Zones | Disabled |
+| 🟠 Hard PvE Zones | Disabled |
+| 🔴 PvP Zones | **Enabled** |
+
+### PvP Zone Locations
+
+| Zone | Description |
+|------|-------------|
+| <TerritoryMention territory="eclipse">Eclipse Barrens</TerritoryMention> | Lawless wasteland |
+| Dominion Borders | Contested frontier areas |
+| <TerritoryMention territory="mire">Mire of Whispers</TerritoryMention> edges | Corrupted borderlands |
+| Resource Hotspots | Rare spawn locations |
+| Event Areas | Special PvP events |
+
+---
+
+## Combat Mechanics
+
+### Level Difference
+
+| Level Gap | Damage Modifier |
+|-----------|-----------------|
+| Same level | 100% damage |
+| +5 levels | 80% damage dealt |
+| +10 levels | 60% damage dealt |
+| +15 levels | 40% damage dealt |
+| +20 levels | 20% damage dealt |
+
+<Callout type="info">
+**Newbie Protection:** Players below level 20 cannot be attacked by players level 40+, regardless of zone.
+</Callout>
+
+### Crowd Control
+
+PvP has adjusted CC durations:
+
+| Effect | PvE Duration | PvP Duration |
+|--------|--------------|--------------|
+| <BuffDebuffMention effect="stun" link={false}>Stun</BuffDebuffMention> | 1-3s | 0.5-1.5s |
+| <BuffDebuffMention effect="slow" link={false}>Slow</BuffDebuffMention> | 5-10s | 3-5s |
+| <BuffDebuffMention effect="silence" link={false}>Silence</BuffDebuffMention> | 3-6s | 2-3s |
+
+### Diminishing Returns
+
+Repeated CC on same player:
+- First CC: 100% duration
+- Second CC (within 15s): 50% duration
+- Third CC (within 15s): 25% duration
+- Fourth CC (within 15s): Immune for 15s
+
+---
+
+## PvP Tips
+
+### Engagement
+
+| Tip | Reason |
+|-----|--------|
+| Check surroundings | Other players may be nearby |
+| Inspect target | Check their gear and level |
+| Consider consequences | Is becoming Outlaw worth it? |
+| Have an escape route | Know how to retreat |
+
+### Survival
+
+| Tip | Reason |
+|-----|--------|
+| Travel light | Minimize potential losses |
+| Group up | Safety in numbers |
+| Stay mobile | Harder to ambush |
+| Use terrain | Line of sight breaks |
+
+### As Outlaw
+
+| Tip | Reason |
+|-----|--------|
+| Avoid Safe Zones | Guards will kill you |
+| Farm monsters | Clear status faster |
+| Watch your back | Everyone can attack you freely |
+| Bank loot first | You drop more items as Outlaw |

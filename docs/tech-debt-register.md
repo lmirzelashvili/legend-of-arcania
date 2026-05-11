@@ -1,0 +1,76 @@
+## Technical Debt Register
+Last updated: 2026-03-31 (Re-audit)
+Total items: 26 | Estimated total effort: ~3 XL + 6 L + 10 M + 7 S
+
+| ID | Category | Description | Files | Effort | Impact | Priority | Added | Sprint |
+|----|----------|-------------|-------|--------|--------|----------|-------|--------|
+| TD-001 | Code Quality | **Duplicated item-templates between client and server.** The `TIER_CONFIG`, `IDENTITY_STATS`, `BONUS_STAT_POOLS`, `SET_BONUSES`, and `ENHANCEMENT_*` constants are near-identical copies in `arcania-client/src/constants/item-templates.ts` (1008 lines) and `arcania-server/src/data/item-templates.ts` (1188 lines). Any game-balance change must be applied in both files. WHY: Monorepo shared package not yet set up; client and server have separate build pipelines. | `arcania-client/src/constants/item-templates.ts`, `arcania-server/src/data/item-templates.ts` | L | Critical | 9.0 | 2026-03-31 | Backlog |
+| TD-002 | Code Quality | **Duplicated type definitions between client and server.** `Race`, `CharacterClass`/`Class`, `ItemType`, `ItemRarity`, `EquipmentSlot`, `StatBlock`, `DerivedStats`, `ItemSpriteInfo`, `ZoneType`, and `LEGACY_SLOT_MAP` are independently defined in both `arcania-client/src/types/game.types.ts` (653 lines) and `arcania-server/src/types/index.ts` (530 lines). Minor naming divergences exist (e.g., `Class` vs `CharacterClass`). | `arcania-client/src/types/game.types.ts`, `arcania-server/src/types/index.ts` | M | High | 7.5 | 2026-03-31 | Backlog |
+| TD-003 | Architecture | **God component: CharacterSheet.tsx (845 lines, grew from 807).** Single component handling equipment rendering, inventory pagination, item equip/unequip/deposit, set bonus calculation, enhancement and gem modals, and tooltip display. Contains an inner `InventorySlot` sub-component defined inline. WHY: Organic growth during feature development. | `arcania-client/src/components/Character/CharacterSheet.tsx` | L | High | 6.0 | 2026-03-31 | Backlog |
+| TD-004 | Architecture | **God component: Marketplace.tsx (1015 lines).** Contains 4 sub-tabs (`BrowseTab`, `SellTab`, `MyListingsTab`, `DirectTradeTab`) all defined in a single file. Each tab is a substantial component with its own state and API calls. | `arcania-client/src/components/Marketplace/Marketplace.tsx` | M | Med | 4.0 | 2026-03-31 | Backlog |
+| TD-005 | Architecture | **God service: character.service.ts (901 lines, grew from 830).** Server-side service handling creation, stat allocation, equip/unequip, inventory management, consumable usage, gem socketing/unsocketing, item selling, and stat recalculation. Multiple responsibilities violate SRP. | `arcania-server/src/services/character.service.ts` | L | High | 5.0 | 2026-03-31 | Backlog |
+| TD-006 | Code Quality | **Duplicated character loading/delete logic in Dashboard and HeroesTab.** `loadCharacters()`, `handleSelectCharacter()`, `confirmDelete()`, and `handleNewHero()` are copy-pasted between `Dashboard.tsx` and `HeroesTab.tsx` with minor differences. | `arcania-client/src/components/Dashboard/Dashboard.tsx`, `arcania-client/src/components/Dashboard/HeroesTab.tsx` | S | Med | 5.0 | 2026-03-31 | Backlog |
+| TD-007 | Code Quality | **Duplicated StatsPanel and CompactStatsPanel.** Both components share identical `handleIncrease`, `handleDecrease`, `startRepeating`, `stopRepeating`, `handleReset`, `handleSave` logic. CompactStatsPanel adds a client-side derived stats calculation and a respec feature. The stat-allocation logic (~60 lines) is copy-pasted. | `arcania-client/src/components/Character/StatsPanel.tsx`, `arcania-client/src/components/Character/CompactStatsPanel.tsx` | M | Med | 4.5 | 2026-03-31 | Backlog |
+| TD-008 | Code Quality | **Duplicated `getRarityColor`/`getRarityBorder` functions.** Rarity-to-CSS-class mapping functions are defined inline in `CharacterSheet.tsx`, `InventoryPanel.tsx`, and `VaultPanel.tsx` rather than extracted to a shared utility. | `arcania-client/src/components/Character/CharacterSheet.tsx`, `arcania-client/src/components/Character/InventoryPanel.tsx`, `arcania-client/src/components/Vault/VaultPanel.tsx` | S | Low | 3.0 | 2026-03-31 | Backlog |
+| TD-009 | Architecture | **`item-sprite-mapping.ts` is a legacy wrapper around `asset-registry.ts`.** The 378-line file duplicates sprite data that also lives in `asset-registry.ts` (the intended single source of truth). Still imported by 3 files (`CharacterSheet.tsx`, `CharacterManagement.tsx`, `Dashboard.tsx`) for `mergeEquipmentSpriteInfo`. | `arcania-client/src/config/item-sprite-mapping.ts`, `arcania-client/src/config/asset-registry.ts` | M | Med | 4.0 | 2026-03-31 | Backlog |
+| TD-010 | Dependency | **Legacy `Item` model kept in Prisma schema and still seeded.** The comment reads "kept for backward compatibility during migration." The `seed.ts` still writes to `prisma.item` (line 229). Meanwhile `prisma.itemTemplate` is never called anywhere in the codebase (see TD-024). The legacy model should be removed once all references are migrated. | `arcania-server/prisma/schema.prisma` (lines 82-101), `arcania-server/src/data/seed.ts` | M | Med | 4.0 | 2026-03-31 | Backlog |
+| TD-011 | Code Quality | **Pervasive `as any` casting in server code (90 occurrences across 9 files, up from 83).** Prisma JSON columns are cast to `any` everywhere instead of using typed helpers. This defeats TypeScript's type safety and makes refactoring risky. The count increased by 7 since last audit. | `arcania-server/src/services/character.service.ts` (41 uses), `arcania-server/src/services/vault.service.ts` (15), `arcania-server/src/services/vendor.service.ts` (10), `arcania-server/src/services/marketplace.service.ts` (9), others | L | High | 5.5 | 2026-03-31 | Backlog |
+| TD-012 | Code Quality | **`as any` casting in client code (16 occurrences across 7 files).** Includes `equipment || {} as any` in CharacterSheet and untyped data in Marketplace/HeroesTab. | `arcania-client/src/components/Character/CharacterSheet.tsx`, `arcania-client/src/components/Marketplace/Marketplace.tsx`, others | S | Low | 2.5 | 2026-03-31 | Backlog |
+| TD-013 | Test | **Zero test files in the entire codebase.** No unit tests, integration tests, or end-to-end tests exist for either client or server. No test framework is configured. All quality assurance is manual. WHY: Rapid prototyping phase. | (project-wide) | XL | Critical | 10.0 | 2026-03-31 | Backlog |
+| TD-014 | Architecture | **No shared package between client and server.** Types, enums, constants, and game-balance data are duplicated because there is no monorepo workspace or shared npm package. This is the root cause of TD-001 and TD-002. | (project structure) | XL | Critical | 10.0 | 2026-03-31 | Backlog |
+| TD-015 | Architecture | **God component: VaultPanel.tsx (734 lines).** Handles vault display, deposit/withdraw for items and currency, vault upgrade UI, filtering, sorting, and item detail modals all in one file. | `arcania-client/src/components/Vault/VaultPanel.tsx` | M | Med | 3.5 | 2026-03-31 | Backlog |
+| TD-016 | Architecture | **God component: Vendors.tsx (656 lines).** Contains `VendorList` and `ItemShop` sub-components inline. Mixing vendor listing with shop interaction in one file. | `arcania-client/src/components/Vendors/Vendors.tsx` | M | Med | 3.0 | 2026-03-31 | Backlog |
+| TD-017 | Code Quality | **TestEquipment.tsx (659 lines) is a dev/debug page still routed in production.** Registered at `/test-equipment` and `/equipment-preview` in `App.tsx`. Should either be behind a feature flag, moved to a dev-only route, or removed. | `arcania-client/src/pages/TestEquipment.tsx`, `arcania-client/src/App.tsx` (lines 93-94) | S | Low | 2.0 | 2026-03-31 | Backlog |
+| TD-018 | Code Quality | **Boilerplate try/catch(err){next(err)} repeated in every route handler.** 54 try/catch blocks across 8 route files (18 in `character.routes.ts` alone). Could be replaced with an async handler wrapper. | `arcania-server/src/routes/character.routes.ts`, `arcania-server/src/routes/marketplace.routes.ts`, all other route files | S | Low | 3.0 | 2026-03-31 | Backlog |
+| TD-019 | Code Quality | **Legacy API endpoints still present.** `marketplaceAPI.getItems` and `marketplaceAPI.purchaseItem` are marked "Legacy compat" but still exported. Server has corresponding "Legacy endpoint" comments in marketplace routes (lines 89, 109, 127). | `arcania-client/src/services/api.service.ts` (line 178), `arcania-server/src/routes/marketplace.routes.ts` | S | Low | 2.0 | 2026-03-31 | Backlog |
+| TD-020 | Code Quality | **Large constants files are pure data blobs.** `armor.constants.ts` (845 lines), `weapon.constants.ts` (814 lines), `equipment.constants.ts` (625 lines) are massive static data definitions. These could be generated from a data file or moved to JSON assets. | `arcania-client/src/constants/armor.constants.ts`, `arcania-client/src/constants/weapon.constants.ts`, `arcania-client/src/constants/equipment.constants.ts` | M | Low | 2.0 | 2026-03-31 | Backlog |
+| TD-021 | Performance | **Client-side derived stats recalculation duplicated from server.** `CompactStatsPanel.tsx` recalculates all derived stats client-side (lines 40-66) using hardcoded formulas that must stay in sync with `stat-calculator.ts` on the server. Drift between these formulas would cause UI/backend stat mismatches. | `arcania-client/src/components/Character/CompactStatsPanel.tsx`, `arcania-server/src/utils/stat-calculator.ts` | M | High | 5.0 | 2026-03-31 | Backlog |
+| TD-022 | Code Quality | **NEW: `DerivedStatKey` type is missing `dodgeChance`.** Both client and server `DerivedStatKey` union types omit `'dodgeChance'`, even though `DerivedStats` interface includes `dodgeChance: number`. The server's `stat-calculator.ts` line 123 passes `'dodgeChance'` to `sb()` which expects a `DerivedStatKey`, causing TS error TS2345. This is the only TypeScript error in the entire codebase. WHY: `DerivedStatKey` was added separately from `DerivedStats` and the two were never reconciled. | `arcania-server/src/types/index.ts` (line 134-139), `arcania-client/src/types/game.types.ts` (line 272-277), `arcania-server/src/utils/stat-calculator.ts` (line 123) | S | High | 8.0 | 2026-03-31 | Next Sprint |
+| TD-023 | Code Quality | **NEW: `DerivedStats` interface and `DerivedStatKey` union are out of sync.** `DerivedStats` has 14 fields (includes `dodgeChance`, excludes `blockChance`/`prestigeDamage`). `DerivedStatKey` has 16 members (includes `blockChance`/`prestigeDamage`, excludes `dodgeChance`). These should represent the same stat set. The mismatch means set bonuses/gems can reference stats (`blockChance`, `prestigeDamage`) that the calculated stats object never returns, and the stat calculator uses `dodgeChance` which cannot be typed as a `DerivedStatKey`. | `arcania-server/src/types/index.ts`, `arcania-client/src/types/game.types.ts` | S | High | 7.0 | 2026-03-31 | Next Sprint |
+| TD-024 | Dependency | **NEW: Dead Prisma `ItemTemplate` model.** The `ItemTemplate` model exists in `schema.prisma` (lines 104-129) but `prisma.itemTemplate` is never called anywhere in the server codebase. The runtime item system uses an in-memory TypeScript `ItemTemplate` interface in `item-templates.ts` instead. The Prisma model was created for a migration that never completed, and seed.ts still only populates the legacy `Item` model. WHY: Migration from legacy Item model to ItemTemplate was started but not completed. | `arcania-server/prisma/schema.prisma` (lines 104-129) | S | Med | 3.5 | 2026-03-31 | Backlog |
+| TD-025 | Code Quality | **NEW: Untyped error catches across client (30+ `catch (err: any)` / `catch (error: any)`).** Every API call in client components catches errors as `any`, bypassing TypeScript's error type system. Error objects from axios have typed response structures that could be leveraged. A shared `handleApiError()` utility would eliminate duplication and provide consistent user-facing error messages. | `arcania-client/src/components/Vendors/Vendors.tsx`, `arcania-client/src/components/Marketplace/Marketplace.tsx`, `arcania-client/src/store/useVaultStore.ts`, 7 other files | M | Med | 3.5 | 2026-03-31 | Backlog |
+| TD-026 | Architecture | **NEW: StoreTab mock purchase with no real payment integration.** `StoreTab.tsx` has a "Mock purchase" comment (line 10) and calls `addCreationToken()` directly with no server validation, payment provider, or purchase record. Any user can add unlimited creation tokens by calling this client-side function. WHY: Payment integration deferred during prototyping. | `arcania-client/src/components/Dashboard/StoreTab.tsx` | L | Critical | 7.0 | 2026-03-31 | Backlog |
+
+---
+
+### Summary by Category
+
+| Category | Count | Effort Spread |
+|----------|-------|---------------|
+| Architecture Debt | 7 | 2 XL, 1 L, 3 M, 0 S |
+| Code Quality Debt | 14 | 0 XL, 2 L, 4 M, 6 S |
+| Test Debt | 1 | 1 XL |
+| Dependency Debt | 2 | 0 XL, 0 L, 1 M, 1 S |
+| Performance Debt | 1 | 1 M |
+| Documentation Debt | 0 | -- |
+
+### Changes Since Last Audit (2026-03-31 initial -> 2026-03-31 re-audit)
+
+**Resolved items:** 0
+**New items:** 5 (TD-022 through TD-026)
+**Worsened items:**
+- TD-003: CharacterSheet.tsx grew from 807 to 845 lines
+- TD-005: character.service.ts grew from 830 to 901 lines
+- TD-011: Server `as any` count grew from 83 to 90 occurrences
+
+**Confirmed fixes from previous work:**
+- `useGameStore` eliminated (0 references remain; `useCharacterStore` used across 13 files)
+- `lpc-assets.config.ts` removed (no longer in source tree)
+- Client TypeScript compiles cleanly (0 errors)
+- No `TODO`, `FIXME`, `HACK`, or `@deprecated` comment markers in source
+
+### Top 5 Priority Items (recommended for next sprint)
+
+1. **TD-022** (Code Quality, S, Priority 8.0) -- Add `'dodgeChance'` to `DerivedStatKey` in both client and server. This is a 1-line fix that resolves the only TS error in the codebase.
+2. **TD-023** (Code Quality, S, Priority 7.0) -- Reconcile `DerivedStats` interface with `DerivedStatKey` union. Add `blockChance`/`prestigeDamage` to `DerivedStats` and `dodgeChance` to `DerivedStatKey` (or vice versa). Small fix with high correctness impact.
+3. **TD-013** (Test Debt, XL, Priority 10.0) -- Zero test coverage. Start with server service unit tests and critical client component tests.
+4. **TD-014** (Architecture, XL, Priority 10.0) -- Create shared types/constants package. This unblocks TD-001 and TD-002.
+5. **TD-026** (Architecture, L, Priority 7.0) -- StoreTab mock purchase is a security/integrity issue. At minimum, move token creation to a server-validated endpoint.
+
+### Notes
+
+- No `TODO`, `FIXME`, `HACK`, or `@deprecated` comment markers in source code.
+- The previous audit's confirmed fixes (useGameStore removal, lpc-assets.config.ts removal, client TS errors fixed) all hold.
+- The codebase has 1 TypeScript error (server only): `stat-calculator.ts:123` caused by TD-022.
+- The `mock_player` listing source type is present in both client/server types and used in marketplace service sorting logic -- this appears to be an intentional game mechanic (NPC-simulated player listings), not leftover mock data.
+- God object sizes are trending upward (CharacterSheet +38 lines, character.service +71 lines), suggesting active feature work is compounding existing architecture debt.

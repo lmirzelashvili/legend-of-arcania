@@ -1,0 +1,236 @@
+---
+title: PvP Rankings
+description: Kill-based leaderboards, K/D tracking, and PvP achievements.
+---
+
+Track your PvP performance with Arcania's comprehensive ranking system. Compete for glory on the leaderboards and earn recognition for your combat prowess.
+
+---
+
+## Ranking System
+
+### Tracked Statistics
+
+| Stat | Description |
+|------|-------------|
+| **Total Kills** | All-time player kills |
+| **Total Deaths** | All-time deaths to players |
+| **K/D Ratio** | Kills divided by deaths |
+| **Kill Streak** | Consecutive kills without dying |
+| **Best Kill Streak** | Highest streak achieved |
+| **Bounties Collected** | Total bounty gold earned |
+| **Outlaws Killed** | Outlaw-specific kill count |
+
+---
+
+## Leaderboards
+
+### Main Leaderboards
+
+| Leaderboard | Ranking Criteria | Reset |
+|-------------|------------------|-------|
+| **All-Time Kills** | Total lifetime kills | Never |
+| **K/D Ratio** | Kill/Death ratio (min 100 kills) | Never |
+| **Season Kills** | Kills this season | Season end |
+| **Weekly Top Killers** | Kills this week | Weekly |
+
+### Special Leaderboards
+
+| Leaderboard | Description |
+|-------------|-------------|
+| **Most Wanted** | Highest active bounties (Outlaws) |
+| **Bounty Hunters** | Most Outlaw kills |
+| **Streak Masters** | Highest kill streaks |
+| **Class Champions** | Top killer per class |
+
+---
+
+## Seasons
+
+### Seasonal Ranking
+
+PvP rankings operate on a **seasonal cycle**:
+
+| Aspect | Details |
+|--------|---------|
+| **Duration** | 3 months per season |
+| **Soft Reset** | Ratings decay, not full reset |
+| **Rewards** | End-of-season rewards based on ranking |
+| **Titles** | Seasonal titles for top performers |
+
+### Season Rewards
+
+| Rank | Rewards |
+|------|---------|
+| **Top 10** | Exclusive title, cosmetic set, <img src="/game-icons/arcanite.png" alt="Arcanite" className="inline w-4 h-4 align-middle" /> 1,000 Arcanite |
+| **Top 100** | Seasonal title, cosmetic item, <img src="/game-icons/arcanite.png" alt="Arcanite" className="inline w-4 h-4 align-middle" /> 500 Arcanite |
+| **Top 1,000** | Seasonal title, <img src="/game-icons/arcanite.png" alt="Arcanite" className="inline w-4 h-4 align-middle" /> 200 Arcanite |
+| **Top 10%** | Seasonal badge, <img src="/game-icons/arcanite.png" alt="Arcanite" className="inline w-4 h-4 align-middle" /> 100 Arcanite |
+| **Participant** | Participation reward (50+ kills) |
+
+<Callout type="info">
+**Season Titles:** Titles display your peak ranking from past seasons. Collect them all to show your history!
+</Callout>
+
+---
+
+## Rating Calculation
+
+### Kill Value
+
+Not all kills are equal:
+
+| Kill Type | Points | Reason |
+|-----------|--------|--------|
+| Equal level | 10 | Base value |
+| +1-5 levels | 12-15 | Harder opponent |
+| +6-10 levels | 16-20 | Significant challenge |
+| -1-5 levels | 8-5 | Easier opponent |
+| -6-10 levels | 4-2 | Much easier |
+| -11+ levels | 1 | Griefing deterrent |
+
+### Death Value
+
+| Death Type | Point Loss |
+|------------|------------|
+| To equal level | -8 |
+| To higher level | -5 to -3 |
+| To lower level | -10 to -15 |
+| To same player (repeated) | -2 (farming deterrent) |
+
+### Rating Formula
+
+```
+Rating Change = (Kill Points Earned) - (Death Points Lost) × Streak Modifier
+
+Streak Modifier:
+• 3+ kill streak: ×1.1
+• 5+ kill streak: ×1.25
+• 10+ kill streak: ×1.5
+```
+
+---
+
+## Titles & Recognition
+
+### PvP Titles
+
+Earned through PvP achievements:
+
+| Title | Requirement |
+|-------|-------------|
+| **Novice Duelist** | 10 player kills |
+| **Combatant** | 50 player kills |
+| **Gladiator** | 200 player kills |
+| **Warlord** | 500 player kills |
+| **Champion** | 1,000 player kills |
+| **Legend** | 5,000 player kills |
+| **Myth** | 10,000 player kills |
+
+### Special Titles
+
+| Title | Requirement |
+|-------|-------------|
+| **Bounty Hunter** | 100 Outlaw kills |
+| **Judge** | 500 Outlaw kills |
+| **Executioner** | 1,000 Outlaw kills |
+| **Untouchable** | 100 kills with 0 deaths (season) |
+| **Survivor** | 50 escapes from combat (low HP) |
+| **Dominator** | 20+ kill streak |
+
+---
+
+## Kill Streaks
+
+### Streak Bonuses
+
+Consecutive kills without dying grant bonuses:
+
+| Streak | Bonus |
+|--------|-------|
+| 3 kills | +10% rating gain |
+| 5 kills | +25% rating gain, broadcast |
+| 10 kills | +50% rating gain, server broadcast |
+| 15 kills | +75% rating gain |
+| 20 kills | +100% rating gain, achievement |
+
+### Streak Announcements
+
+| Streak | Announcement |
+|--------|--------------|
+| 5 | Zone message: "[Player] is on a killing spree!" |
+| 10 | Server message: "[Player] is DOMINATING!" |
+| 15 | Server message: "[Player] is UNSTOPPABLE!" |
+| 20 | Server message: "[Player] is GODLIKE!" |
+
+<Callout type="info">
+**High Streaks = High Bounty:** Long kill streaks add to your bounty, making you a lucrative target for bounty hunters.
+</Callout>
+
+---
+
+## Viewing Rankings
+
+### Where to Check
+
+| Location | Access |
+|----------|--------|
+| Nexus | Leaderboards section |
+| In-Game | `/rankings` command |
+| Profile | Personal stats tab |
+
+### Profile Stats
+
+Your PvP profile shows:
+- Current season rank
+- All-time statistics
+- K/D ratio graph (trend)
+- Recent kills/deaths
+- Earned titles
+- Season progression
+
+---
+
+## Anti-Abuse Measures
+
+### Kill Trading Prevention
+
+| Behavior | Consequence |
+|----------|-------------|
+| Killing same player repeatedly | Diminishing returns (1 point after 3rd) |
+| Suspected boosting | Rating penalty, investigation |
+
+### Alt Account Detection
+
+- Same IP kills flagged
+- Pattern detection for boosting
+- Manual review for top rankings
+
+<Callout type="warning">
+**Fair Play:** Attempting to manipulate rankings through kill trading, boosting, or alt accounts results in rating penalties and potential account action.
+</Callout>
+
+---
+
+## Class Standings
+
+### Class Leaderboards
+
+Each class has its own rankings:
+
+| Leaderboard | Shows |
+|-------------|-------|
+| <ClassMention class="warrior">Warrior</ClassMention> Rankings | Top Warrior PvPers |
+| <ClassMention class="paladin">Paladin</ClassMention> Rankings | Top Paladin PvPers |
+| <ClassMention class="mage">Mage</ClassMention> Rankings | Top Mage PvPers |
+| <ClassMention class="cleric">Cleric</ClassMention> Rankings | Top Cleric PvPers |
+| <ClassMention class="ranger">Ranger</ClassMention> Rankings | Top Ranger PvPers |
+
+### Class vs Class Stats
+
+Track your matchup statistics:
+- Win rate against each class
+- Most killed class
+- Most died to class
+- Best matchup
+- Worst matchup

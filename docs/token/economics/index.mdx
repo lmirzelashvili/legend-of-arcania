@@ -1,0 +1,175 @@
+---
+title: Economic Design
+description: How Arcania's token economy maintains long-term sustainability and value.
+---
+
+Arcania's economic design is built on hard lessons from the Play-to-Earn industry. By studying the successes and failures of games like Axie Infinity, Gods Unchained, and Big Time, we've created systems designed for multi-year sustainability.
+
+---
+
+## Core Principles
+
+### 1. Gameplay First
+
+The game must be enjoyable without any earning potential. Players who never convert Arcanite should have a complete, satisfying experience. This ensures:
+- Sustainable player retention beyond token speculation
+- Organic growth through genuine enjoyment
+- Survival through market downturns
+
+### 2. Controlled Emissions
+
+Token emissions follow a fixed halving schedule with a hard supply cap:
+- 6-month halving cycle reduces emissions by 50% each period
+- Fixed 100M supply — no unlimited minting
+- Oracle adjusts conversion rates and caps based on ecosystem health
+
+### 3. Multiple Sinks
+
+Value can only be maintained if tokens are consistently removed from circulation:
+- Transaction fee burns
+- Crafting and enhancement consumption
+- Premium feature purchases
+- Staking lockups
+
+### 4. Anti-Extraction Design
+
+Systems explicitly discourage pure extraction behavior:
+- Progression gates on conversions
+- Better rates for dedicated players
+- Time-locks that penalize rushing
+- Verification requirements
+
+### 5. Arcanite Emission Peg
+
+Earned Arcanite is capped at **ARC emission × 100** each month. This ensures:
+- Arcanite supply never outpaces ARC conversion capacity
+- One halving cycle controls both currencies
+- No separate inflation schedule needed for Arcanite
+- Purchased Arcanite (real money) is exempt — only earned supply is pegged
+
+---
+
+## Why Previous Games Failed
+
+### The Axie Infinity Collapse
+
+Axie Infinity's SLP token crashed 99.8% due to:
+
+| Problem | Result |
+|---------|--------|
+| Unlimited token minting | Hyperinflation spiral |
+| No meaningful sinks | Supply grew 4x faster than burns |
+| Extraction-focused design | Players left when earning dropped |
+| Scholarship dependency | DAU inflated by economic desperation |
+
+**Key Lesson:** When earning becomes the primary motivation, any reduction in earnings causes mass exodus.
+
+### How Arcania Differs
+
+| Axie Problem | Arcania Solution |
+|--------------|------------------|
+| Unlimited supply | Fixed 100M cap |
+| Single sink (breeding) | Multiple burn mechanisms |
+| Instant withdrawals | Time-locked conversions |
+| No progression gates | Level, playtime, achievement requirements |
+| Earning as primary draw | Gameplay as primary draw |
+
+---
+
+## Sustainable Model Examples
+
+### Big Time
+
+- **Fair launch:** 60% to players, 0% to team/investors
+- **Result:** Built community trust, $100M+ NFT sales
+
+### Gods Unchained
+
+- **Token recycling:** Fusion returns tokens to staking pool
+- **Result:** Sustained engagement, $10M+ monthly NFT sales
+
+### Illuvium
+
+- **Revenue sharing:** 100% game revenue to token buybacks
+- **Result:** Aligned incentives between players and holders
+
+Arcania incorporates elements from each successful model while avoiding their limitations.
+
+---
+
+## Economic Health Indicators
+
+We monitor these metrics to ensure sustainability:
+
+| Indicator | Healthy Range | Warning Signs |
+|-----------|---------------|---------------|
+| Daily Active Users | Growing or stable | Declining 3+ months |
+| Arcanite:ARC Conversion Ratio | < 30% of earned | > 50% immediate extraction |
+| Time-Lock Distribution | > 60% using locks | < 30% using locks |
+| Token Velocity | Moderate | Extremely high (dumping) |
+| New Player Retention | > 20% at 30 days | < 10% at 30 days |
+
+---
+
+## Dynamic Rate Oracle
+
+The exchange system splits into **fixed parameters** (player trust) and **dynamic parameters** (economic safety). The Oracle only controls the dynamic side.
+
+### Fixed Forever
+
+These never change — they are the social contract with players:
+
+| Component | Value | Promise |
+|-----------|-------|---------|
+| **Base Rate** | 100 Arcanite = 1 ARC | Never changes |
+| **Account Rate Formula** | L30/P20/A50 weights, 40-100% | Never changes |
+| **2-Week Lock Rate** | 100% | Patient players always get full rate |
+| **Fees** | 3% instant / 2% locked | Never changes |
+
+### Oracle Controls
+
+These adjust within **published hard limits** based on economic health:
+
+| Component | Normal | Stressed | Growing | Hard Range |
+|-----------|--------|----------|---------|------------|
+| **Weekly Cap (Basic)** | 10,000 | 5,000 | 15,000 | 5k-15k |
+| **Weekly Cap (KYC)** | 20,000 | 10,000 | 25,000 | 10k-25k |
+| **Instant Rate** | 50% | 30% | 60% | 30-60% |
+| **1-Week Rate** | 75% | 60% | 80% | 60-80% |
+
+The **2-week lock rate is never touched**. Patient veterans always receive 100% of their account rate.
+
+### What Triggers Adjustments
+
+| Indicator | Oracle Response |
+|-----------|-----------------|
+| Extraction rate over 50% of earned | Decrease instant/1-week rates, tighten caps |
+| Player base declining 3+ months | Decrease rates to protect supply |
+| Healthy growth + low extraction | Maintain or increase rates |
+| Token price stable/growing | Maintain current parameters |
+
+### Oracle Rules
+
+- Reviewed every **Monday at 00:00 UTC**
+- Changes announced **7 days in advance**
+- Published ranges are **hard limits** — Oracle cannot exceed them
+- Current values always visible in Exchange interface
+
+<Callout type="info">
+The Oracle only affects instant and 1-week withdrawal rates plus weekly caps. If you use the 2-week lock, your rate is always 100% regardless of Oracle state.
+</Callout>
+
+---
+
+## Learn More
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+  <a href="/docs/token/economics/sinks" className="block p-4 border rounded-lg hover:border-primary transition-colors">
+    <h3 className="font-semibold mb-1">Sink Mechanics</h3>
+    <p className="text-sm text-muted-foreground">How tokens are removed from circulation</p>
+  </a>
+  <a href="/docs/token/economics/security" className="block p-4 border rounded-lg hover:border-primary transition-colors">
+    <h3 className="font-semibold mb-1">Security & Verification</h3>
+    <p className="text-sm text-muted-foreground">Anti-bot measures and account verification</p>
+  </a>
+</div>

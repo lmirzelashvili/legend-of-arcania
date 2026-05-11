@@ -1,0 +1,232 @@
+---
+title: Combat System
+description: Real-time action combat with strategic depth in Arcania.
+---
+
+Arcania features a real-time action combat system with tab-targeting elements. Combat is designed to be accessible yet strategic, rewarding positioning, timing, and build optimization.
+
+## Combat Philosophy
+
+### Core Principles
+
+1. **Readable Combat** - Players should always understand why they won or lost
+2. **Meaningful Choices** - Ability selection and timing matter
+3. **Build Diversity** - Multiple viable approaches per class
+4. **Scalable Difficulty** - Easy to learn, challenging to master
+
+## Attack System
+
+### Basic Attacks
+
+**Auto-Attack:**
+- Automatic attacks when target is selected
+- Speed determined by weapon and equipment bonuses
+
+<FormulaBlock title="Attack Speed">
+Attacks Per Second = Base Weapon Speed × (1 + Attack Speed Bonus)
+Soft Cap: 2.5 APS (50% efficiency beyond)
+</FormulaBlock>
+
+### Weapon Speeds
+
+| Weapon Type | Base Speed | Category | Classes |
+|-------------|------------|----------|---------|
+| Sword (Dual) | 1.5 | Medium | <ClassMention class="warrior" link={false}>Warrior</ClassMention> |
+| Bow | 1.4 | Medium | <ClassMention class="ranger" link={false}>Ranger</ClassMention> |
+| Staff | 1.3 | Medium | <ClassMention class="mage" link={false}>Mage</ClassMention>, <ClassMention class="cleric" link={false}>Cleric</ClassMention> |
+| Flail | 1.1 | Medium-Slow | <ClassMention class="paladin" link={false}>Paladin</ClassMention> |
+| Mace | 1.0 | Slow | <ClassMention class="paladin" link={false}>Paladin</ClassMention> |
+| Spear | 0.9 | Slow | <ClassMention class="warrior" link={false}>Warrior</ClassMention> |
+| Maul | 0.8 | Very Slow | <ClassMention class="paladin" link={false}>Paladin</ClassMention> |
+| Scythe | 0.8 | Very Slow | <ClassMention class="warrior" link={false}>Warrior</ClassMention> |
+
+## Damage Calculation
+
+All abilities scale from **derived stats** (<DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> or <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention>), not primary stats directly. This means equipment directly affects ability damage.
+
+### Physical Damage (Warrior, Paladin, Ranger)
+
+<FormulaBlock title="Physical Ability Damage">
+Ability Damage = Base Damage + (Physical Attack × Skill Multiplier)
+Defense Reduction = Enemy Defense / (Enemy Defense + 100)
+Final Damage = Ability Damage × (1 - Defense Reduction)
+</FormulaBlock>
+
+**Example:** Warrior's <SkillMention skill="power_strike">Power Strike</SkillMention> (×1.5 multiplier)
+- <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention>: 200 (from equipment)
+- Base Damage: 100
+- Ability Damage = 100 + (200 × 1.5) = 400
+
+### Magic Damage (Mage, Cleric)
+
+<FormulaBlock title="Magic Ability Damage">
+Ability Damage = Base Damage + (Magic Attack × Skill Multiplier)
+Resistance Reduction = Enemy Resistance / (Enemy Resistance + 120)
+Final Damage = Ability Damage × (1 - Resistance Reduction)
+</FormulaBlock>
+
+**Example:** Mage's <SkillMention skill="fireball">Fireball</SkillMention> (×1.5 multiplier)
+- <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention>: 250 (from equipment)
+- Base Damage: 120
+- Ability Damage = 120 + (250 × 1.5) = 495
+
+<Callout type="info">
+Equipment with +<DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> or +<DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> directly increases ability damage. A weapon with +50 Physical Attack adds +50 × skill multiplier to every physical ability!
+</Callout>
+
+### <DerivedStatMention stat="critical_chance" link={false}>Critical Hits</DerivedStatMention>
+
+<FormulaBlock title="Critical Hit Formula">
+Critical Chance = 5% + Equipment Bonus
+Critical Chance Cap: 50%
+
+Critical Damage = 125% + Equipment Bonus
+Critical Damage Cap: 200%
+</FormulaBlock>
+
+<Callout type="info">
+All characters have a base 5% critical chance. Additional critical chance and damage come from equipment. Agility-focused gear often provides crit bonuses.
+</Callout>
+
+## Defense System
+
+### Miss Chance
+
+Attacks have a chance to miss based on the level difference between attacker and target. Higher level targets are harder to hit, and this applies to both players and monsters.
+
+<FormulaBlock title="Miss Chance">
+Miss Chance = 5% + (Level Difference) × 2%
+Cap: 40%
+</FormulaBlock>
+
+| Scenario | Miss Chance |
+|----------|-------------|
+| Same level | 5% |
+| Target +5 levels | 15% |
+| Target +10 levels | 25% |
+| Target +15 levels | 35% |
+| Target +18+ levels | 40% (cap) |
+
+<Callout type="info">
+This system works both ways: your attacks miss more against higher level enemies, and lower level monsters miss more against you. Outleveling an area provides natural survivability as enemies struggle to hit you.
+</Callout>
+
+### Penetration
+
+Penetration allows attackers to bypass a portion of enemy defenses.
+
+<FormulaBlock title="Armor Penetration">
+<DerivedStatMention stat="armor_penetration" link={false}>Armor Penetration</DerivedStatMention> = Equipment Bonus
+Cap: 40%
+
+Effective Enemy Armor = Enemy Armor × (1 - Armor Penetration)
+</FormulaBlock>
+
+<FormulaBlock title="Magic Penetration">
+<DerivedStatMention stat="magic_penetration" link={false}>Magic Penetration</DerivedStatMention> = Equipment Bonus
+Cap: 40%
+
+Effective Enemy Resistance = Enemy Magic Resistance × (1 - Magic Penetration)
+</FormulaBlock>
+
+<Callout type="warning">
+Penetration comes entirely from equipment. Against heavily armored targets, investing in penetration can be more effective than raw damage stats.
+</Callout>
+
+## Status Effects
+
+### Buffs
+
+| Effect | Duration | Description |
+|--------|----------|-------------|
+| <BuffDebuffMention effect="empowered" link={false}>Empowered</BuffDebuffMention> | 30-60s | Increases damage dealt by 10-25% |
+| <BuffDebuffMention effect="fortified" link={false}>Fortified</BuffDebuffMention> | 30-60s | Increases max HP by 10-20% and restores HP over time |
+| <BuffDebuffMention effect="haste" link={false}>Haste</BuffDebuffMention> | 10-30s | Increases attack speed by 20-50% |
+| <BuffDebuffMention effect="shield" link={false}>Shield</BuffDebuffMention> | 10-20s | Absorbs incoming damage |
+
+### Debuffs
+
+| Effect | Duration | Description |
+|--------|----------|-------------|
+| <BuffDebuffMention effect="slow" link={false}>Slow</BuffDebuffMention> | 5-10s | Reduces movement speed by 30-50% |
+| <BuffDebuffMention effect="vulnerable" link={false}>Vulnerable</BuffDebuffMention> | 8-12s | Increases damage taken by 15-25% |
+| <BuffDebuffMention effect="stun" link={false}>Stun</BuffDebuffMention> | 1-3s | Cannot act |
+| <BuffDebuffMention effect="silence" link={false}>Silence</BuffDebuffMention> | 3-6s | Cannot cast spells |
+| <BuffDebuffMention effect="bleed" link={false}>Bleed</BuffDebuffMention> | 6-12s | Damage over time |
+
+### Diminishing Returns
+
+<Callout type="info">
+Crowd control abilities have diminishing returns to prevent stun-lock situations.
+</Callout>
+
+- **First CC:** Full duration
+- **Second CC (within 15s):** 50% duration
+- **Third CC (within 15s):** 25% duration
+- **Fourth CC (within 15s):** Immune for 15s
+
+**Boss Immunity:**
+- Boss monsters are immune to hard CC (stun, freeze)
+- Bosses can be slowed/weakened at reduced effect
+
+## Combat Resources
+
+### Health & Mana
+
+<FormulaBlock title="HP Regeneration">
+<DerivedStatMention stat="hp_regen" link={false}>HP Regen</DerivedStatMention> = 5 + Equipment Bonus
+Out of Combat: HP Regen × 3 per tick (2 seconds)
+In Combat: HP Regen × 1 per tick
+</FormulaBlock>
+
+<FormulaBlock title="Mana Regeneration">
+<DerivedStatMention stat="mana_regen" link={false}>Mana Regen</DerivedStatMention> = 5 + Equipment Bonus
+Out of Combat: Mana Regen × 2 per tick
+In Combat: Mana Regen × 1 per tick
+</FormulaBlock>
+
+## Death & Resurrection
+
+### Death Penalties
+
+Death penalties vary by zone type:
+
+| Zone Type | Penalty |
+|-----------|---------|
+| 🟡 PvE Zone | **40% durability loss** on all equipped items |
+| 🟠 Hard PvE Zone | **80% durability loss** on all equipped items |
+| 🔴 PvP Zone | **Random items drop** from Bag (equipped items safe) |
+
+<Callout type="warning">
+**Item Destruction:** If an item reaches 0% durability, it is **permanently destroyed**. Always repair your gear at a Blacksmith NPC before it breaks!
+</Callout>
+
+Additional effects on death:
+- Respawn at nearest Safe Zone or outpost
+- 10-second Resurrection Sickness (reduced stats)
+
+For complete death mechanics, see [Death Penalties](/docs/platform/zones/death-penalties).
+
+### Resurrection Options
+
+| Method | Cast Time | Range | Restrictions |
+|--------|-----------|-------|--------------|
+| Self-Resurrect | 10s | Self | Once per 30 min |
+| <ClassMention class="cleric" link={false}>Cleric</ClassMention> Resurrect | 3s | 30m | Requires <ClassMention class="cleric" link={false}>Cleric</ClassMention> |
+| <ScrollMention scroll="resurrection" link={false}>Resurrection Scroll</ScrollMention> | 5s | Self | Consumable item |
+
+## Balance Targets
+
+### Time-to-Kill (TTK)
+
+| Scenario | Target TTK |
+|----------|------------|
+| Player vs Hostile Monster (same level) | 5-8 seconds |
+| Player vs Elite Monster (same level) | 15-25 seconds |
+| Full Party vs Boss | 2-5 minutes |
+
+### Healing vs Damage
+
+- Healers should not outheal focused damage from 2+ DPS
+- Solo healer should sustain party against reasonable damage
+- Self-healing should not make classes unkillable

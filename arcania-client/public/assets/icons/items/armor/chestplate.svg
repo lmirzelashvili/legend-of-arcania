@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Chestplate / breastplate -->
+  <path
+    d="M10 12 L18 8 L24 10 L30 8 L38 12 L36 16 L38 20 L36 36 L30 40 L24 42 L18 40 L12 36 L10 20 L12 16 Z"
+    fill="#c8b89a" fill-opacity="0.15"
+    stroke="#c8b89a" stroke-width="2"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+  <!-- Shoulder line left -->
+  <path
+    d="M10 12 L6 16 L10 20"
+    fill="none"
+    stroke="#c8b89a" stroke-width="2"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+  <!-- Shoulder line right -->
+  <path
+    d="M38 12 L42 16 L38 20"
+    fill="none"
+    stroke="#c8b89a" stroke-width="2"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+  <!-- Center seam -->
+  <line
+    x1="24" y1="10" x2="24" y2="42"
+    stroke="#c8b89a" stroke-width="1.5"
+    stroke-linecap="round"
+    opacity="0.5"
+  />
+  <!-- Belt line -->
+  <line
+    x1="14" y1="32" x2="34" y2="32"
+    stroke="#c8b89a" stroke-width="1.5"
+    stroke-linecap="round"
+    opacity="0.5"
+  />
+</svg>

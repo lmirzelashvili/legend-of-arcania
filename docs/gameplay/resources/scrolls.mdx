@@ -1,0 +1,118 @@
+---
+title: Scrolls
+description: Utility scrolls for resurrection, buffs, and teleportation.
+---
+
+Scrolls provide various utility functions including resurrection, temporary buffs, and fast travel across Arcania.
+
+---
+
+## Resurrection Scrolls
+
+### <ScrollMention scroll="resurrection" link={false}>Scroll of Resurrection</ScrollMention>
+
+Revives a fallen ally or yourself at the location of death.
+
+| Target | Cooldown | HP Restored |
+|--------|----------|-------------|
+| **Ally** | 5 min | 50% Max HP |
+| **Self** | 30 min | 30% Max HP |
+
+<Callout type="info">
+Self-resurrection can only be used if you have the scroll in your inventory before death. The scroll is consumed on use.
+</Callout>
+
+---
+
+## Buff Scrolls
+
+### <ScrollMention scroll="empowerment" link={false}>Scroll of Empowerment</ScrollMention>
+
+Grants a random buff for 5 minutes. One of the following buffs is applied:
+
+| Possible Buff | Effect |
+|---------------|--------|
+| <BuffDebuffMention effect="empowered" link={false}>**Empowered**</BuffDebuffMention> | +15% Physical Attack, +15% Magic Attack |
+| <BuffDebuffMention effect="fortified" link={false}>**Fortified**</BuffDebuffMention> | +15% Physical Defense, +15% Magic Resistance |
+| <BuffDebuffMention effect="haste" link={false}>**Haste**</BuffDebuffMention> | +15% Attack Speed, +15% Movement Speed |
+| <BuffDebuffMention effect="shield" link={false}>**Shield**</BuffDebuffMention> | Absorbs damage equal to 20% Max HP |
+
+<Callout type="warning">
+The buff is random - you cannot choose which one you receive. Scroll of Empowerment buffs do not stack with Elixir of Power.
+</Callout>
+
+---
+
+## Teleportation Scrolls
+
+### <ScrollMention scroll="homeland_scrolls" link={false}>Homeland Scrolls</ScrollMention>
+
+Return to your race's starting village.
+
+| Scroll | Destination | Cooldown |
+|--------|-------------|----------|
+| <ScrollMention scroll="meridia" link={false}>**Scroll of Meridia**</ScrollMention> | Meridia (Human homeland) | 30 min |
+| <ScrollMention scroll="lumeria" link={false}>**Scroll of Lumeria**</ScrollMention> | Lumeria (Luminar homeland) | 30 min |
+| <ScrollMention scroll="lythora" link={false}>**Scroll of Lythora**</ScrollMention> | Lythora (Lilin homeland) | 30 min |
+| <ScrollMention scroll="redmire" link={false}>**Scroll of Redmire**</ScrollMention> | Redmire (Darkan homeland) | 30 min |
+
+---
+
+### Valoryn Scroll
+
+Teleports to Valoryn, the central Alliance city.
+
+| Scroll | Destination | Cooldown |
+|--------|-------------|----------|
+| <ScrollMention scroll="valoryn" link={false}>**Scroll of Valoryn**</ScrollMention> | Valoryn City | 15 min |
+
+<Callout type="tip">
+Valoryn is the main hub with access to all services. This scroll has a shorter cooldown than homeland scrolls.
+</Callout>
+
+---
+
+### <ScrollMention scroll="dominion_scrolls" link={false}>Dominion Scrolls</ScrollMention>
+
+Teleport directly to Dominion zones. Each scroll requires discovery of the zone first.
+
+| Scroll | Destination | Cooldown |
+|--------|-------------|----------|
+| <ScrollMention scroll="dreadmar" link={false}>**Scroll of Dreadmar**</ScrollMention> | Dreadmar Frontier | 60 min |
+| <ScrollMention scroll="whispers" link={false}>**Scroll of Whispers**</ScrollMention> | Mire of Whispers | 60 min |
+| <ScrollMention scroll="stonegrave" link={false}>**Scroll of Stonegrave**</ScrollMention> | Stonegrave Expanse | 60 min |
+| <ScrollMention scroll="eclipse" link={false}>**Scroll of Eclipse**</ScrollMention> | Eclipse Barrens | 60 min |
+| <ScrollMention scroll="fallen" link={false}>**Scroll of the Fallen**</ScrollMention> | Hall of Fallen | 60 min |
+
+<Callout type="warning">
+Dominion scrolls only work after you have discovered the zone entrance. You cannot teleport to zones you haven't visited.
+</Callout>
+
+---
+
+### <ScrollMention scroll="atlas" link={false}>Scroll of Atlas</ScrollMention>
+
+*Legendary scroll unlocked by collecting all five Dominion scrolls.*
+
+| Scroll | Destination | Cooldown |
+|--------|-------------|----------|
+| <ScrollMention scroll="atlas" link={false}>**Scroll of Atlas**</ScrollMention> | Any discovered location | 60 min |
+
+**Unlock Requirement:** Possess all five Dominion scrolls simultaneously. They combine into the Scroll of Atlas permanently.
+
+<Callout type="info">
+The Scroll of Atlas is a permanent unlock - once obtained, it cannot be lost. It allows teleportation to any previously discovered location in Arcania.
+</Callout>
+
+---
+
+## Acquisition Sources
+
+| Scroll | Sources |
+|--------|---------|
+| <ScrollMention scroll="resurrection" link={false}>**Resurrection**</ScrollMention> | Vendors (daily limit), boss rewards, quests |
+| <ScrollMention scroll="empowerment" link={false}>**Empowerment**</ScrollMention> | Elite enemies, Dominion zones, quests |
+| <ScrollMention scroll="homeland_scrolls" link={false}>**Homeland Scrolls**</ScrollMention> | Homeland vendors, starting quests |
+| <ScrollMention scroll="valoryn" link={false}>**Valoryn Scroll**</ScrollMention> | Valoryn vendors, regional quests |
+| <ScrollMention scroll="dominion_scrolls" link={false}>**Dominion Scrolls**</ScrollMention> | Dominion boss drops, legendary quests |
+| <ScrollMention scroll="atlas" link={false}>**Scroll of Atlas**</ScrollMention> | Combine all 5 Dominion scrolls |

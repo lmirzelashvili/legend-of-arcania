@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <!-- Medieval knight helm -->
+  <path
+    d="M14 36 L14 20 Q14 8 24 8 Q34 8 34 20 L34 36 L30 36 L30 28 L26 28 L26 36 Z"
+    fill="#c8b89a" fill-opacity="0.15"
+    stroke="#c8b89a" stroke-width="2"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+  <!-- Visor slit -->
+  <line
+    x1="18" y1="22" x2="30" y2="22"
+    stroke="#c8b89a" stroke-width="2"
+    stroke-linecap="round"
+  />
+  <!-- Brow ridge -->
+  <path
+    d="M14 18 L34 18"
+    fill="none"
+    stroke="#c8b89a" stroke-width="2"
+    stroke-linecap="round"
+  />
+  <!-- Crest/plume ridge on top -->
+  <path
+    d="M24 8 L24 4"
+    fill="none"
+    stroke="#c8b89a" stroke-width="2"
+    stroke-linecap="round"
+  />
+  <circle cx="24" cy="4" r="1.5" fill="#c8b89a" fill-opacity="0.5" stroke="none" />
+</svg>

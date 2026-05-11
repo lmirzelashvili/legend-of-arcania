@@ -1,0 +1,224 @@
+---
+title: Security & Verification
+description: Anti-bot measures, verification tiers, and account security for the token economy.
+---
+
+Protecting the token economy from bots and bad actors is critical for sustainability. Our layered security approach combines progression gates, behavioral analysis, and verification requirements.
+
+---
+
+## The Bot Problem
+
+Bots threaten P2E economies by:
+
+| Threat | Impact |
+|--------|--------|
+| Mass account creation | Dilutes rewards for real players |
+| 24/7 farming | Extracts value faster than humans |
+| Market manipulation | Artificial price movements |
+| Selling pressure | Constant dumping of farmed tokens |
+
+**Research shows:** Bots can farm 5,000+ items daily vs ~500 for active human players. Without countermeasures, bots would extract the majority of P2E rewards.
+
+---
+
+## Layered Defense
+
+### Layer 1: Progression Gates
+
+| Requirement | Bot Difficulty |
+|-------------|----------------|
+| Level 35 minimum | Requires actual gameplay time |
+| 100 hours over 30+ days | Cannot be rushed or farmed quickly |
+| Quest completion | Requires game knowledge |
+| Achievement progress (50% weight) | Skill-based verification |
+
+Bots can technically reach Level 35, but the time investment (30+ calendar days minimum) dramatically reduces profitability.
+
+### Layer 2: Account Rate System
+
+The account rate system naturally disadvantages bots:
+
+| Factor | Human Advantage |
+|--------|-----------------|
+| Level progression | Humans optimize leveling |
+| Achievement completion | Requires varied gameplay |
+| Quest knowledge | Humans adapt to quest changes |
+| Social quests | Require genuine interaction |
+
+A bot at Level 35 with minimal achievements receives only 20% of the conversion rate a veteran player receives.
+
+### Layer 3: Time-Lock Incentives
+
+| Behavior | Effective Rate |
+|----------|----------------|
+| Bot (instant withdrawal) | 20-30% |
+| Impatient player (instant) | 40-50% |
+| Patient player (2-week lock) | 80-100% |
+
+Bots optimizing for extraction speed receive dramatically worse rates. The 3% fee on instant withdrawals (vs 2% for time-locked) further penalizes rapid extraction.
+
+### Layer 4: Verification Requirements
+
+| Tier | Verification | Bot Bypass Cost |
+|------|--------------|-----------------|
+| Account Creation | $0.99 one-time fee | Adds cost per bot |
+| Basic | Email + Captcha + Wallet | Low ($1-5) |
+| KYC (required at $250) | ID + Selfie + Address | Very High |
+
+The $0.99 account creation fee combined with KYC at $250 creates strong bot deterrence. Identity documents cannot be easily fabricated at scale.
+
+---
+
+## Verification Tiers Explained
+
+### Tier 0: Play Only
+
+**Requirements:** Email only
+
+**Access:**
+- Full gameplay
+- No earning/conversion access
+- Can accumulate Arcanite (cannot convert)
+
+**Purpose:** Let players try the game before committing to verification.
+
+### Tier 1: Basic Verification
+
+**Requirements:**
+- Verified email address
+- Captcha completion per session
+- Web3 wallet connected
+
+**Access:**
+- Arcanite conversion up to $250 cumulative
+- 10,000 Arcanite weekly cap (Oracle-adjusted: 5k-15k)
+- Standard processing times
+
+**Bot Resistance:** Moderate
+- Virtual emails: Free
+- Captcha solving: $1-3 per 1,000
+- Wallet creation: Instant
+
+### Tier 2: KYC Verified
+
+**Requirements:**
+- Government-issued photo ID
+- Live selfie with liveness detection
+- Proof of address
+
+**Access:**
+- Unlimited conversion value
+- 20,000 Arcanite weekly cap (Oracle-adjusted: 10k-25k)
+- Priority processing
+- Enhanced features
+
+**Bot Resistance:** Very High
+- ID documents: Difficult to obtain at scale
+- Liveness detection: Cannot be spoofed with photos
+- Address verification: Requires real documentation
+
+---
+
+## Behavioral Analysis
+
+Beyond static requirements, we employ behavioral monitoring:
+
+### Metrics Tracked
+
+| Metric | Normal Range | Bot Indicator |
+|--------|--------------|---------------|
+| Session length | 1-4 hours | 8+ hours continuous |
+| Activity variety | Multiple actions | Repetitive patterns |
+| Movement patterns | Varied | Optimal pathing only |
+| Social interaction | Present | Absent |
+| Play schedule | Variable | 24/7 operation |
+
+### Automated Detection
+
+- **Pattern Recognition:** Machine learning identifies bot-like behavior
+- **Anomaly Detection:** Flags accounts deviating from human norms
+- **Network Analysis:** Identifies coordinated bot farms
+- **Device Fingerprinting:** Detects multiple accounts per device
+
+<Callout type="warning">
+Accounts flagged by automated systems undergo manual review before any action is taken. False positives are investigated thoroughly.
+</Callout>
+
+---
+
+## Proof of Humanity (Planned)
+
+Future integration with decentralized identity solutions:
+
+| Solution | Status | Benefit |
+|----------|--------|---------|
+| Gitcoin Passport | Evaluating | Stamp-based verification |
+| Worldcoin | Evaluating | Biometric uniqueness |
+| BrightID | Evaluating | Social graph verification |
+
+These provide Sybil resistance without centralized KYC for privacy-conscious users.
+
+---
+
+## Account Security
+
+### For Players
+
+Protect your account and tokens:
+
+| Practice | Recommendation |
+|----------|----------------|
+| **Password** | Unique, 16+ characters |
+| **2FA** | Enable authenticator app |
+| **Wallet** | Use hardware wallet for large holdings |
+| **Phishing** | Only use official Arcania URLs |
+| **Seed Phrase** | Never share, store offline |
+
+### Official Domains
+
+| Purpose | Domain |
+|---------|--------|
+| Game | arcania.game |
+| Docs | docs.arcania.game |
+| Exchange | exchange.arcania.game |
+
+<Callout type="warning">
+**Never** enter your wallet seed phrase anywhere except your wallet app. Arcania will **never** ask for your seed phrase.
+</Callout>
+
+---
+
+## Reporting Suspicious Activity
+
+If you suspect bot activity or security issues:
+
+| Issue Type | Report Method |
+|------------|---------------|
+| Bot accounts | In-game report system |
+| Phishing attempts | security@arcania.game |
+| Account compromise | Support ticket (urgent) |
+| Smart contract issues | security@arcania.game |
+
+Confirmed bot farm reports that lead to action may receive Arcanite rewards.
+
+---
+
+## Transparency
+
+### Public Metrics
+
+| Metric | Visibility |
+|--------|------------|
+| Accounts banned (bots) | Monthly report |
+| False positive rate | Monthly report |
+| Conversion volume | Real-time |
+| Burn statistics | Real-time |
+
+### Security Audits
+
+| Component | Audit Status |
+|-----------|--------------|
+| Smart contracts | Third-party audited |
+| Exchange system | Ongoing monitoring |
+| Wallet integration | Standard implementations |

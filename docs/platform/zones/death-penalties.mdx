@@ -1,0 +1,305 @@
+---
+title: Death Penalties
+description: Zone-dependent death mechanics and how to minimize losses.
+---
+
+> "Death is not the end, but it always extracts a price. The wise hero prepares for both."
+> - <img src="/game-icons/avatars/divine_family/erion_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> Erion, Last of the Gods
+
+Death penalties in Arcania vary by zone type. Understanding these mechanics helps you make informed decisions about risk and preparation.
+
+---
+
+## Death Penalty Summary
+
+| Zone Type | Death Cause | Penalty |
+|-----------|-------------|---------|
+| 🟢 Safe Zone | N/A | Cannot die |
+| 🟡 PvE Zone | Monsters | **40% durability loss** |
+| 🟠 Hard PvE Zone | Bosses | **80% durability loss** |
+| 🔴 PvP Zone | Player | Random item drops |
+| 🔴 PvP Zone | Monster | Random item drops |
+
+<Callout type="warning">
+**Item Destruction:** If an item reaches 0% durability, it is **permanently destroyed**. Always repair your gear before it breaks!
+</Callout>
+
+<Callout type="warning">
+In PvP zones, **both player kills AND monster kills** result in item drops. The zone type determines the penalty, not what killed you.
+</Callout>
+
+---
+
+## PvE Death (Durability Loss)
+
+In PvE and Hard PvE zones, death costs durability but not items. The penalty is **severe** - managing your durability is critical to survival.
+
+### Durability Loss by Zone
+
+| Zone Type | Durability Loss |
+|-----------|-----------------|
+| 🟡 PvE Zone (monsters) | **40%** per death |
+| 🟠 Hard PvE Zone (bosses) | **80%** per death |
+
+### How It Works
+
+**PvE Zone Death (40% loss):**
+```
+BEFORE DEATH                          AFTER DEATH
+┌────────────────────┐                ┌────────────────────┐
+│ EQUIPPED GEAR      │                │ EQUIPPED GEAR      │
+│ ⚔️ Sword (100%)    │  ──DEATH──►    │ ⚔️ Sword (60%)     │
+│ 🛡️ Chest (100%)    │                │ 🛡️ Chest (60%)     │
+│ 👢 Boots (100%)    │                │ 👢 Boots (60%)     │
+└────────────────────┘                └────────────────────┘
+```
+
+**Hard PvE Boss Death (80% loss):**
+```
+BEFORE DEATH                          AFTER DEATH
+┌────────────────────┐                ┌────────────────────┐
+│ EQUIPPED GEAR      │                │ EQUIPPED GEAR      │
+│ ⚔️ Sword (100%)    │  ──DEATH──►    │ ⚔️ Sword (20%)     │
+│ 🛡️ Chest (100%)    │                │ 🛡️ Chest (20%)     │
+│ 👢 Boots (100%)    │                │ 👢 Boots (20%)     │
+└────────────────────┘                └────────────────────┘
+```
+
+<Callout type="warning">
+**Danger:** Two deaths in PvE zones (40% + 40% = 80%) leaves gear at critical durability. One boss death (80%) is even worse. Another death could **destroy your items permanently!**
+</Callout>
+
+### Durability Effects
+
+| Durability | Effect |
+|------------|--------|
+| 100% - 50% | Full stats |
+| 49% - 25% | -10% all stats from gear |
+| 24% - 1% | -25% all stats from gear |
+| **0%** | **ITEM DESTROYED** (permanent loss) |
+
+### Item Destruction
+
+<Callout type="warning">
+**Permanent Loss:** When an item reaches 0% durability, it is **permanently destroyed**. All enhancements, gems, and upgrades are lost forever. This cannot be undone!
+</Callout>
+
+### Repairing Gear
+
+Visit a **Blacksmith NPC** in any Safe Zone:
+
+| Repair Option | Cost |
+|---------------|------|
+| Single item | Gold based on tier and damage |
+| All equipped | Bulk discount (10% off) |
+| Full repair | Restore all items to 100% |
+
+**Repair Cost Formula:**
+```
+Cost = (Item Tier × 100) × (Missing Durability %)
+
+Example: T5 weapon at 20% durability
+Cost = 500 × 0.80 = 400 gold to fully repair
+```
+
+<Callout type="tip">
+**Pro Tip:** ALWAYS repair to 100% before entering Hard PvE content. A single boss death at 80% loss can bring fresh gear dangerously close to destruction!
+</Callout>
+
+---
+
+## PvP Death (Item Drops)
+
+In PvP zones, death means losing items from your Bag - the defining high-risk mechanic.
+
+### How It Works
+
+```
+BEFORE DEATH                          AFTER DEATH
+┌────────────────────┐                ┌────────────────────┐
+│ EQUIPPED (SAFE)    │                │ EQUIPPED (SAFE)    │
+│ ⚔️ Sword           │  ──DEATH──►    │ ⚔️ Sword           │
+│ 🛡️ Armor           │                │ 🛡️ Armor           │
+├────────────────────┤                ├────────────────────┤
+│ BAG (AT RISK)      │                │ BAG (REDUCED)      │
+│ 💎💎💎💎💎         │                │ 💎💎💎            │
+│ 🧪🧪🧪🧪           │                │ 🧪🧪              │
+│ 📜📜📜             │                │ 📜📜              │
+│ 💰💰💰💰💰         │                │ 💰💰💰            │
+└────────────────────┘                └────────────────────┘
+                                              │
+                                              ▼
+                                      ┌────────────────┐
+                                      │ GROUND (LOOT)  │
+                                      │ 💎💎 Materials │
+                                      │ 🧪🧪 Potions   │
+                                      │ 📜 Scroll      │
+                                      │ 💰💰 Gold      │
+                                      └────────────────┘
+```
+
+### Item Drop Mechanics
+
+| Aspect | Detail |
+|--------|--------|
+| **Selection** | Random items from Bag |
+| **Quantity** | 3-5 items typically |
+| **Protected** | Equipped items, quest items, bound items |
+| **Lootable by** | Anyone (killer has priority) |
+| **Duration** | Items remain on ground for 60 seconds |
+
+### What Can Drop
+
+| Item Type | Can Drop? |
+|-----------|-----------|
+| Unequipped gear | Yes |
+| Materials | Yes |
+| Consumables | Yes |
+| Gold (portion) | Yes |
+| Quest items | No (protected) |
+| Bound items | No (protected) |
+| Equipped gear | No (protected) |
+
+<Callout type="info">
+**Gold Drops:** When you die, a portion (not all) of your carried gold can drop. Exact amount is random. Store large gold reserves in Vault!
+</Callout>
+
+---
+
+## Resurrection Options
+
+After death, you have several resurrection options:
+
+### Self-Resurrection
+
+| Method | Details |
+|--------|---------|
+| **Auto-Respawn** | 10 seconds, respawn at nearest Safe Zone |
+| **Self-Resurrect** | Once per 30 minutes, resurrect on spot |
+
+### Player Resurrection
+
+| Method | Details |
+|--------|---------|
+| <ClassMention class="cleric">**Cleric**</ClassMention> Resurrect | 3s cast, 30m range, resurrect on spot |
+| <ScrollMention scroll="resurrection">**Resurrection Scroll**</ScrollMention> | 5s self-cast, resurrect on spot |
+
+### Resurrection Sickness
+
+After any resurrection:
+- **10-second debuff**
+- -30% all stats
+- -30% movement speed
+- Clears after timer expires
+
+<Callout type="warning">
+**Don't fight during Resurrection Sickness!** Your stats are significantly reduced. Wait for the debuff to clear before engaging enemies.
+</Callout>
+
+---
+
+## Minimizing Death Penalties
+
+### In PvE Zones
+
+| Strategy | Benefit |
+|----------|---------|
+| Keep gear repaired | Avoid stat loss from low durability |
+| Carry potions | Survive longer, die less |
+| Know your limits | Don't fight enemies too far above your level |
+| Bring a <ClassMention class="cleric">Cleric</ClassMention> | Healing prevents death |
+
+### In PvP Zones
+
+| Strategy | Benefit |
+|----------|---------|
+| **Equip your best** | Equipped items can't drop |
+| **Travel light** | Less to lose |
+| **Store valuables** | Vault rare items before entering |
+| **Group up** | Safety in numbers |
+| **Know escape routes** | Map paths to Safe Zones |
+| **Deposit often** | Frequent loot runs reduce risk |
+
+---
+
+## The Death Decision Tree
+
+When you're about to die in a PvP zone:
+
+```
+LOW HEALTH IN PVP ZONE
+        │
+        ├── Can you escape?
+        │   └── YES → Run to Safe Zone
+        │   └── NO ↓
+        │
+        ├── Do you have a Resurrection Scroll?
+        │   └── YES → Use it, resurrect with items
+        │   └── NO ↓
+        │
+        ├── Is a Cleric nearby?
+        │   └── YES → Die near them for resurrection
+        │   └── NO ↓
+        │
+        └── Accept death
+            └── Respawn at Safe Zone
+            └── Lost items are gone
+```
+
+---
+
+## Recovering Lost Items
+
+### After PvP Death
+
+Your options are limited:
+
+| Option | Success Rate |
+|--------|--------------|
+| **Corpse run** | Low - items likely taken |
+| **Ask killer** | Very low - they want your loot |
+| **Friends revenge** | Variable - might recover if you're fast |
+
+<Callout type="info">
+**Reality Check:** In most cases, items dropped on PvP death are lost forever. The killer will loot them immediately. This is the intended high-stakes design.
+</Callout>
+
+### Prevention is Key
+
+The best strategy is preventing item loss:
+
+1. **Don't carry** items you can't afford to lose
+2. **Store** valuables in Vault before entering PvP zones
+3. **Make loot runs** - deposit finds before pushing deeper
+4. **Know when to retreat** - escaping with loot beats dying for more
+
+---
+
+## Forced Logout Death
+
+Attempting to exit the game in a Danger Zone has consequences:
+
+| Action | Result |
+|--------|--------|
+| Exit in Safe Zone | Safe logout |
+| Exit in PvE Zone | Character stays in world, may die to monsters |
+| Exit in PvP Zone | **Character instantly killed**, item drops apply |
+
+<Callout type="warning">
+**Never force-quit in PvP zones!** The game will kill your character and apply full death penalties. Always return to a Safe Zone to logout.
+</Callout>
+
+---
+
+## Death Statistics
+
+Your character tracks death statistics (viewable in Nexus):
+
+| Stat | Description |
+|------|-------------|
+| Total Deaths | All-time death count |
+| PvE Deaths | Deaths to monsters |
+| PvP Deaths | Deaths to players |
+| Items Lost | Total items dropped on death |
+| Gold Lost | Total gold dropped on death |
+| K/D Ratio | Kills vs deaths in PvP |

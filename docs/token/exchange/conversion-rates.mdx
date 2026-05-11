@@ -1,0 +1,204 @@
+---
+title: Conversion Rates
+description: Understanding Account Rate, Time-Lock Rate, and how your final conversion is calculated.
+---
+
+Your Arcanite to ARC conversion rate is determined by two factors: your **Account Rate** (based on progression) and your **Time-Lock Rate** (based on withdrawal speed).
+
+---
+
+## Base Conversion
+
+**100 Arcanite = 1 ARC Token** at 100% combined rate.
+
+Your actual rate is calculated as:
+
+```
+Final Rate = Account Rate × Time-Lock Rate
+ARC Received = (Arcanite ÷ 100) × Final Rate
+```
+
+---
+
+## Account Rate
+
+Your Account Rate scales from **40% to 100%** based on three weighted factors:
+
+| Factor | Weight | Description |
+|--------|--------|-------------|
+| **Level** | 30% | Progress toward max level (85) |
+| **Playtime** | 20% | Total hours played (over 30+ days) |
+| **Achievements** | 50% | Quests, milestones, and progression |
+
+### Level Contribution (30% weight)
+
+| Level Range | Contribution |
+|-------------|--------------|
+| 35-45 | 0-8% |
+| 46-55 | 8-15% |
+| 56-70 | 15-22% |
+| 71-84 | 22-28% |
+| 85 (Max) | 30% |
+
+### Playtime Contribution (20% weight)
+
+| Hours Played | Contribution |
+|--------------|--------------|
+| 100-200 | 0-5% |
+| 201-400 | 5-10% |
+| 401-700 | 10-15% |
+| 701-1000 | 15-18% |
+| 1000+ | 20% |
+
+<Callout type="info">
+Playtime must be accumulated over a minimum of **30 calendar days**. This prevents rapid farming and ensures genuine engagement.
+</Callout>
+
+### Achievement Contribution (50% weight)
+
+| Achievement Progress | Contribution |
+|---------------------|--------------|
+| Basic homeland quests | 0-10% |
+| All main story quests | 10-20% |
+| Nexus Quests completed | 20-30% |
+| All quests + Social Quests | 30-40% |
+| All achievements + Rare milestones | 50% |
+
+Achievements carry the highest weight because they require genuine gameplay skill and engagement that bots cannot easily replicate.
+
+---
+
+## 100% Account Rate Requirements
+
+To achieve maximum Account Rate:
+
+- Level 85 (max level)
+- All main story quests completed
+- All Nexus Quests completed
+- All Social Quests completed
+- Rare achievement milestones
+
+---
+
+## Time-Lock Rates
+
+Choose how quickly you receive your ARC tokens:
+
+| Withdrawal Type | Rate | Delivery Time | Dynamic? |
+|-----------------|------|---------------|----------|
+| **Instant** | 30-60% | Immediate | Yes — Oracle adjusted |
+| **1 Week Lock** | 60-80% | 7 days | Yes — Oracle adjusted |
+| **2 Week Lock** | 100% | 14 days | **No — Always 100%** |
+
+**Normal rates:** Instant 50% / 1-Week 75% / 2-Week 100%
+
+### Why Time-Locks?
+
+Time-locks serve multiple purposes:
+
+- **Reduces selling pressure** — Spreads withdrawals over time
+- **Rewards patience** — Dedicated players always get the best rate
+- **Discourages bots** — Extraction efficiency reduced
+- **Price stability** — Prevents sudden supply dumps
+
+<Callout type="tip">
+The **2-week lock rate is always 100%** regardless of Oracle state. If you're patient, you always get the best deal.
+</Callout>
+
+<Callout type="info">
+**Cancellation:** Pending withdrawals can be cancelled anytime before completion for a full Arcanite refund.
+</Callout>
+
+---
+
+## Dynamic Rate Oracle
+
+The Oracle adjusts **only instant and 1-week rates** plus **weekly caps** based on economic health. Fixed parameters (base rate, account formula, 2-week rate, fees) never change.
+
+### What the Oracle Controls
+
+| Component | Normal | Stressed | Growing | Hard Range |
+|-----------|--------|----------|---------|------------|
+| **Instant Rate** | 50% | 30% | 60% | 30-60% |
+| **1-Week Rate** | 75% | 60% | 80% | 60-80% |
+| **Weekly Cap (Basic)** | 10,000 | 5,000 | 15,000 | 5k-15k |
+| **Weekly Cap (KYC)** | 20,000 | 10,000 | 25,000 | 10k-25k |
+
+### What Triggers Adjustments
+
+| Indicator | Oracle Response |
+|-----------|-----------------|
+| Extraction rate over 50% of earned | Decrease instant/1-week rates, tighten caps |
+| Player base declining 3+ months | Decrease rates |
+| Healthy growth + low extraction | Maintain or increase |
+| Token price stable/growing | Maintain |
+
+### Oracle Rules
+
+- Reviewed every **Monday at 00:00 UTC**
+- Changes announced **7 days in advance**
+- Published ranges are **hard limits** — Oracle cannot exceed them
+- Current values always visible in Exchange interface
+
+<Callout type="warning">
+During economic stress, instant withdrawals may yield as low as 30%. The 2-week lock is always 100% — patience is always rewarded.
+</Callout>
+
+---
+
+## Combined Rate Examples
+
+### Example 1: New Player
+
+| Component | Value |
+|-----------|-------|
+| Level | 40 (8% contribution) |
+| Playtime | 120 hours over 35 days (5% contribution) |
+| Achievements | Homeland quests (10% contribution) |
+| **Account Rate** | **40%** (minimum) |
+| Time-Lock | Instant (50%) |
+| **Final Rate** | **20%** |
+
+Converting 1,000 Arcanite:
+- Base: 1,000 ÷ 100 = 10 ARC
+- Final: 10 × 20% = **2 ARC**
+
+### Example 2: Mid-Level Player
+
+| Component | Value |
+|-----------|-------|
+| Level | 60 (18% contribution) |
+| Playtime | 350 hours over 60 days (12% contribution) |
+| Achievements | Main quests + some Nexus (25% contribution) |
+| **Account Rate** | **55%** |
+| Time-Lock | 1 Week (75%) |
+| **Final Rate** | **41%** |
+
+Converting 1,000 Arcanite:
+- Base: 1,000 ÷ 100 = 10 ARC
+- Final: 10 × 41% = **4.1 ARC**
+
+### Example 3: Veteran Player
+
+| Component | Value |
+|-----------|-------|
+| Level | 85 (30% contribution) |
+| Playtime | 1,200 hours over 180 days (20% contribution) |
+| Achievements | All completed (50% contribution) |
+| **Account Rate** | **100%** |
+| Time-Lock | 2 Weeks (100%) |
+| **Final Rate** | **100%** |
+
+Converting 1,000 Arcanite:
+- Base: 1,000 ÷ 100 = 10 ARC
+- Final: 10 × 100% = **10 ARC**
+
+---
+
+## Rate Optimization Tips
+
+1. **Focus on achievements** - Largest contribution (50%), requires genuine gameplay
+2. **Complete all quest lines** - Required for maximum rate
+3. **Always use 2-week lock** - Double the rate of instant withdrawals
+4. **Be patient** - Don't rush conversions at low rates
+5. **Spread playtime naturally** - 30-day minimum prevents rushed farming

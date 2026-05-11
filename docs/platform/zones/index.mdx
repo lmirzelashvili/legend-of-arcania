@@ -1,0 +1,277 @@
+---
+title: Zone Types
+description: Understanding Safe Zones, Danger Zones, and PvP territories in Arcania.
+---
+
+> "Beyond the walls of our cities lies a world hungry for blood. Know where you tread, hero."
+> - <img src="/game-icons/avatars/divine_family/erion_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> Erion, Last of the Gods
+
+Arcania's world is divided into different zone types, each with distinct rules for safety, combat, and death penalties. Understanding these zones is crucial for survival.
+
+---
+
+## Zone Classification
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                        ZONE SAFETY SPECTRUM                          │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                      │
+│  🟢 SAFE          🟡 PVE           🟠 HARD PVE        🔴 PVP        │
+│  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+│  No danger        Monsters         Boss monsters      Players can   │
+│  Nexus access     40% durability   80% durability     kill you      │
+│                   loss on death    loss on death      Items drop    │
+│                                                                      │
+│  0% durability = ITEM DESTROYED PERMANENTLY                         │
+│                                                                      │
+│  SAFEST ───────────────────────────────────────────────► RISKIEST   │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 🟢 Safe Zones
+
+**No danger. Full services. Nexus accessible.**
+
+Safe Zones are protected areas where combat is disabled and you can safely manage your character.
+
+### Characteristics
+
+| Feature | Status |
+|---------|--------|
+| Monster spawns | None |
+| PvP | Disabled |
+| Death penalty | N/A (cannot die) |
+| Nexus access | Yes - can exit to Nexus |
+| Services | All NPCs, vendors, facilities |
+
+### Examples
+
+| Zone | Location |
+|------|----------|
+| <TerritoryMention territory="valoryn">Valoryn</TerritoryMention> Capital | Heart of the kingdom |
+| <TerritoryMention territory="meridia">Meridia</TerritoryMention> Capital | Coastal trading hub |
+| <TerritoryMention territory="lythora">Lythora</TerritoryMention> Capital | Forest sanctuary |
+| <TerritoryMention territory="redmire">Redmire</TerritoryMention> Capital | Mountain stronghold |
+| <TerritoryMention territory="lumeria">Lumeria</TerritoryMention> Capital | Arcane city |
+| Outposts | Various safe points in wilderness |
+
+### Available in Safe Zones
+
+- **Vault Access** - Transfer items safely
+- **NPC Vendors** - Buy/sell items
+- **Forgemaster** - Crafting station
+- **Quest NPCs** - Accept and turn in quests
+- **Exit to Nexus** - Safe logout
+
+<Callout type="info">
+You can only exit to the Nexus from Safe Zones. Attempting to logout elsewhere will result in your character remaining in the world (and potentially dying).
+</Callout>
+
+---
+
+## 🟡 PvE Danger Zones
+
+**Monsters present. Durability loss on death. No PvP.**
+
+Most of the world falls into this category - wilderness areas where monsters roam but players cannot attack each other.
+
+### Characteristics
+
+| Feature | Status |
+|---------|--------|
+| Monster spawns | Yes |
+| PvP | Disabled |
+| Death penalty | **40% durability loss** |
+| Nexus access | No - must return to Safe Zone |
+| Services | Limited (some outposts have vendors) |
+
+### Examples
+
+| Zone | Description |
+|------|-------------|
+| Free Realm Wilderness | Forests, plains, caves outside cities |
+| Low-level Dungeons | Instanced or open-world monster areas |
+| Resource gathering areas | Mining, herbalism, hunting grounds |
+
+### Death in PvE Zones
+
+When you die to monsters in a PvE zone:
+
+1. **40% durability loss** on all equipped items
+2. **Respawn** at nearest Safe Zone or outpost
+3. **10-second debuff** - Resurrection Sickness (reduced stats)
+4. **No item drops** - Bag contents are safe
+
+<Callout type="warning">
+**Item Destruction:** If durability reaches 0%, the item is **permanently destroyed**. Two deaths without repairing (40% + 40% = 80%) leaves you dangerously close to losing your gear!
+</Callout>
+
+<Callout type="tip">
+Always repair your equipment at a Blacksmith NPC in Safe Zones. The gold cost is much cheaper than losing your items forever.
+</Callout>
+
+---
+
+## 🟠 Hard PvE Zones
+
+**Extremely dangerous monsters. SEVERE durability loss on death. No PvP.**
+
+The deep Dominion territories and challenging dungeons fall into this category - deadly PvE content without the added threat of other players. Death here is especially punishing.
+
+### Characteristics
+
+| Feature | Status |
+|---------|--------|
+| Monster spawns | Yes - elite and boss monsters |
+| PvP | Disabled |
+| Death penalty | **80% durability loss** |
+| Nexus access | No - must return to Safe Zone |
+| Services | None or very limited |
+
+### Examples
+
+| Zone | Description |
+|------|-------------|
+| Deep <TerritoryMention territory="dreadmar">Dreadmar</TerritoryMention> | Inner corrupted territories |
+| <TerritoryMention territory="stonegrave">Stonegrave</TerritoryMention> Depths | Underground dominion areas |
+| Boss Chambers | Dominion General lairs |
+| High-tier Dungeons | Endgame instanced content |
+
+### Why Hard PvE?
+
+Some Dominion territories are designated Hard PvE rather than PvP to:
+- Allow challenging content without grief potential
+- Enable group PvE progression
+- Provide "hardcore but fair" experiences
+
+<Callout type="warning">
+**80% Durability Loss:** One death to a boss brings your gear to 20% durability. A second death would **destroy all your equipment permanently**. Come prepared with full repairs and don't underestimate these zones!
+</Callout>
+
+---
+
+## 🔴 PvP Zones
+
+**Players can attack you. Items drop on death. Maximum risk, maximum reward.**
+
+Contested territories where players can freely attack each other. Death here means potentially losing items from your Bag to your killer.
+
+### Characteristics
+
+| Feature | Status |
+|---------|--------|
+| Monster spawns | Yes |
+| PvP | Enabled - players can attack |
+| Death penalty | Random item drops from Bag |
+| Nexus access | No - must return to Safe Zone |
+| Services | None (hostile territory) |
+
+### Examples
+
+| Zone | Description |
+|------|-------------|
+| Contested Dominion borders | Frontier areas between realms |
+| <TerritoryMention territory="eclipse">Eclipse Barrens</TerritoryMention> | Lawless wasteland |
+| <TerritoryMention territory="mire">Mire of Whispers</TerritoryMention> edges | Corrupted borderlands |
+| Resource hotspots | Rare material spawns attract conflict |
+
+### Death in PvP Zones
+
+When you die in a PvP zone:
+
+1. **Random items drop** from your Bag (3-5 items typically)
+2. **Dropped items are lootable** by anyone
+3. **Equipped items are SAFE** - they stay with you
+4. **Respawn** at nearest Safe Zone
+5. **Resurrection Sickness** - 10-second reduced stats
+
+### The PvP Risk/Reward
+
+| Risk | Reward |
+|------|--------|
+| Can lose Bag items | Rare resource spawns |
+| Other players hunting | Exclusive material drops |
+| Long distance from safety | PvP ranking points |
+| No services nearby | Excitement and adrenaline |
+
+<Callout type="warning">
+**Exit Warning:** If you try to exit to Nexus while in a PvP zone, your character will be **killed** instantly. Always return to a Safe Zone before logging out!
+</Callout>
+
+---
+
+## Zone Transitions
+
+### Safe → Danger Zone
+
+When leaving a Safe Zone:
+
+```
+┌──────────────┐     ┌───────────────────────────────────┐
+│  SAFE ZONE   │────►│  ⚠️ WARNING: Entering Danger Zone  │
+│  (Valoryn)   │     │  PvE Zone: Monsters present       │
+└──────────────┘     │  Death penalty: Durability loss   │
+                     │  [Enter] [Cancel]                 │
+                     └───────────────────────────────────┘
+```
+
+### Danger → PvP Zone
+
+When entering a PvP zone:
+
+```
+┌──────────────┐     ┌───────────────────────────────────┐
+│  PVE ZONE    │────►│  ⚠️ WARNING: Entering PvP Zone     │
+│  (Wilderness)│     │  Players CAN attack you           │
+└──────────────┘     │  Death penalty: ITEM DROPS        │
+                     │  [Enter at your own risk] [Back]  │
+                     └───────────────────────────────────┘
+```
+
+<Callout type="info">
+Zone boundaries are clearly marked on the map with colored borders. Green = Safe, Yellow = PvE, Orange = Hard PvE, Red = PvP.
+</Callout>
+
+---
+
+## Zone Map Integration
+
+The world map shows zone classifications:
+
+| Map Color | Zone Type | Risk Level |
+|-----------|-----------|------------|
+| 🟢 Green | Safe Zone | None |
+| 🟡 Yellow | PvE Zone | Low |
+| 🟠 Orange | Hard PvE Zone | Medium |
+| 🔴 Red | PvP Zone | High |
+
+### Reading the Map
+
+- **Solid colors** indicate zone type
+- **Hatched areas** indicate contested/changing zones
+- **Icons** show available services (vendors, forgemasters)
+- **Skull icons** indicate boss locations
+
+---
+
+## Strategic Considerations
+
+### Choosing Your Path
+
+| Goal | Recommended Zones |
+|------|-------------------|
+| Leveling safely | 🟡 PvE zones matching your level |
+| Challenging content | 🟠 Hard PvE zones |
+| Best materials | 🔴 PvP zones (if you can handle the risk) |
+| Trading/Crafting | 🟢 Safe zones |
+
+### PvP Zone Survival Tips
+
+1. **Travel light** - Only carry what you're willing to lose
+2. **Stay alert** - Watch for other players
+3. **Know your exits** - Map escape routes to Safe Zones
+4. **Group up** - Safety in numbers
+5. **Deposit often** - Make frequent loot runs back to safety

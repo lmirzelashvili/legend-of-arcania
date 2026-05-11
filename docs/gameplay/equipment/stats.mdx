@@ -1,0 +1,153 @@
+---
+title: Equipment Stats
+description: How the hybrid random stat system works for all equipment in Arcania.
+---
+
+All equipment in Arcania uses a **hybrid random stat system** designed for engaging loot and replayability. Equipment provides **derived stats only** - primary stats like STR, VIT, and AGI come exclusively from level-up point allocation.
+
+---
+
+## How Equipment Stats Work
+
+Every piece of equipment has multiple stat components:
+
+| Component | Description |
+|-----------|-------------|
+| **Base Stat** | Defense (armor/shields) or Damage (weapons) - fixed by tier |
+| **Identity Stat** | Guaranteed derived stat based on equipment slot/type |
+| **Random Bonus Stats** | 1-3 additional stats rolled from a themed pool |
+| **Sockets** | Empty slots for gems (Armor/Weapons/Shields only) |
+
+<Callout type="info">
+**Accessories are different** - they have Identity Stats and Bonus Stats but NO sockets.
+</Callout>
+
+---
+
+## Stat Count by Tier
+
+Higher tier equipment has more bonus stats and sockets:
+
+| Tier | Bonus Stats | Sockets | Total Potential Stats |
+|------|-------------|---------|----------------------|
+| Tier 1 | 1 | 1 | 1 identity + 1 bonus + 1 gem = 3 |
+| Tier 2 | 1 | 2 | 1 identity + 1 bonus + 2 gems = 4 |
+| Tier 3 | 2 | 3 | 1 identity + 2 bonus + 3 gems = 6 |
+| Tier 4 | 2 | 4 | 1 identity + 2 bonus + 4 gems = 7 |
+| Tier 5 | 3 | 5 | 1 identity + 3 bonus + 5 gems = 9 |
+
+---
+
+## Range Variance
+
+All stats roll within a range, creating approximately **±20% variance** from the midpoint. This creates "god rolls" (maximum values) that players can chase.
+
+### Example: Tier 5 Pendant
+
+**God Roll:**
+```
+Titan Pendant (Tier 5) - PERFECT
+├── Crit Chance: +6% (max)
+├── Bonus 1: Max HP +360 (max)
+├── Bonus 2: Crit Damage +15% (max)
+└── Bonus 3: Physical Attack +50 (max)
+```
+
+**Average Roll:**
+```
+Titan Pendant (Tier 5) - AVERAGE
+├── Crit Chance: +5%
+├── Bonus 1: Max HP +300
+├── Bonus 2: Magic Attack +48
+└── Bonus 3: Crit Damage +12%
+```
+
+---
+
+## Themed Bonus Pools
+
+Each equipment slot draws random bonus stats from a **themed pool** appropriate to that slot:
+
+| Equipment | Theme | Example Bonus Stats |
+|-----------|-------|---------------------|
+| **Head** | Magic | <DerivedStatMention stat="max_mana" link={false}>Max Mana</DerivedStatMention>, <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention>, <DerivedStatMention stat="magic_resistance" link={false}>Magic Resistance</DerivedStatMention> |
+| **Chest** | Survivability | <DerivedStatMention stat="physical_defense" link={false}>Physical Defense</DerivedStatMention>, <DerivedStatMention stat="magic_resistance" link={false}>Magic Resistance</DerivedStatMention>, <DerivedStatMention stat="hp_regen" link={false}>HP Regen</DerivedStatMention> |
+| **Gloves** | Offensive | <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention>, <DerivedStatMention stat="critical_chance" link={false}>Crit Chance</DerivedStatMention>, <DerivedStatMention stat="critical_damage" link={false}>Crit Damage</DerivedStatMention> |
+| **Legs** | Endurance | <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention>, <DerivedStatMention stat="movement_speed" link={false}>Movement Speed</DerivedStatMention>, <DerivedStatMention stat="physical_defense" link={false}>Physical Defense</DerivedStatMention> |
+| **Boots** | Mobility | <DerivedStatMention stat="attack_speed" link={false}>Attack Speed</DerivedStatMention>, <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention>, <DerivedStatMention stat="hp_regen" link={false}>HP Regen</DerivedStatMention> |
+| **Weapons** | Class-specific | Crit stats, <DerivedStatMention stat="attack_speed" link={false}>Attack Speed</DerivedStatMention>, Penetration |
+| **Shields** | Defensive | <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention>, <DerivedStatMention stat="magic_resistance" link={false}>Magic Resistance</DerivedStatMention>, <DerivedStatMention stat="hp_regen" link={false}>HP Regen</DerivedStatMention> |
+| **Pendants** | Offensive | <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention>, Attack stats, <DerivedStatMention stat="critical_damage" link={false}>Crit Damage</DerivedStatMention> |
+| **Rings** | Utility | Defenses, <DerivedStatMention stat="max_mana" link={false}>Max Mana</DerivedStatMention>, <DerivedStatMention stat="movement_speed" link={false}>Movement Speed</DerivedStatMention> |
+| **Wings** | Frontline | <DerivedStatMention stat="physical_defense" link={false}>Physical Defense</DerivedStatMention>, <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention>, <DerivedStatMention stat="hp_regen" link={false}>HP Regen</DerivedStatMention> |
+| **Capes** | Caster | <DerivedStatMention stat="magic_resistance" link={false}>Magic Resistance</DerivedStatMention>, <DerivedStatMention stat="max_mana" link={false}>Max Mana</DerivedStatMention>, <DerivedStatMention stat="mana_regen" link={false}>Mana Regen</DerivedStatMention> |
+
+See individual equipment pages for complete bonus pool details and stat ranges.
+
+---
+
+## Socket System
+
+Armor, Weapons, and Shields have empty sockets that can be filled with gems for additional stats. Socket count increases with tier.
+
+| Equipment Type | Tier 1 | Tier 2 | Tier 3 | Tier 4 | Tier 5 |
+|----------------|--------|--------|--------|--------|--------|
+| Armor (per piece) | 1 | 2 | 3 | 4 | 5 |
+| Weapons | 1 | 1 | 2 | 2 | 3 |
+| Shields | 1 | 1 | 2 | 2 | 3 |
+| Accessories | - | - | - | - | - |
+
+---
+
+## Gem System (Placeholder)
+
+Gems provide additional derived stats when socketed into equipment. Expected gem categories:
+
+**Offensive Gems:**
+- <DerivedStatMention stat="critical_chance" link={false}>Critical Chance %</DerivedStatMention>, <DerivedStatMention stat="critical_damage" link={false}>Critical Damage %</DerivedStatMention>
+- <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention>, <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention>
+- <DerivedStatMention stat="attack_speed" link={false}>Attack Speed %</DerivedStatMention>
+- <DerivedStatMention stat="armor_penetration" link={false}>Armor Penetration %</DerivedStatMention>, <DerivedStatMention stat="magic_penetration" link={false}>Magic Penetration %</DerivedStatMention>
+
+**Defensive Gems:**
+- <DerivedStatMention stat="physical_defense" link={false}>Physical Defense</DerivedStatMention>, <DerivedStatMention stat="magic_resistance" link={false}>Magic Resistance</DerivedStatMention>
+- <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention>
+
+**Utility Gems:**
+- <DerivedStatMention stat="max_mana" link={false}>Max Mana</DerivedStatMention>
+- <DerivedStatMention stat="hp_regen" link={false}>HP Regeneration</DerivedStatMention>, <DerivedStatMention stat="mana_regen" link={false}>Mana Regeneration</DerivedStatMention>
+- <DerivedStatMention stat="movement_speed" link={false}>Movement Speed %</DerivedStatMention>
+
+<Callout type="info">
+Gem stats are randomized within ranges when socketed. Full gem system documentation coming soon.
+</Callout>
+
+---
+
+## Acquisition
+
+Equipment drops from various sources based on tier:
+
+| Tier | Primary Sources |
+|------|-----------------|
+| Tier 1 | Homeland vendors, starting quests |
+| Tier 2 | Regional quests, elite enemies |
+| Tier 3 | Dominion Zone 1-2 drops, boss rewards |
+| Tier 4 | Dominion Zone 3-4 drops, boss rewards |
+| Tier 5 | Legendary quests, final boss drops |
+
+---
+
+## Quick Reference
+
+**What's Guaranteed:**
+- Base Defense/Damage (fixed by tier and slot)
+- Identity Stat type (determined by slot)
+- Socket count (fixed by tier)
+
+**What's Random:**
+- Identity Stat value (within tier range)
+- Which bonus stats roll (from themed pool)
+- Bonus stat values (within tier ranges)
+
+This system means two items of the same type and tier can have very different stat profiles, encouraging players to farm for optimal combinations.

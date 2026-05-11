@@ -1,0 +1,245 @@
+---
+title: Armor
+description: Class-specific armor sets with hybrid random stats for engaging loot farming.
+---
+
+Armor in Arcania is class-specific. Each piece uses the **hybrid random stat system** with an identity stat, random bonus stats, and sockets for gems.
+
+---
+
+## Equipment Slots
+
+All armor sets cover five body slots. Each slot has a guaranteed identity stat and draws bonus stats from a themed pool:
+
+| Slot | Identity Stat | Prestige Stat | Bonus Pool Theme |
+|------|---------------|---------------|------------------|
+| **Head** | <DerivedStatMention stat="mana_regen" link={false}>Mana Regeneration</DerivedStatMention> | Prestige Crit % | Magic |
+| **Chest** | <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention> | Prestige HP Regen | Survivability |
+| **Gloves** | <DerivedStatMention stat="attack_speed" link={false}>Attack Speed %</DerivedStatMention> | Prestige Crit Dmg % | Offensive |
+| **Legs** | <DerivedStatMention stat="hp_regen" link={false}>HP Regeneration</DerivedStatMention> | Prestige Move % | Endurance |
+| **Boots** | <DerivedStatMention stat="movement_speed" link={false}>Movement Speed %</DerivedStatMention> | Prestige Atk Spd % | Mobility |
+
+<Callout type="info">
+Equipment provides derived stats only - not primary stats like STR or VIT. Primary stats come from level-up point allocation.
+</Callout>
+
+---
+
+## Identity Stat Ranges by Tier
+
+All identity stats have **±20% variance** for god roll hunting:
+
+| Slot | Identity Stat | T1 | T2 | T3 | T4 | T5 |
+|------|---------------|-------|-------|---------|---------|----------|
+| Head | Mana Regen | 0.4-0.6 | 0.8-1.2 | 1.2-1.8 | 2.0-3.0 | 3.2-4.8 |
+| Chest | Max HP | 24-36 | 56-84 | 112-168 | 200-300 | 320-480 |
+| Gloves | Attack Speed % | 0.8-1.2 | 1.6-2.4 | 3.2-4.8 | 4.8-7.2 | 8-12 |
+| Legs | HP Regen | 0.2-0.4 | 0.5-0.7 | 0.8-1.2 | 1.2-1.8 | 2.0-3.0 |
+| Boots | Move Speed % | 1.6-2.4 | 3.2-4.8 | 4.8-7.2 | 6.4-9.6 | 9.6-14.4 |
+
+---
+
+## Bonus Stats & Sockets by Tier
+
+| Tier | Bonus Stats | Sockets |
+|------|-------------|---------|
+| Tier 1 | 1 random | 1 |
+| Tier 2 | 1 random | 2 |
+| Tier 3 | 2 random | 3 |
+| Tier 4 | 2 random | 4 |
+| Tier 5 | 3 random | 5 |
+
+---
+
+## Prestige Armor
+
+Armor has a 10% chance to drop as **Prestige** quality. Each slot gains a unique Prestige stat:
+
+| Slot | Prestige Stat | T1 | T2 | T3 | T4 | T5 |
+|------|---------------|----|----|----|----|-----|
+| **Head** | Prestige Crit % | +0.5 | +1.0 | +1.5 | +2.5 | +4.0 |
+| **Chest** | Prestige HP Regen | +0.3 | +0.6 | +1.0 | +1.6 | +2.5 |
+| **Gloves** | Prestige Crit Dmg % | +1 | +2 | +4 | +7 | +12 |
+| **Legs** | Prestige Move % | +1 | +2 | +3 | +5 | +8 |
+| **Boots** | Prestige Atk Spd % | +0.5 | +1.0 | +2.0 | +3.5 | +6.0 |
+
+<Callout type="info">
+A full Prestige Tier 5 armor set provides significant stat bonuses on top of standard stats. Prestige items are visually marked with a golden border.
+</Callout>
+
+---
+
+## Bonus Stat Ranges
+
+When a bonus stat rolls, its value falls within these ranges:
+
+### Defensive Stats
+
+| Stat | T1 | T2 | T3 | T4 | T5 |
+|------|-------|-------|---------|---------|---------|
+| <DerivedStatMention stat="max_hp" link={false}>Max HP</DerivedStatMention> | 16-24 | 40-60 | 80-120 | 145-215 | 240-360 |
+| <DerivedStatMention stat="max_mana" link={false}>Max Mana</DerivedStatMention> | 12-18 | 30-50 | 60-100 | 110-170 | 180-280 |
+| <DerivedStatMention stat="physical_defense" link={false}>Physical Defense</DerivedStatMention> | 2-4 | 5-9 | 10-16 | 17-27 | 28-42 |
+| <DerivedStatMention stat="magic_resistance" link={false}>Magic Resistance</DerivedStatMention> | 2-4 | 5-9 | 10-16 | 17-27 | 28-42 |
+| <DerivedStatMention stat="hp_regen" link={false}>HP Regen</DerivedStatMention> | 0.2-0.3 | 0.4-0.6 | 0.7-1.1 | 1.0-1.6 | 1.6-2.4 |
+| <DerivedStatMention stat="mana_regen" link={false}>Mana Regen</DerivedStatMention> | 0.2-0.3 | 0.3-0.5 | 0.5-0.8 | 0.8-1.2 | 1.2-1.8 |
+
+### Offensive Stats
+
+| Stat | T1 | T2 | T3 | T4 | T5 |
+|------|-------|-------|---------|---------|---------|
+| <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> | 2-4 | 5-9 | 10-18 | 18-32 | 30-50 |
+| <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> | 3-5 | 6-10 | 12-20 | 22-38 | 36-60 |
+| <DerivedStatMention stat="critical_chance" link={false}>Crit Chance %</DerivedStatMention> | 0.3-0.5 | 0.6-1.0 | 1.2-1.8 | 1.8-2.6 | 2.8-4.2 |
+| <DerivedStatMention stat="critical_damage" link={false}>Crit Damage %</DerivedStatMention> | 1-2 | 2-4 | 4-6 | 6-10 | 10-15 |
+| <DerivedStatMention stat="attack_speed" link={false}>Attack Speed %</DerivedStatMention> | 0.5-1 | 1-2 | 2-3 | 3-5 | 5-8 |
+| <DerivedStatMention stat="movement_speed" link={false}>Movement Speed %</DerivedStatMention> | 0.5-1 | 1-2 | 2-3 | 3-5 | 5-8 |
+
+---
+
+## Example: Tier 5 Gloves
+
+**Standard God Roll:**
+```
+Eternal Aegis Gauntlets (Tier 5 Plate)
+├── Defense: 65
+├── Identity: Attack Speed +12% (max)
+├── Bonus 1: Crit Damage +15% (max)
+├── Bonus 2: Physical Attack +50 (max)
+├── Bonus 3: Crit Chance +4.2% (max)
+└── Sockets: [ ] [ ] [ ] [ ] [ ]
+```
+
+**Prestige God Roll:**
+```
+★ Eternal Aegis Gauntlets (Tier 5 Plate) [PRESTIGE]
+├── Defense: 65
+├── Identity: Attack Speed +12% (max)
+├── Prestige: Prestige Crit Dmg +12%
+├── Bonus 1: Crit Damage +15% (max)
+├── Bonus 2: Physical Attack +50 (max)
+├── Bonus 3: Crit Chance +4.2% (max)
+└── Sockets: [ ] [ ] [ ] [ ] [ ]
+```
+
+---
+
+## Paladin Armor
+
+Heavy plate armor forged for those who stand between darkness and the innocent.
+
+| Tier | Set Name | Head | Chest | Gloves | Legs | Boots | Lvl |
+|------|----------|------|-------|--------|------|-------|:---:|
+| T1 | Iron Crusader | <ArmorMention armor="iron_crusader_head" link={false}/> | <ArmorMention armor="iron_crusader_chest" link={false}/> | <ArmorMention armor="iron_crusader_gloves" link={false}/> | <ArmorMention armor="iron_crusader_legs" link={false}/> | <ArmorMention armor="iron_crusader_boots" link={false}/> | 1 |
+| T2 | Valoryn Guard | <ArmorMention armor="valoryn_guard_head" link={false}/> | <ArmorMention armor="valoryn_guard_chest" link={false}/> | <ArmorMention armor="valoryn_guard_gloves" link={false}/> | <ArmorMention armor="valoryn_guard_legs" link={false}/> | <ArmorMention armor="valoryn_guard_boots" link={false}/> | 11 |
+| T3 | Sunforged Plate | <ArmorMention armor="sunforged_plate_head" link={false}/> | <ArmorMention armor="sunforged_plate_chest" link={false}/> | <ArmorMention armor="sunforged_plate_gloves" link={false}/> | <ArmorMention armor="sunforged_plate_legs" link={false}/> | <ArmorMention armor="sunforged_plate_boots" link={false}/> | 26 |
+| T4 | Divine Bastion | <ArmorMention armor="divine_bastion_head" link={false}/> | <ArmorMention armor="divine_bastion_chest" link={false}/> | <ArmorMention armor="divine_bastion_gloves" link={false}/> | <ArmorMention armor="divine_bastion_legs" link={false}/> | <ArmorMention armor="divine_bastion_boots" link={false}/> | 41 |
+| T5 | Eternal Aegis | <ArmorMention armor="eternal_aegis_head" link={false}/> | <ArmorMention armor="eternal_aegis_chest" link={false}/> | <ArmorMention armor="eternal_aegis_gloves" link={false}/> | <ArmorMention armor="eternal_aegis_legs" link={false}/> | <ArmorMention armor="eternal_aegis_boots" link={false}/> | 56 |
+
+### Set Bonuses
+
+| Set | 2-Piece | 4-Piece | 5-Piece |
+|-----|---------|---------|---------|
+| <ArmorMention armor="iron_crusader_chest" link={false}>**Iron Crusader**</ArmorMention> | +5% armor | +50 HP | +10% Magic Resistance |
+| <ArmorMention armor="valoryn_guard_chest" link={false}>**Valoryn Guard**</ArmorMention> | +8% armor | +100 HP | +12% Physical Defense |
+| <ArmorMention armor="sunforged_plate_chest" link={false}>**Sunforged**</ArmorMention> | +12% armor | +200 HP | +10% Physical Attack |
+| <ArmorMention armor="divine_bastion_chest" link={false}>**Divine Bastion**</ArmorMention> | +18% armor | +400 HP | +15% Physical Defense |
+| <ArmorMention armor="eternal_aegis_chest" link={false}>**Eternal Aegis**</ArmorMention> | +25% armor | +600 HP | +20% Max HP |
+
+---
+
+## Warrior Armor
+
+Flexible chain and reinforced mail that balances protection with battlefield mobility.
+
+| Tier | Set Name | Head | Chest | Gloves | Legs | Boots | Lvl |
+|------|----------|------|-------|--------|------|-------|:---:|
+| T1 | Crimson Mercenary | <ArmorMention armor="crimson_mercenary_head" link={false}/> | <ArmorMention armor="crimson_mercenary_chest" link={false}/> | <ArmorMention armor="crimson_mercenary_gloves" link={false}/> | <ArmorMention armor="crimson_mercenary_legs" link={false}/> | <ArmorMention armor="crimson_mercenary_boots" link={false}/> | 1 |
+| T2 | Noble Gladiator | <ArmorMention armor="noble_gladiator_head" link={false}/> | <ArmorMention armor="noble_gladiator_chest" link={false}/> | <ArmorMention armor="noble_gladiator_gloves" link={false}/> | <ArmorMention armor="noble_gladiator_legs" link={false}/> | <ArmorMention armor="noble_gladiator_boots" link={false}/> | 11 |
+| T3 | Doom Knight | <ArmorMention armor="doom_knight_head" link={false}/> | <ArmorMention armor="doom_knight_chest" link={false}/> | <ArmorMention armor="doom_knight_gloves" link={false}/> | <ArmorMention armor="doom_knight_legs" link={false}/> | <ArmorMention armor="doom_knight_boots" link={false}/> | 26 |
+| T4 | Dark Berserker | <ArmorMention armor="dark_berserker_head" link={false}/> | <ArmorMention armor="dark_berserker_chest" link={false}/> | <ArmorMention armor="dark_berserker_gloves" link={false}/> | <ArmorMention armor="dark_berserker_legs" link={false}/> | <ArmorMention armor="dark_berserker_boots" link={false}/> | 41 |
+| T5 | Chaos Emperor | <ArmorMention armor="chaos_emperor_head" link={false}/> | <ArmorMention armor="chaos_emperor_chest" link={false}/> | <ArmorMention armor="chaos_emperor_gloves" link={false}/> | <ArmorMention armor="chaos_emperor_legs" link={false}/> | <ArmorMention armor="chaos_emperor_boots" link={false}/> | 56 |
+
+### Set Bonuses
+
+| Set | 2-Piece | 4-Piece | 5-Piece |
+|-----|---------|---------|---------|
+| <ArmorMention armor="crimson_mercenary_chest" link={false}>**Crimson Mercenary**</ArmorMention> | +5% physical damage | +30 HP | +8% Attack Speed |
+| <ArmorMention armor="noble_gladiator_chest" link={false}>**Noble Gladiator**</ArmorMention> | +8% physical damage | +80 HP | +10% Crit Chance |
+| <ArmorMention armor="doom_knight_chest" link={false}>**Doom Knight**</ArmorMention> | +12% physical damage | +150 HP | +12% Attack Speed |
+| <ArmorMention armor="dark_berserker_chest" link={false}>**Dark Berserker**</ArmorMention> | +18% physical damage | +300 HP | +15% Crit Damage |
+| <ArmorMention armor="chaos_emperor_chest" link={false}>**Chaos Emperor**</ArmorMention> | +25% physical damage | +500 HP | +20% Physical Attack |
+
+---
+
+## Ranger Armor
+
+Light, flexible leather that enables stealth and rapid movement through any terrain.
+
+| Tier | Set Name | Head | Chest | Gloves | Legs | Boots | Lvl |
+|------|----------|------|-------|--------|------|-------|:---:|
+| T1 | Leather Scout | <ArmorMention armor="leather_scout_head" link={false}/> | <ArmorMention armor="leather_scout_chest" link={false}/> | <ArmorMention armor="leather_scout_gloves" link={false}/> | <ArmorMention armor="leather_scout_legs" link={false}/> | <ArmorMention armor="leather_scout_boots" link={false}/> | 1 |
+| T2 | Elite Hunter | <ArmorMention armor="elite_hunter_head" link={false}/> | <ArmorMention armor="elite_hunter_chest" link={false}/> | <ArmorMention armor="elite_hunter_gloves" link={false}/> | <ArmorMention armor="elite_hunter_legs" link={false}/> | <ArmorMention armor="elite_hunter_boots" link={false}/> | 11 |
+| T3 | Black Ambition | <ArmorMention armor="black_ambition_head" link={false}/> | <ArmorMention armor="black_ambition_chest" link={false}/> | <ArmorMention armor="black_ambition_gloves" link={false}/> | <ArmorMention armor="black_ambition_legs" link={false}/> | <ArmorMention armor="black_ambition_boots" link={false}/> | 26 |
+| T4 | Ancient Venom | <ArmorMention armor="ancient_venom_head" link={false}/> | <ArmorMention armor="ancient_venom_chest" link={false}/> | <ArmorMention armor="ancient_venom_gloves" link={false}/> | <ArmorMention armor="ancient_venom_legs" link={false}/> | <ArmorMention armor="ancient_venom_boots" link={false}/> | 41 |
+| T5 | Dark Phantom | <ArmorMention armor="dark_phantom_head" link={false}/> | <ArmorMention armor="dark_phantom_chest" link={false}/> | <ArmorMention armor="dark_phantom_gloves" link={false}/> | <ArmorMention armor="dark_phantom_legs" link={false}/> | <ArmorMention armor="dark_phantom_boots" link={false}/> | 56 |
+
+### Set Bonuses
+
+| Set | 2-Piece | 4-Piece | 5-Piece |
+|-----|---------|---------|---------|
+| <ArmorMention armor="leather_scout_chest" link={false}>**Leather Scout**</ArmorMention> | +5% movement | +50 HP | +8% Crit Chance |
+| <ArmorMention armor="elite_hunter_chest" link={false}>**Elite Hunter**</ArmorMention> | +8% movement | +100 HP | +10% Crit Chance |
+| <ArmorMention armor="black_ambition_chest" link={false}>**Black Ambition**</ArmorMention> | +12% movement | +150 HP | +12% Movement Speed |
+| <ArmorMention armor="ancient_venom_chest" link={false}>**Ancient Venom**</ArmorMention> | +15% movement | +250 HP | +15% Crit Damage |
+| <ArmorMention armor="dark_phantom_chest" link={false}>**Dark Phantom**</ArmorMention> | +20% movement | +400 HP | +20% Attack Speed |
+
+---
+
+## Mage & Cleric Armor
+
+Enchanted cloth that amplifies magical power while providing modest protection.
+
+| Tier | Set Name | Head | Chest | Gloves | Legs | Boots | Lvl |
+|------|----------|------|-------|--------|------|-------|:---:|
+| T1 | Swift Silk | <ArmorMention armor="swift_silk_head" link={false}/> | <ArmorMention armor="swift_silk_chest" link={false}/> | <ArmorMention armor="swift_silk_gloves" link={false}/> | <ArmorMention armor="swift_silk_legs" link={false}/> | <ArmorMention armor="swift_silk_boots" link={false}/> | 1 |
+| T2 | Silver Wing | <ArmorMention armor="silver_wing_head" link={false}/> | <ArmorMention armor="silver_wing_chest" link={false}/> | <ArmorMention armor="silver_wing_gloves" link={false}/> | <ArmorMention armor="silver_wing_legs" link={false}/> | <ArmorMention armor="silver_wing_boots" link={false}/> | 11 |
+| T3 | Mystic Vestments | <ArmorMention armor="mystic_vestments_head" link={false}/> | <ArmorMention armor="mystic_vestments_chest" link={false}/> | <ArmorMention armor="mystic_vestments_gloves" link={false}/> | <ArmorMention armor="mystic_vestments_legs" link={false}/> | <ArmorMention armor="mystic_vestments_boots" link={false}/> | 26 |
+| T4 | Manticore Regalia | <ArmorMention armor="manticore_regalia_head" link={false}/> | <ArmorMention armor="manticore_regalia_chest" link={false}/> | <ArmorMention armor="manticore_regalia_gloves" link={false}/> | <ArmorMention armor="manticore_regalia_legs" link={false}/> | <ArmorMention armor="manticore_regalia_boots" link={false}/> | 41 |
+| T5 | White Oracle | <ArmorMention armor="white_oracle_head" link={false}/> | <ArmorMention armor="white_oracle_chest" link={false}/> | <ArmorMention armor="white_oracle_gloves" link={false}/> | <ArmorMention armor="white_oracle_legs" link={false}/> | <ArmorMention armor="white_oracle_boots" link={false}/> | 56 |
+
+### Set Bonuses (Mage Focus)
+
+| Set | 2-Piece | 4-Piece | 5-Piece |
+|-----|---------|---------|---------|
+| <ArmorMention armor="swift_silk_chest" link={false}>**Swift Silk**</ArmorMention> | +5% cast speed | +50 mana | +8% Magic Attack |
+| <ArmorMention armor="silver_wing_chest" link={false}>**Silver Wing**</ArmorMention> | +8% cast speed | +100 mana | +10% Crit Chance |
+| <ArmorMention armor="mystic_vestments_chest" link={false}>**Mystic**</ArmorMention> | +12% cast speed | +200 mana | +12% Mana Regen |
+| <ArmorMention armor="manticore_regalia_chest" link={false}>**Manticore**</ArmorMention> | +15% cast speed | +350 mana | +15% Magic Resistance |
+| <ArmorMention armor="white_oracle_chest" link={false}>**White Oracle**</ArmorMention> | +20% cast speed | +500 mana | +20% Magic Attack |
+
+### Set Bonuses (Cleric Focus)
+
+| Set | 2-Piece | 4-Piece | 5-Piece |
+|-----|---------|---------|---------|
+| <ArmorMention armor="swift_silk_chest" link={false}>**Swift Silk**</ArmorMention> | +5% cast speed | +50 mana | +8% Max Mana |
+| <ArmorMention armor="silver_wing_chest" link={false}>**Silver Wing**</ArmorMention> | +8% cast speed | +100 mana | +10% Mana Regen |
+| <ArmorMention armor="mystic_vestments_chest" link={false}>**Mystic**</ArmorMention> | +12% cast speed | +200 mana | +12% HP Regen |
+| <ArmorMention armor="manticore_regalia_chest" link={false}>**Manticore**</ArmorMention> | +15% cast speed | +350 mana | +15% Magic Resistance |
+| <ArmorMention armor="white_oracle_chest" link={false}>**White Oracle**</ArmorMention> | +20% cast speed | +500 mana | +20% Max HP |
+
+<Callout type="tip">
+Mages and Clerics share armor appearances but receive different set bonuses based on their class.
+</Callout>
+
+---
+
+## Acquisition Sources
+
+| Tier | Primary Sources |
+|------|-----------------|
+| Tier 1 | Homeland vendors, starting quests |
+| Tier 2 | Regional quests, elite enemies |
+| Tier 3 | Dominion zones 1-2, boss rewards |
+| Tier 4 | Dominion zones 3-4, boss drops |
+| Tier 5 | Legendary quests, final boss drops |

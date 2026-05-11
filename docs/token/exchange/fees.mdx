@@ -1,0 +1,201 @@
+---
+title: Fees & Limits
+description: Withdrawal fees, conversion limits, and processing details for the Arcanite Exchange.
+---
+
+Understanding the fee structure and limits helps you optimize your Arcanite to ARC conversions.
+
+---
+
+## Fee Structure
+
+### Withdrawal Fees
+
+Fees vary based on withdrawal speed and are **100% burned** (permanently removed from supply):
+
+| Withdrawal Type | Fee | Destination |
+|-----------------|-----|-------------|
+| **Instant** | 3% | Burned |
+| **1 Week Lock** | 2% | Burned |
+| **2 Week Lock** | 2% | Burned |
+
+The higher instant fee further incentivizes patient withdrawals while contributing more to token deflation.
+
+**Examples:**
+
+**Instant withdrawal** of 1,000 Arcanite at 100% account rate:
+- Base: 1,000 ÷ 100 = 10 ARC × 50% (instant rate) = 5 ARC
+- 3% fee = 0.15 ARC burned
+- **You receive: 4.85 ARC**
+
+**2-week lock withdrawal** of 1,000 Arcanite at 100% account rate:
+- Base: 1,000 ÷ 100 = 10 ARC × 100% (2-week rate) = 10 ARC
+- 2% fee = 0.2 ARC burned
+- **You receive: 9.8 ARC**
+
+<Callout type="info">
+All withdrawal fees are **burned**, not collected. This reduces total ARC supply over time, benefiting all token holders through deflation.
+</Callout>
+
+### Blockchain Gas Fees
+
+| Fee Type | Amount | Paid By |
+|----------|--------|---------|
+| **Gas Fee** | Variable | User |
+
+Gas fees are required to process the blockchain transaction:
+- Paid in ETH (or native chain token)
+- Amount varies based on network congestion
+- Not controlled by Arcania
+
+**Typical Gas Costs:**
+| Network Condition | Approximate Cost |
+|-------------------|------------------|
+| Low congestion | $1-3 |
+| Normal | $3-10 |
+| High congestion | $10-50+ |
+
+<Callout type="tip">
+Convert during low-activity periods (weekends, early mornings UTC) for lower gas fees.
+</Callout>
+
+---
+
+## Weekly Conversion Caps
+
+Caps prevent large-scale extraction and are **Oracle-adjusted** within published ranges:
+
+| Verification Level | Normal Cap | Stressed | Growing | Hard Range |
+|--------------------|------------|----------|---------|------------|
+| **Basic** (Email + Captcha + Wallet) | 10,000 | 5,000 | 15,000 | 5k-15k |
+| **KYC Verified** | 20,000 | 10,000 | 25,000 | 10k-25k |
+
+### Cap Details
+
+- Caps reset every **Monday at 00:00 UTC**
+- Unused cap does **not** roll over
+- Time-locked conversions count toward the week they're initiated
+- Multiple conversions per week allowed within cap
+- Oracle adjusts caps within hard ranges based on economic health
+
+<Callout type="info">
+Complete KYC verification to access higher weekly caps. Cap adjustments are announced 7 days in advance.
+</Callout>
+
+---
+
+## Minimum Conversion
+
+| Requirement | Amount |
+|-------------|--------|
+| **Minimum per conversion** | 1,000 Arcanite |
+| **Minimum ARC received** | ~10 ARC (at 100% rate) |
+
+### Maximum Conversion
+
+There is no maximum single conversion amount, but:
+- Weekly caps still apply
+- Large conversions may trigger additional verification
+- Conversions over $10,000 equivalent require enhanced KYC
+
+---
+
+## Processing Times
+
+### By Withdrawal Type
+
+| Type | Processing Time | When You Receive ARC |
+|------|----------------|---------------------|
+| **Instant** | 1-24 hours | Same day (after blockchain confirmation) |
+| **1 Week Lock** | 7 days | After lock period + blockchain time |
+| **2 Week Lock** | 14 days | After lock period + blockchain time |
+
+### Processing Stages
+
+1. **Initiated** - Conversion request submitted
+2. **Locked** - Arcanite deducted, timer starts (if time-locked)
+3. **Processing** - Lock complete, preparing blockchain transaction
+4. **Confirming** - Transaction submitted, awaiting confirmations
+5. **Complete** - ARC in your wallet
+
+<Callout type="info">
+Blockchain confirmations typically take 5-15 minutes after the processing stage begins.
+</Callout>
+
+---
+
+## Cancellation Policy
+
+### Before Lock Completion
+
+| Action | Result |
+|--------|--------|
+| **Cancel** | Full Arcanite refund, no fees |
+| **Modify** | Not allowed (cancel and restart) |
+
+### After Lock Completion
+
+| Action | Result |
+|--------|--------|
+| **Cancel** | Not possible once processing begins |
+| **Modify** | Not possible |
+
+<Callout type="warning">
+Once a conversion enters "Processing" stage, it cannot be cancelled. The transaction will complete.
+</Callout>
+
+---
+
+## Fee Comparison: Time-Lock Options
+
+For a 1,000 Arcanite conversion at 100% account rate:
+
+| Option | Rate | Base ARC | Fee % | Fee Amount | Net ARC |
+|--------|------|----------|-------|------------|---------|
+| **Instant** | 50% | 5 ARC | 3% | -0.15 | **4.85 ARC** |
+| **1 Week** | 75% | 7.5 ARC | 2% | -0.15 | **7.35 ARC** |
+| **2 Week** | 100% | 10 ARC | 2% | -0.20 | **9.8 ARC** |
+
+**Patience premium:** 2-week lock yields **102% more ARC** than instant for the same Arcanite.
+
+---
+
+## Tax Considerations
+
+<Callout type="warning">
+**Disclaimer:** This is not tax advice. Consult a qualified tax professional for your jurisdiction.
+</Callout>
+
+ARC Token conversions may be taxable events depending on your location:
+
+| Event | Potential Tax Implication |
+|-------|--------------------------|
+| Arcanite → ARC conversion | May be taxable income |
+| ARC sale for fiat | Capital gains/losses may apply |
+| ARC staking rewards | May be taxable income |
+
+**Recommended:**
+- Keep records of all conversions
+- Note conversion dates and ARC amounts
+- Track fair market value at time of conversion
+- Consult local tax regulations
+
+---
+
+## Optimizing Your Conversions
+
+### Best Practices
+
+1. **Always use 2-week lock** unless you urgently need funds
+2. **Batch conversions** to reduce gas fee impact per ARC
+3. **Convert during low gas** periods (check gas trackers)
+4. **Complete KYC early** for 20,000 weekly limit
+5. **Max your account rate** before large conversions
+
+### Worst Practices
+
+- Instant withdrawals at low account rate (effective rate as low as 20% minus 3% fee)
+- Multiple small conversions (high gas per ARC)
+- Converting during network congestion
+- Rushing conversions before reaching higher levels
+- Converting right before weekly cap reset (unused cap doesn't roll over)

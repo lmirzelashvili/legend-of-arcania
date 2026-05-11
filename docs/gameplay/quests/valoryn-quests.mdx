@@ -1,0 +1,484 @@
+---
+title: "Valoryn Quests"
+description: Convergence, Alliance Training, Class Milestones, and The Breach - preparing for the Dominion campaign.
+---
+
+> "Four homelands. Four peoples. One purpose. At Valoryn, we become the Grand Alliance."
+> - <img src="/game-icons/avatars/divine_family/erion_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> Erion, Last of the Gods
+
+After completing your homeland quests, all paths converge toward <TerritoryMention territory="valoryn">Valoryn</TerritoryMention>. This section covers the journey from Convergence through Alliance Training to your first true combat in The Breach.
+
+---
+
+## Phase Overview
+
+| Phase | Levels | Quests | Description |
+|-------|--------|--------|-------------|
+| **Convergence** | 20-25 | 7 | Races meet, first joint content |
+| **Valoryn Training** | 25-30 | 6 | Main story preparation |
+| **Class Milestones** | 27 | 5 | Unique per class |
+| **The Breach** | 30-35 | 10 | First true combat zone |
+
+---
+
+## Convergence (Levels 20-25)
+
+*Where all survivors meet*
+
+**Quest Givers:**
+- <img src="/game-icons/avatars/human_npc/lyris_avatar.png" alt="Lyris" className="inline w-8 h-8 mr-2 my-0 rounded-full align-middle" /> **Commander Lyris Dawnshield** (<RaceMention race="human" link={false}>Human</RaceMention>) - Alliance officer at The Crossroads
+- <img src="/game-icons/avatars/lilin_npc/refugee_elder_mira.png" alt="Mira" className="inline w-8 h-8 mr-2 my-0 rounded-full align-middle" /> **Refugee Elder Mira** (<RaceMention race="lilin" link={false}>Lilin</RaceMention>) - Survivor coordinator
+
+**Supporting NPCs:**
+- <img src="/game-icons/avatars/darkan_npc/korr_avatar.png" alt="Korr" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> **Watchman Korr** (<RaceMention race="darkan" link={false}>Darkan</RaceMention>) - Defense coordination
+- <img src="/game-icons/avatars/luminar_npc/solis_avatar.png" alt="Solis" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> **Lightbearer Solis** (<RaceMention race="luminar" link={false}>Luminar</RaceMention>) - Morale and healing
+
+### Quest Chain
+
+| # | Quest | Level | Objective | Reward |
+|---|-------|-------|-----------|--------|
+| 1 | **The Crossroads** | 20 | Reach The Crossroads | <img src="/game-icons/gold_icon.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> 100 Gold |
+| 2 | **Strength in Unity** | 21 | Kill 20 Despair Shades | <img src="/game-icons/armour/armour_sets/gloves/Icon15.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T2 Gloves |
+| 3 | **Hollow Wanderers** | 22 | Kill 25 Hollow Wanderers, Collect 10 Lost Memories | <CrystalMention crystal="spirit" link={false}>Crystal of Spirit</CrystalMention> x5 |
+| 4 | **The Corrupted** | 23 | Kill 15 Corrupted Refugees | <img src="/game-icons/armour/armour_sets/chest/Icon12.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T2 Chest, <ElixirMention elixir="life" size="md" link={false}>Elixir of Life MD</ElixirMention> x5 |
+| 5 | **Path Corruptor** | 24 | Defeat Path Corruptor (Elite) | <img src="/game-icons/armour/armour_sets/legs/Icon15.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T2 Legs |
+| 6 | **Valoryn's Shadow** | 24 | Reach Valoryn's Shadow | <ScrollMention scroll="valoryn" link={false}>Scroll of Valoryn</ScrollMention> |
+| 7 | **The Fallen Guardian** | 25 | Defeat The Fallen Guardian (Area Boss) | <img src="/game-icons/armour/armour_sets/chest/Icon15.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T2 Full Set Piece (choice), **Valoryn Entry Token** |
+
+### Quest Dialogues
+
+<QuestDialogue
+  quest="The Crossroads"
+  npc={<><img src="/game-icons/avatars/human_npc/lyris_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Commander Lyris Dawnshield</>}
+  accept="Another survivor. Good - we need every blade we can get. I'm Commander Dawnshield, Alliance. This is The Crossroads - last stop before Valoryn for anyone who made it out of the homelands. You look like you can fight. Get to the outpost and report in. We'll see what you're worth."
+  complete="You made it. Not everyone does. Here's your first pay - spend it on supplies, not sentiment. This isn't a refugee camp anymore. It's a staging ground. Rest up. Tomorrow, you earn your keep."
+/>
+
+<QuestDialogue
+  quest="Strength in Unity"
+  npc={<><img src="/game-icons/avatars/human_npc/lyris_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Commander Lyris Dawnshield</>}
+  accept="Despair Shades. Nasty things - born from the hopelessness of survivors who couldn't hold on. Twenty of them circle the camp. I'm sending you out with warriors from other homelands. Human, Lilin, Darkan, Luminar - doesn't matter. You fight together or you die alone."
+  complete="Shades are down, and nobody died. That's a win. See those people you fought beside? Different races, different homes, same enemy. Remember that. Here - better armor for better soldiers."
+/>
+
+<QuestDialogue
+  quest="Hollow Wanderers"
+  npc={<><img src="/game-icons/avatars/human_npc/lyris_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Commander Lyris Dawnshield</>}
+  accept="The Hollow Wanderers trouble me. They're not aggressive - they just... walk. Empty. But they carry lost memories with them - fragments of who they were. Kill twenty-five. Collect what memories you can. The scholars want to study them. Maybe understand what made these people hollow."
+  complete="These memories... I recognize some of these faces. People I knew. People who didn't make it. Take these crystals. Use them to get stronger. Honor their memory by not becoming one of them."
+/>
+
+<QuestDialogue
+  quest="The Corrupted"
+  npc={<><img src="/game-icons/avatars/human_npc/lyris_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Commander Lyris Dawnshield</>}
+  accept="This one's hard to swallow. Corrupted Refugees. They were survivors like you - came to The Crossroads looking for hope. Found despair instead. Now they attack anyone who gets close. Fifteen of them. Put them down. It's a mercy. Trust me."
+  complete="Done. I won't pretend that was easy. But better a clean death than that half-life. Take this armor, and these elixirs. We honor the fallen by staying strong enough to fight."
+/>
+
+<QuestDialogue
+  quest="Path Corruptor"
+  npc={<><img src="/game-icons/avatars/human_npc/lyris_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Commander Lyris Dawnshield</>}
+  accept="Found the source. The Path Corruptor - some kind of elite creature spreading the despair that turns refugees into those hollow things. It's fortified near the road. Take it out. Cut off the corruption at its source."
+  complete="The Corruptor's dead. Already seeing fewer new cases of the hollow sickness. This armor belonged to the soldier who first spotted it. He didn't survive the encounter. You did. Wear it well."
+/>
+
+<QuestDialogue
+  quest="Valoryn's Shadow"
+  npc={<><img src="/game-icons/avatars/human_npc/lyris_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Commander Lyris Dawnshield</>}
+  accept="Time to see what you're walking into. Valoryn's Shadow is the last stretch before the city. It's called that because you can see Valoryn's walls from there - the shadow of hope against the darkness. Scout ahead. Tell me the path is clear."
+  complete="Path's open. Good. Take this scroll - it'll bring you back to Valoryn if things go sideways in the field. Every soldier gets one. Don't waste it on homesickness. One more test, and you're ready for the city."
+/>
+
+<QuestDialogue
+  quest="The Fallen Guardian"
+  npc={<><img src="/game-icons/avatars/human_npc/lyris_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Commander Lyris Dawnshield</>}
+  accept="The Fallen Guardian. Once it protected this road. Now it kills anyone who tries to pass. We've lost good soldiers to it. You want into Valoryn? This is your final exam. Kill it. Prove you're ready for the real war."
+  complete="It's done. The guardian falls, and you rise. I've seen a lot of refugees come through here. Most of them die within a week. You're different. Take this equipment - best we have at The Crossroads. And this token. It gets you into Valoryn. Welcome to the Alliance, soldier. Don't make me regret it."
+/>
+
+### Story Summary
+
+The Crossroads is a desperate place. Survivors from all four homelands gather here - Human refugees from Meridia, Lilin fleeing the dying First Forest, Darkan descending from the volcanic highlands, and Luminar whose light grows dim.
+
+Commander Lyris Dawnshield brings order to chaos. She assigns you to work alongside warriors of other races, teaching a crucial lesson: the Dominion doesn't care about racial differences. Neither should you.
+
+The **Corrupted Refugees** quest is particularly tragic - these were once survivors like you, consumed by despair and transformed into enemies. It's a harsh reminder of what happens when hope dies.
+
+**The Fallen Guardian** is the first major skill check. This boss requires coordination between players of different races and classes. Defeating it proves you're ready for Valoryn.
+
+> "I don't care what homeland you came from. At The Crossroads, you're Alliance. Act like it."
+> - <img src="/game-icons/avatars/alliance_leadership/lyris_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> Commander Lyris Dawnshield
+
+<Callout type="warning" title="Progression Gate">
+The Fallen Guardian is designed to test your combat skills before entering Valoryn. If you struggle, use this time to complete any remaining homeland quests and upgrade your equipment to full T2.
+</Callout>
+
+---
+
+## Valoryn Training (Levels 25-30)
+
+*The safe hub - where you become a true soldier*
+
+**Quest Givers:**
+- <img src="/game-icons/avatars/divine_family/erion_avatar.png" alt="Erion" className="inline w-8 h-8 mr-2 my-0 rounded-full align-middle" /> **Erion, Last of the Gods** - Supreme Commander at Sunward Keep
+- <img src="/game-icons/avatars/divine_family/marael_avatar.png" alt="Marael" className="inline w-8 h-8 mr-2 my-0 rounded-full align-middle" /> **Marael, Celestial Firstborn** - War Strategist
+
+**Key Locations:**
+- **Sunward Keep** - Erion's council chamber
+- **Hall of Unity** - War coordination center
+- **Proving Grounds** - Training facilities
+- **Forge District** - Equipment and crafting
+
+### Main Story Quests
+
+| # | Quest | Level | Objective | Reward |
+|---|-------|-------|-----------|--------|
+| 1 | **Audience with a God** | 25 | Meet Erion at Sunward Keep | <img src="/game-icons/gold_icon.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> 200 Gold, Lore: The Five Dominions |
+| 2 | **War Council Briefing** | 26 | Speak with all faction leaders | <CrystalMention crystal="spirit" link={false}>Crystal of Spirit</CrystalMention> x10 |
+| 3 | **The Proving Grounds** | 27 | Complete Solo Trial (kill 50 training dummies in time) | <img src="/game-icons/weapons/warrior_weapons/battle_spear.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Weapon (class-specific) |
+| 4 | **Know Your Enemy** | 28 | Study Dominion creatures at Hall of Unity | Lore: Dominion Generals |
+| 5 | **Equipment Requisition** | 29 | Collect T3 armor from Forge District | <img src="/game-icons/armour/armour_sets/chest/Icon25.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Chest Armor |
+| 6 | **Ready for War** | 30 | Report to Shadow Gate | **Breach Entry Pass** |
+
+### Quest Dialogues
+
+<QuestDialogue
+  quest="Audience with a God"
+  npc={<><img src="/game-icons/avatars/divine_family/marael_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Marael, Celestial Firstborn</>}
+  accept="You are summoned to Sunward Keep. Erion himself wishes to meet the one who conquered The Crossroads. Do not keep the last god waiting."
+  complete="So. You are the one who carries hope from the broken homelands. I have watched empires rise and fall. I have buried my family, one by one. Now I watch you. There is something in you, mortal - a spark that refuses to die. Perhaps that is what we need. Take this gold, and this knowledge of what we fight. The Five Dominions await. You will conquer them, or die trying."
+/>
+
+<QuestDialogue
+  quest="War Council Briefing"
+  npc={<><img src="/game-icons/avatars/divine_family/erion_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Erion, Last of the Gods</>}
+  accept="Words alone will not prepare you for what comes. You must meet those who lead this war. Speak with each faction leader. Learn what they offer, and what they need. Then return to me."
+  complete="You have met them. The general, the empress, the high king, the seraph, the undying knight. Each carries burdens you cannot imagine. Each has lost more than you know. Yet they fight on. These crystals are gifts from each of them - their faith in your potential. Do not squander it."
+/>
+
+<QuestDialogue
+  quest="The Proving Grounds"
+  npc={<><img src="/game-icons/avatars/divine_family/erion_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Erion, Last of the Gods</>}
+  accept="Faith is not enough. You must prove your skill. The Proving Grounds await - fifty training constructs, timed. Complete the trial alone. No allies. No excuses. Show me the warrior you claim to be."
+  complete="You passed. The constructs were built to simulate Dominion creatures. You destroyed them all. This weapon was forged by the greatest smiths in Valoryn, enchanted by the last mages who remember the old ways. It is yours now. Wield it against those who would extinguish all light."
+/>
+
+<QuestDialogue
+  quest="Know Your Enemy"
+  npc={<><img src="/game-icons/avatars/divine_family/marael_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Marael, Celestial Firstborn</>}
+  accept="Erion wishes you prepared not just in body, but in mind. The Hall of Unity contains our knowledge of the Dominion - their creatures, their generals, their weaknesses. Study well. Ignorance kills as surely as any blade."
+  complete="You have studied. Good. The Generals were not always what they are now. Vharun once protected. Saelistra once healed. Kharagul... he was always hunger. But the others? The Anguish Stone corrupted them. Remember that when you face them. Sometimes mercy is understanding what your enemy once was."
+/>
+
+<QuestDialogue
+  quest="Equipment Requisition"
+  npc={<><img src="/game-icons/avatars/legendary_mortals/thorin_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> High King Thorin Stonefist</>}
+  accept="Erion sends word you need proper armor. The Forge District has prepared equipment for you. Collect it. My smiths don't waste metal on soldiers who won't survive long enough to use it. Prove them right."
+  complete="Fits well. That armor will turn blades and deflect magic - good Darkan steel at its core, enchanted by Luminar hands. The Alliance built it together. May it serve you as well as you serve us."
+/>
+
+<QuestDialogue
+  quest="Ready for War"
+  npc={<><img src="/game-icons/avatars/divine_family/erion_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Erion, Last of the Gods</>}
+  accept="The time has come. Report to Shadow Gate - the threshold between Valoryn and the war beyond. Sergeant Varn commands there. Tell him Erion sends you. Tell him you are ready."
+  complete="You stand at the edge of everything we have built. Beyond the Shadow Gate lies The Breach - and beyond that, the Dominions. I have sent thousands through that gate. Many never returned. But you... I believe you will. Take this pass. It is your key to the war. Do not make me regret my faith in you."
+/>
+
+### Story Summary
+
+Valoryn is the last bastion of hope in Arcania. Here, Erion himself - the Last of the Gods - coordinates the war against the Dominion. Meeting him is a pivotal moment in your journey.
+
+The **War Council Briefing** introduces you to the faction leaders who will guide you through the coming campaign:
+- **General Kira Ironhand** - <RaceMention race="human" link={false}>Human</RaceMention>, commands ground forces
+- **Empress Lilith** - <RaceMention race="lilin" link={false}>Lilin</RaceMention>, heads intelligence operations
+- **High King Thorin Stonefist** - <RaceMention race="darkan" link={false}>Darkan</RaceMention>, oversees logistics and equipment
+- **High Seraph Aurelia** - <RaceMention race="luminar" link={false}>Luminar</RaceMention>, provides spiritual guidance
+- **Aldric the Undying** - First Paladin, trains frontline warriors
+
+At the **Proving Grounds**, you're tested individually. This is where you earn your T3 weapon and prove you can handle yourself in combat.
+
+> "You stand before the last god. You fight for the last hope. Do not waste either."
+> - <img src="/game-icons/avatars/divine_family/erion_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> Erion, Last of the Gods
+
+---
+
+## Class Milestone Quests (Level 27)
+
+*One unique quest per class - complete these for your signature weapon and skill*
+
+Each class has a specialized quest given by a faction leader. These quests test the specific skills your class brings to the war effort.
+
+### Paladin: "The Undying's Lesson"
+
+**Quest Giver:** <img src="/game-icons/avatars/legendary_mortals/aldric_avatar.png" alt="Aldric" className="inline w-8 h-8 mr-2 my-0 rounded-full align-middle" /> Aldric the Undying (Proving Grounds)
+
+| Detail | Information |
+|--------|-------------|
+| **Objective** | Survive 100 hits in Proving Grounds (tank endurance test) |
+| **Challenge** | Maintain defensive stance while taking sustained damage |
+| **Reward** | <img src="/game-icons/weapons/paladin_weapons/guardian_mace.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Paladin Mace |
+
+> "A Paladin doesn't win by killing faster. A Paladin wins by not dying. Show me you understand."
+> - <img src="/game-icons/avatars/legendary_mortals/aldric_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> Aldric the Undying
+
+### Warrior: "Steel Covenant Initiation"
+
+**Quest Giver:** <img src="/game-icons/avatars/legendary_mortals/kira_avatar.png" alt="Kira" className="inline w-8 h-8 mr-2 my-0 rounded-full align-middle" /> General Kira Ironhand (Hall of Unity)
+
+| Detail | Information |
+|--------|-------------|
+| **Objective** | Kill 30 training targets in 60 seconds (DPS test) |
+| **Challenge** | Maximum damage output with efficient skill rotation |
+| **Reward** | <img src="/game-icons/weapons/warrior_weapons/battle_spear.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Warrior Sword |
+
+> "The Steel Covenant doesn't train soldiers who hesitate. Strike fast. Strike hard. Don't stop until they're dead."
+> - <img src="/game-icons/avatars/legendary_mortals/kira_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> General Kira Ironhand
+
+### Cleric: "Veyla's Legacy"
+
+**Quest Giver:** <img src="/game-icons/avatars/alliance_leadership/aurelia_avatar.png" alt="Aurelia" className="inline w-8 h-8 mr-2 my-0 rounded-full align-middle" /> High Seraph Aurelia (Healer's Sanctuary)
+
+| Detail | Information |
+|--------|-------------|
+| **Objective** | Heal 5000 HP in Proving Grounds (sustained healing test) |
+| **Challenge** | Keep multiple wounded soldiers alive during combat simulation |
+| **Reward** | <img src="/game-icons/weapons/cleric_mage_weapons/mystic_staff.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Cleric Staff |
+
+> "Veyla discovered how to share Anias's light with mortals. You carry that legacy. Prove worthy of it."
+> - <img src="/game-icons/avatars/alliance_leadership/aurelia_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> High Seraph Aurelia
+
+### Mage: "Arcane Secrets"
+
+**Quest Giver:** <img src="/game-icons/avatars/legendary_mortals/lilith_avatar.png" alt="Lilith" className="inline w-8 h-8 mr-2 my-0 rounded-full align-middle" /> Empress Lilith (Shadow Archive)
+
+| Detail | Information |
+|--------|-------------|
+| **Objective** | Kill 20 magic-resistant targets (spell penetration test) |
+| **Challenge** | Overcome high magic resistance through proper technique |
+| **Reward** | <img src="/game-icons/weapons/cleric_mage_weapons/mystic_staff.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Mage Staff |
+
+> "Power without precision is noise. Show me you can pierce defenses, not just throw fire at them."
+> - <img src="/game-icons/avatars/legendary_mortals/lilith_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> Empress Lilith
+
+### Ranger: "Shadow's Eye"
+
+**Quest Giver:** <img src="/game-icons/avatars/legendary_mortals/lilith_avatar.png" alt="Lilith" className="inline w-8 h-8 mr-2 my-0 rounded-full align-middle" /> Empress Lilith (Shadow Archive)
+
+| Detail | Information |
+|--------|-------------|
+| **Objective** | Hit 50 moving targets (accuracy test) |
+| **Challenge** | Track and hit targets at range while they maneuver |
+| **Reward** | <img src="/game-icons/weapons/ranger_weapons/hunter_recurve.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Ranger Bow |
+
+> "My scouts don't miss. One shot, one kill. Anything less wastes arrows and lives. Show me you won't waste either."
+> - <img src="/game-icons/avatars/legendary_mortals/lilith_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> Empress Lilith
+
+<Callout type="tip" title="Class Quest Timing">
+Complete your class milestone quest immediately after "The Proving Grounds" (Quest #3). The T3 weapon makes the remaining Valoryn quests and The Breach significantly easier.
+</Callout>
+
+### Class Quest Dialogues
+
+<QuestDialogue
+  quest="The Undying's Lesson"
+  npc={<><img src="/game-icons/avatars/legendary_mortals/aldric_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Aldric the Undying</>}
+  accept="So you wish to be a Paladin. Everyone wants to be a Paladin until they learn what it costs. A Paladin doesn't win by killing faster. A Paladin wins by not dying. By standing when others fall. By being the wall that never breaks. One hundred hits. Take them all. Stay standing. Then we'll talk."
+  complete="One hundred hits. You're still standing. Good. I've trained Paladins for centuries. Most break before the count. Not you. This mace was blessed by Anias herself, before she fell. And this skill - Divine Shield - will let you protect not just yourself, but others. That is what Paladins do. We endure so others don't have to."
+/>
+
+<QuestDialogue
+  quest="Steel Covenant Initiation"
+  npc={<><img src="/game-icons/avatars/legendary_mortals/kira_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> General Kira Ironhand</>}
+  accept="The Steel Covenant doesn't train soldiers who hesitate. We train killers. Efficient, ruthless, unstoppable. Thirty targets. Sixty seconds. Miss the timer, and you're not Covenant material. Strike fast. Strike hard. Don't stop until they're dead."
+  complete="Thirty kills. Under a minute. That's the Covenant standard. You've met it. This sword has been in the Ironhand family for generations - passed from warrior to warrior. You carry that legacy now. And Berserker Rage? Use it when you need to tear through everything in your path. Just remember - rage is a tool, not a master."
+/>
+
+<QuestDialogue
+  quest="Veyla's Legacy"
+  npc={<><img src="/game-icons/avatars/alliance_leadership/aurelia_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> High Seraph Aurelia</>}
+  accept="Veyla was the first mortal to channel Anias's light for healing. She devoted her life to understanding how divine radiance could mend mortal wounds. You carry that legacy. Five thousand points of healing, in active combat conditions. Keep the wounded alive. Prove the light still answers."
+  complete="Five thousand healed. The soldiers you saved will fight another day because of you. This staff was Veyla's own - passed down through generations of healers. And Mass Heal will let you save many at once. Remember: a Cleric's job isn't to prevent death. It's to delay it long enough for victory."
+/>
+
+<QuestDialogue
+  quest="Arcane Secrets"
+  npc={<><img src="/game-icons/avatars/legendary_mortals/lilith_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Empress Lilith</>}
+  accept="Power without precision is noise. Any fool can throw fire. A true mage pierces defenses, finds weakness, strikes where it matters. Twenty targets, heavily warded against magic. Burn through them anyway. Show me you understand that magic is a scalpel, not a hammer."
+  complete="Twenty wards, shattered. You found the gaps, exploited the weaknesses. That's what separates mages from magic-throwers. This staff amplifies arcane energy beyond what most can channel. And Arcane Burst? It's raw power compressed to a point. Use it when subtlety fails and everything needs to die."
+/>
+
+<QuestDialogue
+  quest="Shadow's Eye"
+  npc={<><img src="/game-icons/avatars/legendary_mortals/lilith_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Empress Lilith</>}
+  accept="My scouts don't miss. One shot, one kill. Anything less wastes arrows and lives. Fifty moving targets. Hit them all. Range, angle, wind - factor everything. If you can't do this in training, you'll fail in the field. And failure in the field means dead allies."
+  complete="Fifty hits. Zero misses. You have the eye. This bow was crafted for distance work - accurate at ranges most archers can't even see. And Piercing Shot? It goes through armor, through shields, through anything between you and your target. My scouts carry the war's secrets. Now you carry one of its deadliest weapons."
+/>
+
+---
+
+## The Breach (Levels 30-35)
+
+*The war begins - first true combat zone*
+
+**Quest Givers:**
+- <img src="/game-icons/avatars/human_npc/varn_avatar.png" alt="Varn" className="inline w-8 h-8 mr-2 my-0 rounded-full align-middle" /> **Sergeant Varn** - Breach Forward Commander
+- **Scout Kira** - Reconnaissance officer
+
+**Supporting NPCs:**
+- <img src="/game-icons/avatars/human_npc/auryn_avatar.png" alt="Auryn" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> **Field Medic Auryn** - Aurelia's healer (emergency healing)
+- <img src="/game-icons/avatars/darkan_npc/grond_avatar.png" alt="Grond" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> **Supply Master Grond** - Thorin's quartermaster (equipment vendor)
+
+### Quest Chain
+
+| # | Quest | Level | Objective | Reward |
+|---|-------|-------|-----------|--------|
+| 1 | **No Man's Land** | 30 | Reach No Man's Land | <img src="/game-icons/gold_icon.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> 100 Gold |
+| 2 | **First Blood** | 31 | Kill 30 Breach Walkers | <img src="/game-icons/armour/armour_sets/gloves/Icon25.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Gloves |
+| 3 | **Fallen Comrades** | 32 | Kill 25 Corrupted Soldiers, Collect 15 Dog Tags | <img src="/game-icons/armour/armour_sets/gloves/Icon25.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Gloves, <ElixirMention elixir="life" size="lg" link={false}>Elixir of Life LG</ElixirMention> x3 |
+| 4 | **Battlefield Wraiths** | 32 | Kill 20 Battlefield Wraiths | <CrystalMention crystal="dominion" link={false}>Crystal of Dominion</CrystalMention> x2 |
+| 5 | **The Commander** | 33 | Defeat Breach Commander (Elite) | <img src="/game-icons/armour/armour_sets/chest/Icon25.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Chest |
+| 6 | **Gate Approach** | 33 | Reach Corrupted Gate | <ElixirMention elixir="life" size="lg" link={false}>Elixir of Life LG</ElixirMention> x5 |
+| 7 | **Gate Keepers** | 34 | Kill 40 Gate Keepers | <img src="/game-icons/armour/armour_sets/legs/Icon25.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Legs |
+| 8 | **Sentinel Down** | 34 | Defeat Corrupted Gate Sentinel (Elite) | <img src="/game-icons/armour/armour_sets/boots/Icon25.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Boots |
+| 9 | **The Battlefield Reaver** | 35 | Defeat Battlefield Reaver (Area Boss) | T3 Pendant of Kharagul |
+| 10 | **The Gatekeeper** | 35 | Defeat The Gatekeeper (Area Boss) | T3 Full Set Completion, **Dominion Entry Pass** |
+
+### Quest Dialogues
+
+<QuestDialogue
+  quest="No Man's Land"
+  npc={<><img src="/game-icons/avatars/human_npc/varn_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Sergeant Varn</>}
+  accept="Fresh from Valoryn. Good. I'm Varn. This is The Breach - the line between civilization and hell. Everything before this was training. This is real. People die here. Don't let it be you. Get to No Man's Land. See what the war actually looks like."
+  complete="You saw it. The bodies. The destruction. That's what we fight every day. Here's your pay. Spend it on whatever keeps you alive. You'll need everything you can get."
+/>
+
+<QuestDialogue
+  quest="First Blood"
+  npc={<><img src="/game-icons/avatars/human_npc/varn_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Sergeant Varn</>}
+  accept="Time for your first real kills. Breach Walkers - corrupted soldiers from both sides, fused together by the Anguish Stone's power. Thirty of them patrol the line. Put them down. Don't think about what they used to be."
+  complete="Thirty kills. First blood. You didn't freeze, didn't run. That's more than most manage. This armor's seen combat - belonged to a soldier who didn't make it. Fits you better than the grave fits him. Wear it."
+/>
+
+<QuestDialogue
+  quest="Fallen Comrades"
+  npc={<><img src="/game-icons/avatars/human_npc/varn_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Sergeant Varn</>}
+  accept="This one's going to hurt. Corrupted Soldiers. They were Alliance once - our people. Now they're the enemy. Twenty-five of them. And collect their dog tags. The families deserve to know what happened. Even if what happened was... this."
+  complete="The tags. I know some of these names. Fought beside them. Now you've ended them. It's a mercy, soldier. Remember that. This armor and these elixirs - they're not rewards. They're tools to make sure you don't end up like them."
+/>
+
+<QuestDialogue
+  quest="Battlefield Wraiths"
+  npc={<><img src="/game-icons/avatars/human_npc/varn_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Sergeant Varn</>}
+  accept="Battlefield Wraiths. The dead who won't stay dead. Twenty of them haunt the killing fields, feeding on the grief of every fallen soldier. They're not people anymore - just echoes of pain given form. Put them to rest."
+  complete="Wraiths are quiet. For now. These crystals were pulled from the battlefield - still humming with Dominion energy. The scholars say they're valuable. I say use them to get stronger. Dead soldiers don't spend gold."
+/>
+
+<QuestDialogue
+  quest="The Commander"
+  npc={<><img src="/game-icons/avatars/human_npc/varn_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Sergeant Varn</>}
+  accept="We've got a Breach Commander coordinating enemy movement. Elite creature - smart, organized, dangerous. It needs to die. Cut off the head, and the body flails. Take a team if you need to. Just get it done."
+  complete="The Commander's down. Already seeing their formations break apart. This armor piece came from its collection - trophies from soldiers it killed. Now it's yours. Turn their weapons against them."
+/>
+
+<QuestDialogue
+  quest="Gate Approach"
+  npc={<><img src="/game-icons/avatars/human_npc/varn_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Sergeant Varn</>}
+  accept="Time to push forward. The Corrupted Gate is ahead - the actual entrance to the Dominions. We need eyes on it. Get close enough to see what we're dealing with. Don't engage. Not yet."
+  complete="You saw the Gate. Massive, corrupted, crawling with enemies. That's our target. These elixirs will help you survive what comes next. The final push is coming. Be ready."
+/>
+
+<QuestDialogue
+  quest="Gate Keepers"
+  npc={<><img src="/game-icons/avatars/human_npc/varn_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Sergeant Varn</>}
+  accept="Gate Keepers guard the approach. Forty of them, entrenched and waiting. We need that position cleared before we can assault the Gate itself. This is sustained combat, soldier. Pace yourself. Kill them all."
+  complete="Forty kills. The approach is clear. This armor has seen every battle since the war began. It's saved lives. Now it'll save yours. Rest up. The bosses are next."
+/>
+
+<QuestDialogue
+  quest="Sentinel Down"
+  npc={<><img src="/game-icons/avatars/human_npc/varn_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Sergeant Varn</>}
+  accept="The Corrupted Gate Sentinel. Big, armored, deadly. It guards the main approach, and it's been killing our assault teams for weeks. Take it down. Open the path. Show them we're not afraid."
+  complete="Sentinel's down. The Gate is exposed now. These boots belonged to the first soldier to wound that thing - she didn't live to see it fall. You finished what she started. Honor that."
+/>
+
+<QuestDialogue
+  quest="The Battlefield Reaver"
+  npc={<><img src="/game-icons/avatars/human_npc/varn_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Sergeant Varn</>}
+  accept="The Battlefield Reaver. It hunts our wounded, our stragglers. An Area Boss that's been feeding on Alliance blood for months. I'm authorizing a full assault team. Kill it. End its hunt."
+  complete="The Reaver is dead. Months of terror, ended. This pendant was forged from Kharagul's own domain - fitting that you'll carry it into his territory. One boss down. The Gatekeeper waits."
+/>
+
+<QuestDialogue
+  quest="The Gatekeeper"
+  npc={<><img src="/game-icons/avatars/human_npc/varn_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> Sergeant Varn</>}
+  accept="This is it. The Gatekeeper. The final guardian before the Dominions. Every soldier who's made it this far has faced this thing. Many didn't walk away. You will. Take your best team. Kill the Gatekeeper. Open the path to Dreadmar."
+  complete="The Gatekeeper falls. The Gate is open. You've done what thousands couldn't. This armor completes your set - you're now equipped for the real war. And this pass? It's your ticket to the Dominions. Erion himself signed it. Don't waste it. Go. Kill the Generals. End this war."
+/>
+
+### Story Summary
+
+The Breach is the contested no-man's-land between Valoryn and Dreadmar Frontier, the first Dominion. This is where the true war begins.
+
+**No Man's Land** is a scorched battlefield where neither side claims victory. Bodies of Alliance soldiers and Dominion creatures litter the ground. The **Fallen Comrades** quest hits hard - you collect dog tags from corrupted soldiers who were once your allies.
+
+The **Breach Commander** is an Elite enemy who demonstrates the tactical intelligence of the Dominion's forces. They're not mindless creatures - they have leaders and strategy.
+
+At the **Corrupted Gate**, you face the threshold into darkness. The **Gatekeeper** is the final test before entering the Dominions proper. It's designed as a party challenge that requires coordination.
+
+> "Everything before this was training. This is real. People die here. Don't let it be you."
+> - <img src="/game-icons/avatars/alliance_leadership/varn_avatar.png" alt="" className="inline w-5 h-5 mr-1 my-0 rounded-full align-middle" /> Sergeant Varn
+
+<Callout type="warning" title="Difficulty Spike">
+The Breach represents a significant difficulty increase. Ensure you have:
+- Full T3 armor from Valoryn quests
+- T3 class weapon from your milestone quest
+- Consumables (Elixirs LG recommended)
+- A party for the final two quests
+</Callout>
+
+---
+
+## Reward Summary
+
+### By Phase Completion
+
+**After Convergence:**
+- <img src="/game-icons/armour/armour_sets/chest/Icon15.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> Full T2 armor set
+- <CrystalMention crystal="spirit" link={false}>Crystal of Spirit</CrystalMention> x5
+- <ScrollMention scroll="valoryn">Scroll of Valoryn</ScrollMention>
+- Valoryn Entry Token
+
+**After Valoryn Training:**
+- <img src="/game-icons/weapons/warrior_weapons/battle_spear.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Weapon (class-specific)
+- <img src="/game-icons/armour/armour_sets/chest/Icon25.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Chest Armor
+- <CrystalMention crystal="spirit" link={false}>Crystal of Spirit</CrystalMention> x10
+- Breach Entry Pass
+
+**After Class Milestone:**
+- <img src="/game-icons/weapons/warrior_weapons/battle_spear.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Class-specific weapon
+
+**After The Breach:**
+- <img src="/game-icons/armour/armour_sets/chest/Icon25.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> Full T3 armor set
+- <img src="/game-icons/accessories/pendant_kharagul.png" alt="" className="inline w-5 h-5 mr-1 my-0" /> T3 Pendant of Kharagul
+- <CrystalMention crystal="dominion" link={false}>Crystal of Dominion</CrystalMention> x2
+- **Dominion Entry Pass**
+
+---
+
+## NPC Locations in Valoryn
+
+| NPC | Location | Function |
+|-----|----------|----------|
+| <img src="/game-icons/avatars/divine_family/erion_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> **Erion, Last of the Gods** | Sunward Keep | Main story quests |
+| <img src="/game-icons/avatars/legendary_mortals/kira_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> **General Kira Ironhand** | Hall of Unity | Warrior training, combat quests |
+| <img src="/game-icons/avatars/alliance_leadership/aurelia_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> **High Seraph Aurelia** | Healer's Sanctuary | Cleric training, healing |
+| <img src="/game-icons/avatars/legendary_mortals/aldric_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> **Aldric the Undying** | Proving Grounds | Paladin training |
+| <img src="/game-icons/avatars/legendary_mortals/lilith_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> **Empress Lilith** | Shadow Archive | Mage/Ranger training |
+| <img src="/game-icons/avatars/legendary_mortals/thorin_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> **High King Thorin Stonefist** | Forge District | Equipment, crafting |
+| <img src="/game-icons/avatars/divine_family/marael_avatar.png" alt="" className="inline w-6 h-6 mr-1 my-0 rounded-full align-middle" /> **Marael, Celestial Firstborn** | War Council Chamber | Lore quests |
+
+---
+
+## Next Step
+
+With your Dominion Entry Pass, proceed to [Dominion Quests](/docs/gameplay/quests/dominion-quests) to begin the campaign through the Five Dominions.

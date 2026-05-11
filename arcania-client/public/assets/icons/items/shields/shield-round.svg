@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+  <!-- Round shield body -->
+  <circle cx="24" cy="25" r="16" stroke="#c8b89a" stroke-width="2" fill="#c8b89a" fill-opacity="0.15" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Outer rim detail -->
+  <circle cx="24" cy="25" r="13" stroke="#c8b89a" stroke-width="1.5" fill="none" opacity="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Center boss -->
+  <circle cx="24" cy="25" r="5" stroke="#c8b89a" stroke-width="2" fill="#c8b89a" fill-opacity="0.15" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Boss dome highlight -->
+  <circle cx="24" cy="25" r="2" stroke="#c8b89a" stroke-width="1.5" fill="none" opacity="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Radial rivets -->
+  <circle cx="24" cy="13" r="1" fill="#c8b89a" opacity="0.5"/>
+  <circle cx="24" cy="37" r="1" fill="#c8b89a" opacity="0.5"/>
+  <circle cx="10" cy="25" r="1" fill="#c8b89a" opacity="0.5"/>
+  <circle cx="38" cy="25" r="1" fill="#c8b89a" opacity="0.5"/>
+</svg>

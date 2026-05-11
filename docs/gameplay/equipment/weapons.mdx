@@ -1,0 +1,252 @@
+---
+title: Weapons
+description: Class-specific arms with hybrid random stats for god roll hunting.
+---
+
+Weapons in Arcania are class-specific, with each class wielding arms suited to their combat style and lore. All weapons use the **hybrid random stat system** with base damage, identity stats, random bonus stats, and sockets for gems.
+
+---
+
+## Weapon Stat Model
+
+Each weapon provides multiple stat components:
+
+| Component | Description |
+|-----------|-------------|
+| **Base Damage** | Damage range (scales by tier, ~±10% variance) |
+| **Identity Stat** | <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> (melee/ranged) OR <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> (staffs) |
+| **Prestige Stat** | Prestige Damage (only on Prestige quality drops) |
+| **Random Bonus Stats** | 1-3 stats rolled from class-specific pool |
+| **Sockets** | Empty slots for gems (1/1/2/2/3 by tier) |
+
+<Callout type="info">
+Weapons are the primary source of offensive stats. They use class-specific bonus pools for relevant combat stats.
+</Callout>
+
+---
+
+## Weapon Types by Class
+
+| Class | Weapon Types | Identity Stat |
+|-------|--------------|---------------|
+| <ClassMention class="paladin">Paladin</ClassMention> | Maces, Flails, Mauls | <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> |
+| <ClassMention class="warrior">Warrior</ClassMention> | Swords, Spears, Scythes | <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> |
+| <ClassMention class="ranger">Ranger</ClassMention> | Bows | <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> |
+| <ClassMention class="mage">Mage</ClassMention> | Staffs | <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> |
+| <ClassMention class="cleric">Cleric</ClassMention> | Staffs | <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> |
+
+---
+
+## Base Damage Ranges
+
+Base damage has ~±10% variance:
+
+| Tier | Damage Range |
+|------|--------------|
+| Tier 1 | 9-16 |
+| Tier 2 | 18-33 |
+| Tier 3 | 36-60 |
+| Tier 4 | 63-99 |
+| Tier 5 | 99-154 |
+
+---
+
+## Identity Stat Ranges
+
+All identity stats have **±20% variance** for god roll hunting:
+
+| Tier | Physical Attack | Magic Attack |
+|------|-----------------|--------------|
+| Tier 1 | 4-6 | 5-7 |
+| Tier 2 | 10-14 | 12-18 |
+| Tier 3 | 20-30 | 24-36 |
+| Tier 4 | 36-54 | 44-66 |
+| Tier 5 | 60-90 | 72-108 |
+
+<Callout type="tip">
+Magic Attack values are slightly higher than Physical Attack to compensate for mana costs and cast times.
+</Callout>
+
+---
+
+## Bonus Stats & Sockets by Tier
+
+| Tier | Bonus Stats | Sockets |
+|------|-------------|---------|
+| Tier 1 | 1 random | 1 |
+| Tier 2 | 1 random | 1 |
+| Tier 3 | 2 random | 2 |
+| Tier 4 | 2 random | 2 |
+| Tier 5 | 3 random | 3 |
+
+---
+
+## Prestige Weapons
+
+Weapons have a 10% chance to drop as **Prestige** quality, gaining bonus flat damage.
+
+| Tier | Prestige Damage |
+|------|-----------------|
+| Tier 1 | +5 |
+| Tier 2 | +10 |
+| Tier 3 | +18 |
+| Tier 4 | +28 |
+| Tier 5 | +45 |
+
+<Callout type="info">
+Prestige Damage is added to your final damage calculation. A Prestige Tier 5 weapon adds +45 flat damage on top of all other bonuses.
+</Callout>
+
+---
+
+## Weapon Bonus Pools
+
+### Physical Weapons (Warrior/Paladin/Ranger)
+
+| Stat | T1 | T2 | T3 | T4 | T5 |
+|------|-------|-------|---------|---------|---------|
+| <DerivedStatMention stat="critical_chance" link={false}>Crit Chance %</DerivedStatMention> | 0.4-0.6 | 0.8-1.2 | 1.6-2.4 | 2.4-3.6 | 4-6 |
+| <DerivedStatMention stat="critical_damage" link={false}>Crit Damage %</DerivedStatMention> | 1-2 | 2-4 | 4-6 | 6-10 | 10-15 |
+| <DerivedStatMention stat="attack_speed" link={false}>Attack Speed %</DerivedStatMention> | 0.8-1.2 | 1.6-2.4 | 2.4-3.6 | 4-6 | 6.4-9.6 |
+| <DerivedStatMention stat="armor_penetration" link={false}>Armor Pen %</DerivedStatMention> | 0.3-0.5 | 0.6-1.0 | 1.2-1.8 | 1.8-2.6 | 2.8-4.2 |
+
+### Magic Weapons (Mage/Cleric)
+
+| Stat | T1 | T2 | T3 | T4 | T5 |
+|------|-------|-------|---------|---------|---------|
+| <DerivedStatMention stat="critical_chance" link={false}>Crit Chance %</DerivedStatMention> | 0.4-0.6 | 0.8-1.2 | 1.6-2.4 | 2.4-3.6 | 4-6 |
+| <DerivedStatMention stat="critical_damage" link={false}>Crit Damage %</DerivedStatMention> | 1-2 | 2-4 | 4-6 | 6-10 | 10-15 |
+| <DerivedStatMention stat="attack_speed" link={false}>Attack Speed %</DerivedStatMention> | 0.8-1.2 | 1.6-2.4 | 2.4-3.6 | 4-6 | 6.4-9.6 |
+| <DerivedStatMention stat="magic_penetration" link={false}>Magic Pen %</DerivedStatMention> | 0.3-0.5 | 0.6-1.0 | 1.2-1.8 | 1.8-2.6 | 2.8-4.2 |
+
+---
+
+## Example: Tier 5 Warrior Weapon
+
+**Standard God Roll:**
+```
+Executioner (Tier 5 Dual Swords)
+├── Base Damage: 140-154 (max)
+├── Identity: Physical Attack +90 (max)
+├── Bonus 1: Crit Chance +6% (max)
+├── Bonus 2: Crit Damage +15% (max)
+├── Bonus 3: Attack Speed +9.6% (max)
+└── Sockets: [ ] [ ] [ ]
+```
+
+**Prestige God Roll:**
+```
+★ Executioner (Tier 5 Dual Swords) [PRESTIGE]
+├── Base Damage: 140-154 (max)
+├── Identity: Physical Attack +90 (max)
+├── Prestige: Prestige Damage +45
+├── Bonus 1: Crit Chance +6% (max)
+├── Bonus 2: Crit Damage +15% (max)
+├── Bonus 3: Attack Speed +9.6% (max)
+└── Sockets: [ ] [ ] [ ]
+```
+
+---
+
+## Example: Tier 5 Mage Weapon
+
+**God Roll:**
+```
+Oracle's Light (Tier 5 Staff)
+├── Base Damage: 140-154 (max)
+├── Identity: Magic Attack +108 (max)
+├── Bonus 1: Crit Chance +6% (max)
+├── Bonus 2: Crit Damage +15% (max)
+├── Bonus 3: Attack Speed +9.6% (max)
+└── Sockets: [ ] [ ] [ ]
+```
+
+---
+
+## Paladin Weapons
+
+Paladins wield maces, flails, and mauls-blessed weapons designed to crush evil and protect the innocent.
+
+| Tier | Weapon | Wielding | Req. Level |
+|:----:|--------|:--------:|:----------:|
+| Tier 1 | <WeaponMention weapon="iron_mace" link={false}>Iron Mace</WeaponMention> | One-Handed | 1 |
+| Tier 2 | <WeaponMention weapon="guardian_mace" link={false}>Guardian Mace</WeaponMention> | One-Handed | 11 |
+| Tier 3 | <WeaponMention weapon="noble_flail" link={false}>Noble Flail</WeaponMention> | One-Handed | 26 |
+| Tier 4 | <WeaponMention weapon="colossus_maul" link={false}>Colossus Maul</WeaponMention> | Two-Handed | 41 |
+| Tier 5 | <WeaponMention weapon="dawn_breaker" link={false}>Dawn Breaker</WeaponMention> | Two-Handed | 56 |
+
+<Callout type="info">
+**One-Handed** = Can pair with shield | **Two-Handed** = No shield, more damage
+</Callout>
+
+### Lore
+Paladin weapons are forged with fragments of the Spark of Light woven into their metal. Higher tiers contain more concentrated divine essence, making them increasingly effective against shadow creatures.
+
+---
+
+## Warrior Weapons
+
+Warriors wield swords, spears, and scythes-practical weapons that rely on mortal skill rather than magical enhancement.
+
+| Tier | Weapon | Wielding | Req. Level |
+|:----:|--------|:--------:|:----------:|
+| Tier 1 | <WeaponMention weapon="iron_sword" link={false}>Iron Sword</WeaponMention> | Dual Wield | 1 |
+| Tier 2 | <WeaponMention weapon="battle_spear" link={false}>Battle Spear</WeaponMention> | Two-Handed | 11 |
+| Tier 3 | <WeaponMention weapon="flame_sword" link={false}>Flame Sword</WeaponMention> | Dual Wield | 26 |
+| Tier 4 | <WeaponMention weapon="dark_scythe" link={false}>Dark Scythe</WeaponMention> | Two-Handed | 41 |
+| Tier 5 | <WeaponMention weapon="executioner" link={false}>Executioner</WeaponMention> | Dual Wield | 56 |
+
+### Lore
+Warrior weapons follow the Steel Covenant philosophy: pure craftsmanship without magical dependency.
+
+<Callout type="info">
+**Dual Wield** = Fast attacks | **Two-Handed** = Heavy attacks
+</Callout>
+
+---
+
+## Ranger Weapons
+
+Rangers wield bows crafted from First World materials, each drawing power from the primal wilderness.
+
+| Tier | Weapon | Wielding | Req. Level |
+|:----:|--------|:--------:|:----------:|
+| Tier 1 | <WeaponMention weapon="scout_bow" link={false}>Scout Bow</WeaponMention> | Two-Handed | 1 |
+| Tier 2 | <WeaponMention weapon="hunter_recurve" link={false}>Hunter's Recurve</WeaponMention> | Two-Handed | 11 |
+| Tier 3 | <WeaponMention weapon="ambition_stringbow" link={false}>Ambition Stringbow</WeaponMention> | Two-Handed | 26 |
+| Tier 4 | <WeaponMention weapon="venomstrike_bow" link={false}>Venomstrike Bow</WeaponMention> | Two-Handed | 41 |
+| Tier 5 | <WeaponMention weapon="phantom_longbow" link={false}>Phantom Longbow</WeaponMention> | Two-Handed | 56 |
+
+### Lore
+Ranger bows are grown as much as crafted. The wood comes from First World trees that still remember Anias's dreams.
+
+---
+
+## Mage & Cleric Weapons
+
+Mages and Clerics share a weapon progression, wielding staffs that channel either the Anguish (arcane) or the Eternal Light (divine).
+
+| Tier | Weapon | Wielding | Req. Level |
+|:----:|--------|:--------:|:----------:|
+| Tier 1 | <WeaponMention weapon="silkwood_staff" link={false}>Silkwood Staff</WeaponMention> | Two-Handed | 1 |
+| Tier 2 | <WeaponMention weapon="silverwing_rod" link={false}>Silverwing Rod</WeaponMention> | Two-Handed | 11 |
+| Tier 3 | <WeaponMention weapon="mystic_staff" link={false}>Mystic Staff</WeaponMention> | Two-Handed | 26 |
+| Tier 4 | <WeaponMention weapon="manticore_spire" link={false}>Manticore Spire</WeaponMention> | Two-Handed | 41 |
+| Tier 5 | <WeaponMention weapon="oracle_light" link={false}>Oracle's Light</WeaponMention> | Two-Handed | 56 |
+
+### Lore
+Though Mages and Clerics use the same weapons, the power they channel differs:
+- **Mages** draw upon the Anguish-raw Titan energy that must be carefully controlled
+- **Clerics** channel the Eternal Light-Anias's distributed essence that flows through living things
+
+---
+
+## Acquisition Sources
+
+| Tier | Primary Sources |
+|------|-----------------|
+| Tier 1 | Homeland vendors, starting quests |
+| Tier 2 | Regional quests, elite enemies |
+| Tier 3 | Dominion Zone 1-2 drops, boss rewards |
+| Tier 4 | Dominion Zone 3-4 drops, boss rewards |
+| Tier 5 | Legendary quests, final boss drops |

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "gemini": {
+      "command": "npx",
+      "args": ["tsx", "C:\\Users\\lasha\\Documents\\arcania_nexus_stable\\arcania_nexus\\mcp-gemini\\index.ts"],
+      "env": {
+        "GEMINI_API_KEY": "AIzaSyB8YfoY0n0xNFoSqrxYViomSuY1Mpj8Y-I"
+      }
+    }
+  }
+}

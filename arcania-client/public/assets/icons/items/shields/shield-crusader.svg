@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+  <!-- Crusader shield body (heater shape with pointed bottom) -->
+  <path d="M10 8 L38 8 L38 26 L24 42 L10 26 Z" stroke="#c8b89a" stroke-width="2" fill="#c8b89a" fill-opacity="0.15" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Cross vertical bar -->
+  <line x1="24" y1="12" x2="24" y2="35" stroke="#c8b89a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cross horizontal bar -->
+  <line x1="15" y1="20" x2="33" y2="20" stroke="#c8b89a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Border detail -->
+  <path d="M13 11 L35 11 L35 25 L24 38 L13 25 Z" stroke="#c8b89a" stroke-width="1.5" fill="none" opacity="0.5" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

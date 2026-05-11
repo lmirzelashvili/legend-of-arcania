@@ -1,0 +1,152 @@
+---
+title: Nexus Architecture
+description: The hybrid browser Nexus that bridges account management with real-time gameplay.
+---
+
+Arcania uses a **hybrid architecture** where a browser-based **Nexus** handles account management, inventory, and social features, while the Godot-powered game client handles real-time combat and zone exploration.
+
+---
+
+## Architecture Overview
+
+The Nexus and In-Game systems work together as a seamless experience:
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                      NEXUS (Browser Hub)                             │
+├─────────────────────────────────────────────────────────────────────┤
+│  Account & Characters  │  Inventory & Vault  │  Social & Trading    │
+│  • Login/Register      │  • Vault (safe)     │  • Friends           │
+│  • Character Select    │  • Bag management   │  • Parties           │
+│  • Loadouts            │  • Equipment        │  • Marketplace       │
+│  • Stats & Builds      │  • Forgemaster      │  • Chat              │
+└─────────────────────────────────────────────────────────────────────┘
+                              │
+                         "Enter Zone"
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────────┐
+│                    IN-GAME (Godot Client)                            │
+├─────────────────────────────────────────────────────────────────────┤
+│  Real-Time Gameplay    │  Combat Interface   │  World Interaction   │
+│  • Zone exploration    │  • Hotbar (skills)  │  • NPC Vendors       │
+│  • Monster combat      │  • Quick inventory  │  • Loot pickup       │
+│  • PvP encounters      │  • Health/Mana bars │  • Quest objectives  │
+│  • Other players       │  • Minimap          │  • Chat overlay      │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## What Lives Where
+
+### Nexus Features
+
+The Nexus handles everything you can do **outside active combat**:
+
+| Feature | Description | Why Nexus? |
+|---------|-------------|------------|
+| **Account Management** | Login, register, settings | Security, persistence |
+| **Character Selection** | Create, select, delete characters | Pre-game preparation |
+| **Vault** | Account-wide safe storage | Rich UI, cross-character |
+| **Inventory Management** | Full bag organization, sorting | Complex UI, no time pressure |
+| **Equipment & Loadouts** | Theory-craft builds | Detailed stat comparison |
+| **Forgemaster** | Crafting system | Recipe browsing, material tracking |
+| **Marketplace** | Player-to-player trading | Search, filters, history |
+| **Quest Log** | Read quests, lore | Long-form content |
+| **Social Hub** | Friends, parties, chat | Always accessible |
+
+### In-Game Features
+
+The Godot client handles everything requiring **real-time interaction**:
+
+| Feature | Description | Why In-Game? |
+|---------|-------------|---------------|
+| **Zone Exploration** | Move through the world | Real-time movement |
+| **Combat** | Fight monsters and players | Action gameplay |
+| **Quick Inventory** | Open bag mid-combat | Fast equipment swaps |
+| **Hotbar** | Use potions, cast abilities | Combat responsiveness |
+| **Loot Pickup** | Collect dropped items | World interaction |
+| **NPC Vendors** | Buy potions, basic gear | Immersive shops |
+| **Other Players** | See and interact with others | MMO experience |
+
+<Callout type="info">
+Players can open their **Bag** during combat to swap equipment. The game does not pause - this is an MMO!
+</Callout>
+
+---
+
+## Seamless Transition
+
+The Nexus and In-Game share the same browser tab. Transitioning between them is seamless:
+
+### Entering a Zone
+
+```
+1. Player in Nexus (managing inventory, chatting)
+        │
+        ▼
+2. Click "Enter [Zone Name]" button
+        │
+        ▼
+3. Nexus UI fades out
+        │
+        ▼
+4. Godot client expands to fullscreen
+        │
+        ▼
+5. Character spawns at zone entrance
+```
+
+### Returning to Nexus
+
+```
+1. Player in Zone (fighting, exploring)
+        │
+        ▼
+2. Reach Safe Zone (city, outpost) OR press ESC menu
+        │
+        ▼
+3. Click "Return to Nexus"
+        │
+        ▼
+4. Godot client minimizes
+        │
+        ▼
+5. Nexus UI fades back in
+```
+
+<Callout type="warning">
+**Danger Zone Exit:** If you try to exit in a Danger Zone, your character will be **killed** and suffer death penalties. Always return to a Safe Zone before exiting!
+</Callout>
+
+---
+
+## Nexus Sections
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+  <a href="/docs/platform/nexus-quests" className="block p-4 border rounded-lg hover:border-primary transition-colors">
+    <h3 className="font-semibold mb-1">Nexus Quests</h3>
+    <p className="text-sm text-muted-foreground">Login streaks, social tasks, achievements</p>
+  </a>
+  <a href="/docs/platform/inventory" className="block p-4 border rounded-lg hover:border-primary transition-colors">
+    <h3 className="font-semibold mb-1">Inventory System</h3>
+    <p className="text-sm text-muted-foreground">Vault, Bag, and item safety mechanics</p>
+  </a>
+  <a href="/docs/platform/zones" className="block p-4 border rounded-lg hover:border-primary transition-colors">
+    <h3 className="font-semibold mb-1">Zones & Safety</h3>
+    <p className="text-sm text-muted-foreground">Zone types and death penalties</p>
+  </a>
+  <a href="/docs/platform/economy" className="block p-4 border rounded-lg hover:border-primary transition-colors">
+    <h3 className="font-semibold mb-1">Economy</h3>
+    <p className="text-sm text-muted-foreground">Currencies, Marketplace, and Premium</p>
+  </a>
+  <a href="/docs/platform/pvp" className="block p-4 border rounded-lg hover:border-primary transition-colors">
+    <h3 className="font-semibold mb-1">PvP System</h3>
+    <p className="text-sm text-muted-foreground">Outlaw mechanics and rankings</p>
+  </a>
+  <a href="/docs/platform/social" className="block p-4 border rounded-lg hover:border-primary transition-colors">
+    <h3 className="font-semibold mb-1">Social</h3>
+    <p className="text-sm text-muted-foreground">Chat and community features</p>
+  </a>
+</div>

@@ -1,0 +1,100 @@
+---
+title: "Ability System"
+description: Class abilities with scaling, progression, and enhancement systems.
+---
+
+## Ability Scaling
+
+All abilities scale from **derived stats**, not primary stats directly:
+
+| Class | Abilities Scale From |
+|-------|---------------------|
+| <ClassMention class="paladin">Paladin</ClassMention> | <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> (+ <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> for hybrid abilities) |
+| <ClassMention class="cleric">Cleric</ClassMention> | <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> |
+| <ClassMention class="warrior">Warrior</ClassMention> | <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> |
+| <ClassMention class="ranger">Ranger</ClassMention> | <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> |
+| <ClassMention class="mage">Mage</ClassMention> | <DerivedStatMention stat="magic_attack" link={false}>Magic Attack</DerivedStatMention> |
+
+<Callout type="info">
+Equipment directly affects ability damage. A sword with +50 <DerivedStatMention stat="physical_attack" link={false}>Physical Attack</DerivedStatMention> adds +50 × skill multiplier to Warrior abilities!
+</Callout>
+
+<Callout type="tip">
+**Reading Ability Stats:** Values shown as "80→250" indicate Level 1 → Level 10 progression. See individual class pages for complete level-by-level scaling tables.
+</Callout>
+
+---
+
+## Paladin Abilities
+
+| Ability | Type | Description |
+|---------|------|-------------|
+| <SkillMention skill="divine_strike" link={false}>Divine Strike</SkillMention> | Single Target | 80→250 + (Physical Attack × 0.75→1.25) holy damage, +25% vs Undead |
+| <SkillMention skill="righteous_taunt" link={false}>Righteous Taunt</SkillMention> | Aggro | Forces all enemies in range to attack you (3→8s duration) |
+| <SkillMention skill="shield_bond" link={false}>Shield Bond</SkillMention> | Defensive | Share 50% of your Physical Defense with nearest ally (6→15s) |
+| <SkillMention skill="judgement_of_erion" link={false}>Judgment of Erion</SkillMention> | Ultimate | 400→1400 + (Physical Attack × 1.5→3) + (Magic Attack × 0.5→1) AoE + stun |
+
+<Callout type="info">
+Paladins are the premier tank class, designed to protect allies and absorb damage. See the [Paladin class page](/docs/gameplay/classes/paladin) for detailed ability scaling tables.
+</Callout>
+
+---
+
+## Cleric Abilities
+
+| Ability | Type | Description |
+|---------|------|-------------|
+| <SkillMention skill="healing_light" link={false}>Healing Light</SkillMention> | Direct Heal | 100→430 + (Magic Attack × 1.5→3) HP restored |
+| <SkillMention skill="purify" link={false}>Purify</SkillMention> | Cleanse | 50→240 + (Magic Attack × 0.5→1) heal + remove 1→All debuffs |
+| <SkillMention skill="divine_shield" link={false}>Divine Shield</SkillMention> | Protection | Applies Shield absorbing 80→400 + (Magic Attack × 1→2) damage for 8→12s |
+| <SkillMention skill="divine_intervention" link={false}>Divine Intervention</SkillMention> | Ultimate | Resurrect ally at 20→100% Max HP |
+
+<Callout type="info">
+Clerics are the heart of any group. See the [Cleric class page](/docs/gameplay/classes/cleric) for detailed ability scaling tables.
+</Callout>
+
+---
+
+## Warrior Abilities
+
+| Ability | Type | Description |
+|---------|------|-------------|
+| <SkillMention skill="power_strike" link={false}>Power Strike</SkillMention> | Single Target | 100→360 + (Physical Attack × 1→2) physical damage |
+| <SkillMention skill="whirlwind" link={false}>Whirlwind</SkillMention> | Area Attack | 60→260 + (Physical Attack × 0.6→1.1) damage in 5→9m radius |
+| <SkillMention skill="warcry" link={false}>War Cry</SkillMention> | Self Buff | Applies <BuffDebuffMention effect="empowered" link={false}>Empowered</BuffDebuffMention> (+15→45% damage) for 8→18s |
+| <SkillMention skill="bladestorm" link={false}>Blade Storm</SkillMention> | Ultimate | 80→300 + (Physical Attack × 0.75→1.25) × 5→10 hits AoE |
+
+<Callout type="info">
+Warriors are the backbone of Erion's infantry. See the [Warrior class page](/docs/gameplay/classes/warrior) for detailed ability scaling tables.
+</Callout>
+
+---
+
+## Ranger Abilities
+
+| Ability | Type | Description |
+|---------|------|-------------|
+| <SkillMention skill="aimed_shot" link={false}>Aimed Shot</SkillMention> | Single Target | 90→370 + (Physical Attack × 1→2) physical damage |
+| <SkillMention skill="multi_shot" link={false}>Multi-Shot</SkillMention> | Area Attack | 50→210 + (Physical Attack × 0.6→1.1) damage to 3→8 targets |
+| <SkillMention skill="vine_trap" link={false}>Vine Trap</SkillMention> | Control | 30→170 + (Physical Attack × 0.25→0.75) damage + 2→5s root |
+| <SkillMention skill="arrow_rain" link={false}>Arrow Rain</SkillMention> | Ultimate | 100→360 + (Physical Attack × 0.75→1.25) × 4→9 waves AoE |
+
+<Callout type="info">
+Rangers are mobile skirmishers who control distance. See the [Ranger class page](/docs/gameplay/classes/ranger) for detailed ability scaling tables.
+</Callout>
+
+---
+
+## Mage Abilities
+
+| Ability | Type | Description |
+|---------|------|-------------|
+| <SkillMention skill="fireball" link={false}>Fireball</SkillMention> | Single Target | 90→370 + (Magic Attack × 1→2) magic damage |
+| <SkillMention skill="frost_nova" link={false}>Frost Nova</SkillMention> | Area Control | 50→210 + (Magic Attack × 0.5→1) damage + 1.5→3.5s slow in 6→10m |
+| <SkillMention skill="chain_lightning" link={false}>Chain Lightning</SkillMention> | Multi-Target | 70→270 + (Magic Attack × 0.75→1.25) damage, 3→8 bounces |
+| <SkillMention skill="meteor_storm" link={false}>Meteor Storm</SkillMention> | Ultimate | 200→750 + (Magic Attack × 1.25→2.25) × 3→8 hits AoE |
+
+<Callout type="info">
+Mages are glass cannons with devastating damage. See the [Mage class page](/docs/gameplay/classes/mage) for detailed ability scaling tables.
+</Callout>
+

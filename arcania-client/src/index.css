@@ -1,0 +1,668 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;600;700&family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   DARK PIXEL ART FANTASY THEME
+   World-Class Design System
+   ============================================ */
+
+:root {
+  /* Dark Fantasy Color Palette */
+  --color-void: #0a0a0f;
+  --color-abyss: #12121a;
+  --color-shadow: #1a1a27;
+  --color-nightfall: #242435;
+  --color-twilight: #2d2d42;
+
+  /* Accent Colors */
+  --color-blood: #8b0000;
+  --color-crimson: #dc143c;
+  --color-ember: #ff4500;
+  --color-gold: #ffd700;
+  --color-amber: #ffbf00;
+
+  /* Mystical Colors */
+  --color-arcane: #4a0e78;
+  --color-mystic: #6a0dad;
+  --color-ethereal: #9370db;
+  --color-soul: #00ffff;
+  --color-frost: #87ceeb;
+
+  /* UI States */
+  --color-health: #00ff41;
+  --color-mana: #1e90ff;
+  --color-stamina: #ffa500;
+  --color-danger: #ff1744;
+
+  /* Pixel Art Dimensions */
+  --pixel-border: 4px;
+  --pixel-corner: 2px;
+  --glow-strength: 0 0 10px;
+  --glow-strong: 0 0 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+body {
+  font-family: 'Press Start 2P', 'MedievalSharp', cursive;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+  background: var(--color-void);
+  color: #e0e0e0;
+  overflow: auto;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Atmospheric Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(138, 43, 226, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(220, 20, 60, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(0, 0, 0, 0.8) 0%, var(--color-void) 100%);
+  z-index: -2;
+  animation: atmosphericShift 30s ease-in-out infinite;
+}
+
+/* Scanline Effect */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.3;
+  animation: scanlines 8s linear infinite;
+}
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Game Container */
+#game-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+#game-container canvas {
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* ============================================
+   PIXEL ART UI FRAMEWORK
+   ============================================ */
+
+/* Pixel Perfect Borders */
+.pixel-border {
+  position: relative;
+  background: var(--color-shadow);
+  border: none;
+  outline: var(--pixel-border) solid var(--color-twilight);
+  outline-offset: calc(-1 * var(--pixel-border));
+  box-shadow:
+    inset 0 0 0 2px var(--color-void),
+    inset 0 0 20px rgba(0, 0, 0, 0.5),
+    0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.pixel-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg,
+    rgba(138, 43, 226, 0.2) 0%,
+    rgba(220, 20, 60, 0.2) 100%
+  );
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Pixel Corners */
+.pixel-corners {
+  clip-path: polygon(
+    0 var(--pixel-corner), var(--pixel-corner) var(--pixel-corner),
+    var(--pixel-corner) 0, calc(100% - var(--pixel-corner)) 0,
+    calc(100% - var(--pixel-corner)) var(--pixel-corner), 100% var(--pixel-corner),
+    100% calc(100% - var(--pixel-corner)), calc(100% - var(--pixel-corner)) calc(100% - var(--pixel-corner)),
+    calc(100% - var(--pixel-corner)) 100%, var(--pixel-corner) 100%,
+    var(--pixel-corner) calc(100% - var(--pixel-corner)), 0 calc(100% - var(--pixel-corner))
+  );
+}
+
+/* Glowing Elements */
+.glow-arcane {
+  box-shadow: var(--glow-strength) var(--color-arcane),
+              inset 0 0 20px rgba(106, 13, 173, 0.2);
+  border: 2px solid var(--color-mystic);
+}
+
+.glow-blood {
+  box-shadow: var(--glow-strength) var(--color-blood),
+              inset 0 0 20px rgba(139, 0, 0, 0.2);
+  border: 2px solid var(--color-crimson);
+}
+
+.glow-gold {
+  box-shadow: var(--glow-strong) var(--color-gold),
+              inset 0 0 30px rgba(255, 215, 0, 0.15);
+  border: 2px solid var(--color-amber);
+  animation: pulseGold 2s ease-in-out infinite;
+}
+
+/* ============================================
+   BUTTON STYLES
+   ============================================ */
+
+.btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.1s ease;
+  background: var(--color-nightfall);
+  color: #e0e0e0;
+  box-shadow:
+    0 4px 0 var(--color-void),
+    0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 6px 0 var(--color-void),
+    0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow:
+    0 0 0 var(--color-void),
+    0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--color-mystic) 0%, var(--color-arcane) 100%);
+  color: white;
+  box-shadow:
+    0 4px 0 #2a0542,
+    0 8px 16px rgba(106, 13, 173, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(180deg, #7a0ec0 0%, #5a0ea0 100%);
+  box-shadow:
+    0 6px 0 #2a0542,
+    0 10px 20px rgba(106, 13, 173, 0.6),
+    0 0 20px var(--color-ethereal),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-danger {
+  background: linear-gradient(180deg, var(--color-crimson) 0%, var(--color-blood) 100%);
+  color: white;
+  box-shadow:
+    0 4px 0 #450000,
+    0 8px 16px rgba(220, 20, 60, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-danger:hover {
+  background: linear-gradient(180deg, #ff1744 0%, #a00000 100%);
+  box-shadow:
+    0 6px 0 #450000,
+    0 10px 20px rgba(220, 20, 60, 0.6),
+    0 0 20px var(--color-crimson),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3);
+}
+
+.btn-gold {
+  background: linear-gradient(180deg, var(--color-gold) 0%, var(--color-amber) 100%);
+  color: var(--color-void);
+  font-weight: bold;
+  box-shadow:
+    0 4px 0 #8b7500,
+    0 8px 16px rgba(255, 215, 0, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4);
+  animation: shimmerGold 3s ease-in-out infinite;
+}
+
+/* ============================================
+   CARD & PANEL STYLES
+   ============================================ */
+
+.card {
+  background: linear-gradient(135deg,
+    var(--color-abyss) 0%,
+    var(--color-shadow) 50%,
+    var(--color-abyss) 100%
+  );
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--color-gold) 50%,
+    transparent 100%
+  );
+  opacity: 0.6;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* ============================================
+   INPUT STYLES
+   ============================================ */
+
+.input {
+  font-family: 'MedievalSharp', cursive;
+  font-size: 14px;
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--color-void);
+  border: 3px solid var(--color-twilight);
+  color: #e0e0e0;
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.input:focus {
+  border-color: var(--color-mystic);
+  box-shadow:
+    inset 0 2px 8px rgba(0, 0, 0, 0.6),
+    0 0 16px rgba(106, 13, 173, 0.4);
+}
+
+.input::placeholder {
+  color: #4a4a5a;
+  font-style: italic;
+}
+
+/* ============================================
+   PROGRESS BARS
+   ============================================ */
+
+.progress-bar {
+  width: 100%;
+  height: 16px;
+  background: var(--color-void);
+  border: 2px solid var(--color-twilight);
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.progress-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.3s ease;
+  position: relative;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.2) 3px,
+    rgba(0, 0, 0, 0.2) 4px
+  );
+  animation: progressScan 1s linear infinite;
+}
+
+.progress-hp {
+  background: linear-gradient(90deg, var(--color-blood) 0%, var(--color-health) 100%);
+}
+
+.progress-mana {
+  background: linear-gradient(90deg, var(--color-arcane) 0%, var(--color-mana) 100%);
+}
+
+.progress-stamina {
+  background: linear-gradient(90deg, #cc7000 0%, var(--color-stamina) 100%);
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+
+.title-medieval {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow:
+    0 0 10px var(--color-gold),
+    0 0 20px var(--color-amber),
+    2px 2px 4px rgba(0, 0, 0, 0.8),
+    4px 4px 8px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(180deg, var(--color-gold) 0%, var(--color-amber) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titlePulse 3s ease-in-out infinite;
+}
+
+.title-pixel {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  line-height: 1.8;
+  text-shadow:
+    2px 2px 0 var(--color-void),
+    4px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.text-arcane {
+  color: var(--color-ethereal);
+  text-shadow: 0 0 8px var(--color-mystic);
+}
+
+.text-blood {
+  color: var(--color-crimson);
+  text-shadow: 0 0 8px var(--color-blood);
+}
+
+.text-gold {
+  color: var(--color-gold);
+  text-shadow: 0 0 8px var(--color-amber);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes atmosphericShift {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+@keyframes scanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(2px); }
+}
+
+@keyframes pulseGold {
+  0%, 100% {
+    box-shadow:
+      0 0 10px var(--color-gold),
+      0 0 20px var(--color-amber),
+      inset 0 0 20px rgba(255, 215, 0, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 20px var(--color-gold),
+      0 0 40px var(--color-amber),
+      inset 0 0 30px rgba(255, 215, 0, 0.2);
+  }
+}
+
+@keyframes shimmerGold {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+  100% { filter: brightness(1); }
+}
+
+@keyframes titlePulse {
+  0%, 100% {
+    text-shadow:
+      0 0 10px var(--color-gold),
+      0 0 20px var(--color-amber),
+      2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  50% {
+    text-shadow:
+      0 0 20px var(--color-gold),
+      0 0 40px var(--color-amber),
+      2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes progressScan {
+  0% { transform: translateX(-4px); }
+  100% { transform: translateX(0px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glitch {
+  animation: glitch 0.3s ease-in-out;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-void);
+  border: 2px solid var(--color-twilight);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-mystic) 0%, var(--color-arcane) 100%);
+  border: 2px solid var(--color-twilight);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #8a2be2 0%, #6a0dad 100%);
+  box-shadow: 0 0 10px var(--color-ethereal);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--color-void);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.backdrop-dark {
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.border-arcane {
+  border: 2px solid var(--color-mystic);
+}
+
+.border-blood {
+  border: 2px solid var(--color-crimson);
+}
+
+.border-gold {
+  border: 2px solid var(--color-amber);
+}
+
+.shadow-arcane {
+  box-shadow: 0 8px 32px rgba(106, 13, 173, 0.4);
+}
+
+.shadow-deep {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.8);
+}
+
+/* Particle Effect Container */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* HP/Mana/Resource Icons */
+.resource-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 4px currentColor);
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  background: var(--color-void);
+  border: 2px solid var(--color-twilight);
+  padding: 8px 12px;
+  font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+}
+
+/* ============================================
+   SOLANA WALLET ADAPTER OVERRIDES
+   Match the dark-fantasy pixel aesthetic.
+   ============================================ */
+
+.wallet-connect-override .wallet-adapter-button {
+  background: #000000 !important;
+  border: 1px solid #1f2937 !important; /* gray-800 equivalent */
+  color: #f59e0b !important;            /* amber-500 */
+  font-family: 'Press Start 2P', monospace !important;
+  font-size: 9px !important;
+  height: auto !important;
+  padding: 6px 10px !important;
+  border-radius: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.wallet-connect-override .wallet-adapter-button:hover {
+  background: #171200 !important;
+  color: #fbbf24 !important; /* amber-400 */
+}
+
+.wallet-connect-override .wallet-adapter-button-start-icon,
+.wallet-connect-override .wallet-adapter-button img {
+  display: none !important;
+}
