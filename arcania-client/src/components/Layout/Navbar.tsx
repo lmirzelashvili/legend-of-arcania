@@ -9,6 +9,7 @@ const navLinks = [
   { path: '/races', label: 'RACES' },
   { path: '/classes', label: 'CLASSES' },
   { path: '/token', label: 'TOKEN' },
+  { path: '/whitepaper', label: 'WHITEPAPER' },
 ];
 
 export const Navbar: React.FC = () => {

@@ -17,6 +17,7 @@ const Lore = React.lazy(() => import('./pages/Lore'));
 const Races = React.lazy(() => import('./pages/Races'));
 const Classes = React.lazy(() => import('./pages/Classes'));
 const Token = React.lazy(() => import('./pages/Token'));
+const Whitepaper = React.lazy(() => import('./pages/Whitepaper'));
 
 const LoginScreen = React.lazy(() =>
   import('./components/Auth/LoginScreen').then(m => ({ default: m.LoginScreen }))
@@ -95,6 +96,7 @@ function App() {
           <Route path="/races" element={<Races />} />
           <Route path="/classes" element={<Classes />} />
           <Route path="/token" element={<Token />} />
+          <Route path="/whitepaper" element={<Whitepaper />} />
 
           {/* Auth */}
           <Route path="/login" element={<LoginScreen />} />

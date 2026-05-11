@@ -1,4 +1,7 @@
 # Backlog: arcania-client
+- [ ] Frontend: Whitepaper page for Colosseum judges
+
+- [ ] Frontend: Polish Home + About for hackathon judges
 
 - [x] Frontend: Update Token.tsx with devnet live section + honest roadmap
 - [ ] Frontend: Solana wallet adapter stack (Phantom connect + balance display)
