@@ -27,7 +27,7 @@ export const Home: React.FC = () => {
             <h1 className="text-amber-500 text-4xl mb-6">LEGEND OF ARCANIA</h1>
             <p className="text-gray-500 text-[11px] mb-4">A Solana-powered 2D MMORPG with a player-owned economy</p>
             <p className="text-gray-700 text-[10px] mb-12 max-w-md mx-auto leading-relaxed">
-              Every item, every trade, every achievement carries real on-chain value. No downloads. No extractive servers. Built for Colosseum Frontier 2026.
+              Every item, every trade, every achievement carries real on-chain value. No downloads. No extractive servers.
             </p>
 
             <div className="flex items-center justify-center gap-4 mb-6">
@@ -187,30 +187,17 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Built for Colosseum */}
+      {/* Follow the Project */}
       <section className="max-w-6xl mx-auto px-4 py-12">
         <Card className="border-amber-900">
-          <p className="text-amber-500 text-[9px] text-center mb-2">COLOSSEUM FRONTIER 2026 · SUBMISSION</p>
+          <p className="text-amber-500 text-[9px] text-center mb-2">FOLLOW THE PROJECT</p>
           <p className="text-gray-500 text-[7px] text-center">
-            Built in the open. Repo:{' '}
-            <a
-              href="https://github.com/lmirzelashvili/legend-of-arcania"
-              target="_blank"
-              rel="noreferrer"
-              className="text-amber-400 underline"
-            >
-              github.com/lmirzelashvili/legend-of-arcania
-            </a>
-            . ARC token:{' '}
-            <a
-              href={`https://solscan.io/token/${ARC_MINT_DEVNET}?cluster=devnet`}
-              target="_blank"
-              rel="noreferrer"
-              className="text-amber-400 underline"
-            >
-              {shortenAddress(ARC_MINT_DEVNET)}
-            </a>
-            . We're applying for Accelerator.
+            Source on{' '}
+            <a href="https://github.com/lmirzelashvili/legend-of-arcania" target="_blank" rel="noreferrer" className="text-amber-400 underline hover:text-amber-300">GitHub</a>
+            {' · '}
+            ARC token on{' '}
+            <a href={`https://solscan.io/token/${ARC_MINT_DEVNET}?cluster=devnet`} target="_blank" rel="noreferrer" className="text-amber-400 underline hover:text-amber-300">Solscan</a>
+            .
           </p>
         </Card>
       </section>

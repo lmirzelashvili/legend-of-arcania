@@ -1,4 +1,5 @@
 # Backlog: arcania-client
+- [ ] Whitepaper: drop Colosseum framing, strengthen tokenomics, add Designed On-Chain Features section
 - [ ] Fix: RaceStep Lilin tile preview fails to load when selectedGender=male
 - [ ] Frontend: Whitepaper page for Colosseum judges
 

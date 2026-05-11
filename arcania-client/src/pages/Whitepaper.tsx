@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Layout } from '@/components/Layout/Layout';
-import { ARC_MINT_DEVNET, ARC_TOTAL_SUPPLY, ARC_DECIMALS } from '@/config/solana';
+import { ARC_MINT_DEVNET, ARC_TOTAL_SUPPLY } from '@/config/solana';
 
 const Card: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
   <div className={`border border-gray-800 bg-black p-4 ${className}`}>
@@ -32,7 +32,7 @@ export const Whitepaper: React.FC = () => {
           <h1 className="text-amber-500 text-xl mb-3">LEGEND OF ARCANIA — WHITEPAPER</h1>
           <p className="text-gray-400 text-[8px] leading-relaxed mb-4">
             A 2D MMORPG with player-owned economy on Solana.
-            Version 0.1 — May 2026 — Colosseum Frontier submission.
+            Version 0.1 — May 2026
           </p>
           <div className="flex flex-wrap gap-2 justify-center mb-6">
             <span className="border border-green-800 text-green-500 text-[7px] px-3 py-1">
@@ -78,13 +78,14 @@ export const Whitepaper: React.FC = () => {
               ['#section-03', '03. The Solution'],
               ['#section-04', '04. Game Systems Live Today'],
               ['#section-05', '05. Solana Architecture'],
-              ['#section-06', '06. ARC Tokenomics'],
-              ['#section-07', '07. Currency Mechanics'],
-              ['#section-08', '08. Conversion Mechanics'],
-              ['#section-09', '09. Anti-Abuse Design'],
-              ['#section-10', '10. Business Model'],
-              ['#section-11', '11. Roadmap'],
-              ['#section-12', '12. Team & Hackathon'],
+              ['#section-06', '06. Designed On-Chain Features'],
+              ['#section-07', '07. ARC Tokenomics'],
+              ['#section-08', '08. Currency Mechanics'],
+              ['#section-09', '09. Conversion Mechanics'],
+              ['#section-10', '10. Anti-Abuse Design'],
+              ['#section-11', '11. Business Model'],
+              ['#section-12', '12. Roadmap'],
+              ['#section-13', '13. Team'],
             ].map(([href, label]) => (
               <a
                 key={href}
@@ -268,68 +269,186 @@ export const Whitepaper: React.FC = () => {
             </div>
           </section>
 
-          {/* ── 06. ARC Tokenomics ── */}
+          {/* ── 06. Designed On-Chain Features ── */}
           <section id="section-06">
-            <SectionHeading num="06" title="ARC Tokenomics" />
+            <SectionHeading num="06" title="Designed On-Chain Features" />
+            <div className="space-y-4">
+              <p className="text-gray-400 text-[8px] leading-relaxed italic">
+                Specified in detail in our design docs. Not yet built. Roadmap-tracked.
+              </p>
+              <div className="grid md:grid-cols-2 gap-3">
+                <Card>
+                  <div className="flex flex-col h-full">
+                    <div className="text-amber-400 text-[8px] font-bold mb-2">cNFT INVENTORY (PRESTIGE GEAR)</div>
+                    <p className="text-gray-400 text-[7px] leading-relaxed flex-1">
+                      Prestige equipment drops at 10% rate with golden borders and fixed prestige stats. Opt-in wrappable as Metaplex Bubblegum compressed NFTs — tradeable on Tensor and Magic Eden.
+                    </p>
+                    <div className="flex justify-end mt-3">
+                      <span className="text-[6px] border border-amber-900 px-2 py-0.5 text-amber-500">Metaplex Bubblegum</span>
+                    </div>
+                    <div className="text-gray-700 text-[6px] mt-1">docs/gameplay/equipment/index.mdx:11-43</div>
+                  </div>
+                </Card>
+                <Card>
+                  <div className="flex flex-col h-full">
+                    <div className="text-amber-400 text-[8px] font-bold mb-2">ARC STAKING → SEASONAL BONUS</div>
+                    <p className="text-gray-400 text-[7px] leading-relaxed flex-1">
+                      Stake ARC for the duration of a 90-day season to boost Battle Pass XP gain. Capped to prevent farming; receipt token claimable on unstake.
+                    </p>
+                    <div className="flex justify-end mt-3">
+                      <span className="text-[6px] border border-amber-900 px-2 py-0.5 text-amber-500">Anchor staking program</span>
+                    </div>
+                    <div className="text-gray-700 text-[6px] mt-1">docs/token/arc-token/utility.mdx:19-27 + docs/platform/economy/battle-pass.mdx</div>
+                  </div>
+                </Card>
+                <Card>
+                  <div className="flex flex-col h-full">
+                    <div className="text-amber-400 text-[8px] font-bold mb-2">SOULBOUND ACHIEVEMENT IDENTITY</div>
+                    <p className="text-gray-400 text-[7px] leading-relaxed flex-1">
+                      20+ designed achievements (Boss Slayer, Dominion Conqueror, etc.) mint to player wallets as non-transferable SBTs. Portable proof-of-play that any dApp can read.
+                    </p>
+                    <div className="flex justify-end mt-3">
+                      <span className="text-[6px] border border-amber-900 px-2 py-0.5 text-amber-500">Metaplex Token Metadata</span>
+                    </div>
+                    <div className="text-gray-700 text-[6px] mt-1">docs/platform/nexus-quests.mdx:59-103</div>
+                  </div>
+                </Card>
+                <Card>
+                  <div className="flex flex-col h-full">
+                    <div className="text-amber-400 text-[8px] font-bold mb-2">ON-CHAIN LEADERBOARDS</div>
+                    <p className="text-gray-400 text-[7px] leading-relaxed flex-1">
+                      Weekly snapshot of top-100 PvP rankings written to a Solana program. Immutable, queryable, and provides a verifiable basis for tournament prize pools.
+                    </p>
+                    <div className="flex justify-end mt-3">
+                      <span className="text-[6px] border border-amber-900 px-2 py-0.5 text-amber-500">Anchor program</span>
+                    </div>
+                    <div className="text-gray-700 text-[6px] mt-1">docs/platform/pvp/rankings.mdx:30-36</div>
+                  </div>
+                </Card>
+                <Card>
+                  <div className="flex flex-col h-full">
+                    <div className="text-amber-400 text-[8px] font-bold mb-2">TOKEN-WEIGHTED GOVERNANCE</div>
+                    <p className="text-gray-400 text-[7px] leading-relaxed flex-1">
+                      Snapshot voting on seasonal balance decisions: drop rates, currency sinks, content cadence. &gt;100 ARC required to vote.
+                    </p>
+                    <div className="flex justify-end mt-3">
+                      <span className="text-[6px] border border-amber-900 px-2 py-0.5 text-amber-500">Realms-compatible</span>
+                    </div>
+                    <div className="text-gray-700 text-[6px] mt-1">docs/token/arc-token/index.mdx:28-35</div>
+                  </div>
+                </Card>
+                <Card>
+                  <div className="flex flex-col h-full">
+                    <div className="text-amber-400 text-[8px] font-bold mb-2">DYNAMIC ORACLE VIA PYTH</div>
+                    <p className="text-gray-400 text-[7px] leading-relaxed flex-1">
+                      The conversion-rate Oracle currently designed as a backend cron migrates to Pyth Network price feeds. Real on-chain price discovery for ARC/USDC drives rate adjustments — devs can't tweak in secret.
+                    </p>
+                    <div className="flex justify-end mt-3">
+                      <span className="text-[6px] border border-amber-900 px-2 py-0.5 text-amber-500">Pyth Network</span>
+                    </div>
+                    <div className="text-gray-700 text-[6px] mt-1">docs/token/arc-token/tokenomics.mdx:185-193</div>
+                  </div>
+                </Card>
+                <Card>
+                  <div className="flex flex-col h-full">
+                    <div className="text-amber-400 text-[8px] font-bold mb-2">SOLANA PAY FOR ARCANITE IAP</div>
+                    <p className="text-gray-400 text-[7px] leading-relaxed flex-1">
+                      Buy Arcanite packages via Solana Pay QR — pay with USDC, receive in-game premium currency. Bypasses card-processor fees and chargebacks entirely.
+                    </p>
+                    <div className="flex justify-end mt-3">
+                      <span className="text-[6px] border border-amber-900 px-2 py-0.5 text-amber-500">Solana Pay SDK</span>
+                    </div>
+                    <div className="text-gray-700 text-[6px] mt-1">docs/platform/economy/currencies.mdx:86</div>
+                  </div>
+                </Card>
+              </div>
+            </div>
+          </section>
+
+          {/* ── 07. ARC Tokenomics ── */}
+          <section id="section-07">
+            <SectionHeading num="07" title="ARC Tokenomics" />
             <div className="space-y-4">
               <Card>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <Stat value="100M" label="TOTAL SUPPLY (FIXED)" />
+                  <Stat value="100M" label="MAX SUPPLY (FIXED)" />
                   <Stat value="9" label="DECIMALS" />
-                  <Stat value="75%" label="TO PLAYERS (DESIGN)" />
-                  <Stat value="3–5%" label="TARGET ANNUAL DEFLATION" />
+                  <Stat value="0" label="TEAM ALLOCATION" />
+                  <Stat value="3–5%" label="TARGET ANNUAL DEFLATION (POST-Y2)" />
                 </div>
               </Card>
               <div className="grid md:grid-cols-2 gap-4">
                 <Card>
-                  <div className="text-amber-400 text-[8px] mb-2">SUPPLY NOTES</div>
-                  <p className="text-gray-400 text-[7px] leading-relaxed">
-                    100,000,000 ARC total supply — fixed forever, never inflated. Design intent:
-                    75% allocated to play-to-earn distribution, 25% to treasury, team, and
-                    operational runway. Decimals: {ARC_DECIMALS}. Primary acquisition: gameplay,
-                    not purchases.
-                  </p>
-                </Card>
-                <Card>
-                  <div className="text-amber-400 text-[8px] mb-2">BURN DISTRIBUTION</div>
+                  <div className="text-amber-400 text-[8px] mb-2">SUPPLY DISTRIBUTION</div>
                   <div className="space-y-1 text-[7px]">
                     {[
-                      ['Marketplace fees', '~40%'],
-                      ['Conversion fees', '~30%'],
-                      ['Premium features', '~20%'],
-                      ['Cosmetics / upgrades', '~10%'],
-                    ].map(([label, pct]) => (
+                      ['Play-to-Earn rewards', '75M (75%)'],
+                      ['Treasury', '10M (10%)'],
+                      ['Private sale', '5M (5%)'],
+                      ['Public sale', '5M (5%)'],
+                      ['Liquidity pool', '5M (5%) — PERMANENTLY LOCKED'],
+                    ].map(([label, val]) => (
                       <div key={label} className="flex justify-between">
                         <span className="text-gray-400">{label}</span>
-                        <span className="text-amber-400">{pct}</span>
+                        <span className="text-amber-400">{val}</span>
                       </div>
                     ))}
                   </div>
+                  <Card className="border-amber-900 mt-3">
+                    <p className="text-amber-400 text-[7px]">
+                      Team allocation: 0. Team revenue comes from existing on-platform fees, not from token allocation.
+                    </p>
+                  </Card>
+                  <div className="text-gray-700 text-[6px] mt-1">docs/token/arc-token/tokenomics.mdx:28-33</div>
+                </Card>
+                <Card>
+                  <div className="text-amber-400 text-[8px] mb-2">DEFLATIONARY BURNS</div>
+                  <div className="space-y-1 text-[7px]">
+                    {[
+                      ['Marketplace fees', '~40% of total burn volume (2.5% of each sale burned)'],
+                      ['Conversion fees', '~30% (2% of ARC received)'],
+                      ['Premium features', '~20% (100% burned)'],
+                      ['Cosmetics + upgrades', '~10% (partial burns)'],
+                    ].map(([label, detail]) => (
+                      <div key={label} className="flex justify-between gap-2">
+                        <span className="text-gray-400 shrink-0">{label}</span>
+                        <span className="text-amber-400 text-right">{detail}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="text-gray-700 text-[6px] mt-2">docs/token/economics/sinks.mdx:152-162</div>
                 </Card>
               </div>
-              <Card>
-                <div className="text-amber-400 text-[8px] mb-2">DEFLATION SCHEDULE</div>
-                <div className="grid md:grid-cols-3 gap-4 text-[7px]">
-                  <div>
-                    <div className="text-gray-300 mb-1">Year 1 — Growth</div>
-                    <div className="text-gray-500">~22.5M emitted, ~2–4M burned. Net inflationary (ecosystem growing).</div>
+              <div className="grid md:grid-cols-2 gap-4">
+                <Card>
+                  <div className="text-amber-400 text-[8px] mb-2">WEEKLY WITHDRAWAL CAPS</div>
+                  <div className="space-y-1 text-[7px]">
+                    {[
+                      ['Basic accounts', '5,000 to 15,000 ARC/week (Oracle-adjusted)'],
+                      ['KYC-verified', '10,000 to 25,000 ARC/week (Oracle-adjusted)'],
+                    ].map(([label, detail]) => (
+                      <div key={label} className="flex justify-between gap-2">
+                        <span className="text-gray-400 shrink-0">{label}</span>
+                        <span className="text-amber-400 text-right">{detail}</span>
+                      </div>
+                    ))}
                   </div>
-                  <div>
-                    <div className="text-gray-300 mb-1">Year 2 — Transition</div>
-                    <div className="text-gray-500">~7.5M emitted, ~4–6M burned. Near neutral to deflationary.</div>
-                  </div>
-                  <div>
-                    <div className="text-gray-300 mb-1">Year 3+ — Deflationary</div>
-                    <div className="text-gray-500">~6M emitted, ~6–8M burned. Target 3–5% annual deflation.</div>
-                  </div>
-                </div>
-              </Card>
+                  <div className="text-gray-700 text-[6px] mt-2">docs/token/economics/index.mdx:114-157</div>
+                </Card>
+                <Card>
+                  <div className="text-amber-400 text-[8px] mb-2">DYNAMIC RATE ORACLE</div>
+                  <p className="text-gray-400 text-[7px] leading-relaxed">
+                    Reviews every Monday 00:00 UTC. Changes announced 7 days in advance. Adjusts only instant + 1-week conversion rates and weekly caps. The 2-week time-locked 100% rate is never adjusted — players who commit get full value, always.
+                  </p>
+                  <div className="text-gray-700 text-[6px] mt-2">docs/token/arc-token/tokenomics.mdx:185-193</div>
+                </Card>
+              </div>
             </div>
           </section>
 
-          {/* ── 07. Currency Mechanics ── */}
-          <section id="section-07">
-            <SectionHeading num="07" title="Currency Mechanics" />
+          {/* ── 08. Currency Mechanics ── */}
+          <section id="section-08">
+            <SectionHeading num="08" title="Currency Mechanics" />
             <div className="space-y-4">
               <p className="text-gray-400 text-[8px] leading-relaxed">
                 Arcania uses a three-tier currency system. Each tier serves a distinct role and
@@ -367,14 +486,14 @@ export const Whitepaper: React.FC = () => {
             </div>
           </section>
 
-          {/* ── 08. Conversion Mechanics ── */}
-          <section id="section-08">
-            <SectionHeading num="08" title="Conversion Mechanics" />
+          {/* ── 09. Conversion Mechanics ── */}
+          <section id="section-09">
+            <SectionHeading num="09" title="Conversion Mechanics" />
             <div className="space-y-4">
               <p className="text-gray-400 text-[8px] leading-relaxed">
                 The Arcanite-to-ARC conversion system rewards dedicated, long-term players over
                 extractors and bots. Two multipliers determine your final rate:
-                Account Rate (40–100% based on progression) and Time-Lock Rate (30–100% based
+                Account Rate (40–100% based on progression) and Time-Lock Rate (50–100% based
                 on withdrawal speed).
               </p>
               <div className="grid md:grid-cols-2 gap-4">
@@ -395,11 +514,12 @@ export const Whitepaper: React.FC = () => {
                 </Card>
                 <Card>
                   <div className="text-amber-400 text-[8px] mb-3">TIME-LOCK RATES</div>
-                  <div className="space-y-2 text-[7px]">
+                  <div className="space-y-1 text-[7px] mb-2">
+                    <div className="text-gray-500 italic">Default rates (Oracle neutral):</div>
                     {[
-                      ['Instant', '30–60%', 'Oracle-adjusted'],
-                      ['1-Week Lock', '60–80%', 'Oracle-adjusted'],
-                      ['2-Week Lock', '100%', 'Always fixed'],
+                      ['Instant', '50%', 'Oracle range: 30–60%'],
+                      ['1-Week Lock', '75%', 'Oracle range: 60–80%'],
+                      ['2-Week Lock', '100%', 'Never adjusted — always fixed'],
                     ].map(([type, rate, note]) => (
                       <div key={type} className="flex justify-between items-center">
                         <span className="text-gray-400">{type}</span>
@@ -408,6 +528,7 @@ export const Whitepaper: React.FC = () => {
                       </div>
                     ))}
                   </div>
+                  <div className="text-gray-700 text-[6px]">docs/token/exchange/conversion-rates.mdx:93,120-125</div>
                 </Card>
               </div>
               <Card className="border-amber-900">
@@ -423,16 +544,22 @@ export const Whitepaper: React.FC = () => {
                 <p className="text-gray-400 text-[7px] leading-relaxed">
                   The Oracle adjusts only Instant and 1-Week rates plus weekly caps, reviewed
                   every Monday at 00:00 UTC with 7-day advance notice. The 2-week lock rate
-                  is always 100% — patience is always rewarded. Weekly caps: 10,000 Arcanite
-                  basic / 20,000 with KYC.
+                  is always 100% — patience is always rewarded.
                 </p>
+              </Card>
+              <Card>
+                <div className="text-amber-400 text-[8px] mb-2">ARCANITE EARN CAPS</div>
+                <p className="text-gray-400 text-[7px] leading-relaxed">
+                  Earned Arcanite is capped at 250M / month initially (100 ARC × 100 base rate) to prevent farm inflation. Cap adjusts with player population.
+                </p>
+                <div className="text-gray-700 text-[6px] mt-1">docs/token/arc-token/tokenomics.mdx:127-140</div>
               </Card>
             </div>
           </section>
 
-          {/* ── 09. Anti-Abuse Design ── */}
-          <section id="section-09">
-            <SectionHeading num="09" title="Anti-Abuse Design" />
+          {/* ── 10. Anti-Abuse Design ── */}
+          <section id="section-10">
+            <SectionHeading num="10" title="Anti-Abuse Design" />
             <div className="space-y-4">
               <p className="text-gray-400 text-[8px] leading-relaxed italic">
                 Note: these mechanisms are designed and documented — not yet enforced on devnet.
@@ -473,9 +600,9 @@ export const Whitepaper: React.FC = () => {
             </div>
           </section>
 
-          {/* ── 10. Business Model ── */}
-          <section id="section-10">
-            <SectionHeading num="10" title="Business Model" />
+          {/* ── 11. Business Model ── */}
+          <section id="section-11">
+            <SectionHeading num="11" title="Business Model" />
             <div className="space-y-4">
               <p className="text-gray-400 text-[8px] leading-relaxed">
                 Self-sustaining without relying on token price speculation. Five revenue streams —
@@ -511,9 +638,9 @@ export const Whitepaper: React.FC = () => {
             </div>
           </section>
 
-          {/* ── 11. Roadmap ── */}
-          <section id="section-11">
-            <SectionHeading num="11" title="Roadmap" />
+          {/* ── 12. Roadmap ── */}
+          <section id="section-12">
+            <SectionHeading num="12" title="Roadmap" />
             <div className="space-y-4">
               <Card>
                 <div className="space-y-3">
@@ -535,15 +662,12 @@ export const Whitepaper: React.FC = () => {
             </div>
           </section>
 
-          {/* ── 12. Team & Hackathon ── */}
-          <section id="section-12">
-            <SectionHeading num="12" title="Team & Hackathon" />
+          {/* ── 13. Team ── */}
+          <section id="section-13">
+            <SectionHeading num="13" title="Team" />
             <div className="space-y-4">
               <p className="text-gray-400 text-[8px] leading-relaxed">
-                Arcania Nexus is built by a Tbilisi-based full-stack team applying for the
-                Colosseum Accelerator ($250K program) under the Gaming track. We are not
-                pitching a concept — we are demonstrating a working product with 111 design
-                documents, 30+ backend services, and an SPL token already deployed on Solana devnet.
+                Tbilisi-based, full-stack team. Building in the open with focus on real player economy infrastructure.
               </p>
               <div className="grid md:grid-cols-2 gap-3">
                 <Card>
@@ -553,26 +677,7 @@ export const Whitepaper: React.FC = () => {
                     <div className="text-gray-400">Giorgi Tsereteli — Full-Stack Engineer</div>
                   </div>
                   <div className="text-gray-600 text-[7px] mt-3 italic">
-                    Team bios and Telegram will be added before submission deadline.
-                  </div>
-                </Card>
-                <Card>
-                  <div className="text-amber-400 text-[8px] mb-2">HACKATHON</div>
-                  <div className="space-y-1 text-[7px]">
-                    <div className="text-gray-400">Event: Colosseum Frontier</div>
-                    <div className="text-gray-400">Track: Gaming ($25K prize)</div>
-                    <div className="text-gray-400">Accelerator: $250K potential</div>
-                    <div className="text-gray-400">Deadline: May 11, 2026</div>
-                    <div className="mt-2">
-                      <a
-                        href="https://github.com/lmirzelashvili/legend-of-arcania"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-amber-400 hover:text-amber-300 underline"
-                      >
-                        github.com/lmirzelashvili/legend-of-arcania
-                      </a>
-                    </div>
+                    Team bios and Telegram coming soon.
                   </div>
                 </Card>
               </div>
@@ -584,7 +689,7 @@ export const Whitepaper: React.FC = () => {
         {/* ── Footer ── */}
         <div className="mt-16 pt-6 border-t border-gray-800 text-center">
           <p className="text-gray-700 text-[7px]">
-            Whitepaper v0.1 — May 11 2026. Living document. Last updated for Colosseum Frontier submission.
+            Whitepaper v0.1 — May 11 2026. Living document. Last updated May 2026.
           </p>
         </div>
 

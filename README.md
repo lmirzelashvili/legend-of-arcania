@@ -1,6 +1,6 @@
 # Legend of Arcania
 
-A 2D MMORPG built around a deep, player-driven economy on Solana. **Submitted to Colosseum Frontier 2026.**
+A 2D MMORPG built around a deep, player-driven economy on Solana.
 
 ## What's live today
 
@@ -10,7 +10,7 @@ A feature-complete in-game economy: character creation, paperdoll equipment syst
 - ARC SPL token: [`DcYWNXRrXzQcNgYPu8e6fcn4gk4pwqEJhR8TJPzN5Tu8`](https://solscan.io/token/DcYWNXRrXzQcNgYPu8e6fcn4gk4pwqEJhR8TJPzN5Tu8?cluster=devnet) (100M total supply)
 - Phantom wallet adapter, balance display, on-chain message-signing wallet linking (ed25519 verified server-side)
 
-**Coming in the 4-week post-hackathon sprint:**
+**Coming in the next sprint:**
 - Anchor marketplace escrow program (Rust)
 - Arcanite ↔ ARC bridge with time-lock conversion bonuses
 - Phaser 3 world scene (LPC paperdoll already wired)
@@ -21,7 +21,7 @@ A feature-complete in-game economy: character creation, paperdoll equipment syst
 arcania_nexus/
 ├── arcania-client/   # React 18 + Vite + TypeScript + Tailwind + Zustand
 ├── arcania-server/   # Express + TypeScript + Prisma + PostgreSQL + Redis
-└── docs/             # Design docs, architecture review, tokenomics, hackathon brief
+└── docs/             # Design docs, architecture review, tokenomics
 ```
 
 ## Tech stack
@@ -52,7 +52,7 @@ Connect Phantom (top-right of any marketing page) → switch to Devnet → see y
 
 ## Key documents
 
-- [`docs/hackathon/02-project-brief.md`](docs/hackathon/02-project-brief.md) — 500-word project brief
+- [`docs/02-project-brief.md`](docs/02-project-brief.md) — 500-word project brief
 - [`docs/ARCHITECTURE_REVIEW.md`](docs/ARCHITECTURE_REVIEW.md) — system architecture
 - [`docs/token/arc-token/index.mdx`](docs/token/arc-token/index.mdx) — ARC tokenomics
 - [`docs/token/economics/sinks.mdx`](docs/token/economics/sinks.mdx) — deflationary mechanics
